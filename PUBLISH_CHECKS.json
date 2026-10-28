@@ -46,5 +46,26 @@
     "Fresh-machine dependency installation was not repeated",
     "Virtual-display branch documented but this check used existing WSLg DISPLAY",
     "New independent validation is excluded from the historical student performance statistics"
-  ]
+  ],
+  "task_guide_revision": {
+    "date": "2026-10-28",
+    "scope": "Documentation only: teacher Tasks 1-5, commands, expectations and new-run offline analysis",
+    "bash_blocks_syntax_checked": 24,
+    "local_document_links": "PASS",
+    "mininet_python_expressions": "Syntax PASS",
+    "new_run_analysis_command": {
+      "input": "todo05/verification-B-20261028-182050",
+      "status": "PASS",
+      "lost": 37,
+      "total": 51024,
+      "output": "todo06/reproduced-new-du1ob_r6",
+      "figure_visually_checked": true
+    },
+    "original_publication_file_hashes_unchanged": 256,
+    "limitations": [
+      "No controller or measured evidence changed",
+      "Did not rerun network experiments for this documentation revision",
+      "Fresh machine installation and Xvfb execution remain unverified"
+    ]
+  }
 }

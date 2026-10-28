@@ -4,10 +4,22 @@
 
 ## 从哪里开始
 
-1. **先复现**：[安装与逐步实验指南](docs/REPRODUCE.md)。先运行无流量单元检查，再做 B 场景，最后做 A/C。
+1. **先理解并复现**：[完整安装与 Task 1–5 指南](docs/REPRODUCE.md)。逐项说明老师要求、我们的实现、原因、完整命令、预期现象与证据；首次学习按 Task 1→5，快速检查环境可先做独立 B 验证。
 2. **先理解再改**：[实现与数据说明](docs/DESIGN_AND_RESULTS.md)。这里解释算法参数、原始结果与已知限制。
 3. **准备现场展示**：[25 分钟 demo 建议](docs/DEMO_PLAN.md)。时间分配是建议，以课程公布的时段为准。
 4. **请搭档反馈**：[复现与改进问题清单](docs/PARTNER_REVIEW.md)。记录失败步骤、建议改动及展示方式。
+
+### 按老师任务阅读
+
+| 任务 | 逐步指南 |
+|---|---|
+| Task 1 | [MiniEdit 参数、17 条链路、连通性、端口/流表与正常吞吐](docs/TASK1_TOPOLOGY.md) |
+| Task 2 | [正常 ping 基线、EMA、限时异常、drop 规则与合法通信](docs/TASK2_DETECTION.md) |
+| Task 3 | [全部有向链路代价、正常负载、异常惩罚与恢复](docs/TASK3_LINK_COST.md) |
+| Task 4 | [A/B/C 完整启动、定时测量、真实改道与恢复证据](docs/TASK4_REROUTING.md) |
+| Task 5 | [重画已有结果、冻结和绘制自己的新测量、解释图表](docs/TASK5_EVALUATION.md) |
+
+注意：原 analyze_task5.py 默认读取历史 A/B1/C，不会自动分析最新实验；新数据的完整命令在 Task 5 第 5 节。
 
 ## 已有报告与实验结果
 
