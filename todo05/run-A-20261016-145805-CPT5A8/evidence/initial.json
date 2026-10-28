@@ -1,0 +1,1162 @@
+{
+  "time": 1792134012.6569636,
+  "actual_path": [
+    1,
+    2,
+    6
+  ],
+  "active_vlan": 5,
+  "path_packet_counts": {
+    "1": 0,
+    "2": 2,
+    "6": 2
+  },
+  "installed": {
+    "time": 1792134012.3955607,
+    "ready": true,
+    "failed": false,
+    "switches": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "directed_links": 22,
+    "routes": {
+      "10.0.0.1>10.0.0.2": {
+        "path": [
+          1,
+          2
+        ],
+        "cost": 5.000150711066929,
+        "outputs": [
+          {
+            "dpid": 1,
+            "output_port": 2
+          },
+          {
+            "dpid": 2,
+            "output_port": 1
+          }
+        ],
+        "tag": 1
+      },
+      "10.0.0.1>10.0.0.3": {
+        "path": [
+          1,
+          2,
+          3
+        ],
+        "cost": 15.000524645738142,
+        "outputs": [
+          {
+            "dpid": 1,
+            "output_port": 2
+          },
+          {
+            "dpid": 2,
+            "output_port": 3
+          },
+          {
+            "dpid": 3,
+            "output_port": 1
+          }
+        ],
+        "tag": 2
+      },
+      "10.0.0.1>10.0.0.4": {
+        "path": [
+          1,
+          4
+        ],
+        "cost": 8.00009347895271,
+        "outputs": [
+          {
+            "dpid": 1,
+            "output_port": 3
+          },
+          {
+            "dpid": 4,
+            "output_port": 1
+          }
+        ],
+        "tag": 3
+      },
+      "10.0.0.1>10.0.0.5": {
+        "path": [
+          1,
+          2,
+          5
+        ],
+        "cost": 17.000207943244313,
+        "outputs": [
+          {
+            "dpid": 1,
+            "output_port": 2
+          },
+          {
+            "dpid": 2,
+            "output_port": 4
+          },
+          {
+            "dpid": 5,
+            "output_port": 1
+          }
+        ],
+        "tag": 4
+      },
+      "10.0.0.1>10.0.0.6": {
+        "path": [
+          1,
+          2,
+          6
+        ],
+        "cost": 19.00020794869809,
+        "outputs": [
+          {
+            "dpid": 1,
+            "output_port": 2
+          },
+          {
+            "dpid": 2,
+            "output_port": 6
+          },
+          {
+            "dpid": 6,
+            "output_port": 1
+          }
+        ],
+        "tag": 5
+      },
+      "10.0.0.2>10.0.0.1": {
+        "path": [
+          2,
+          1
+        ],
+        "cost": 5.00015067615136,
+        "outputs": [
+          {
+            "dpid": 2,
+            "output_port": 2
+          },
+          {
+            "dpid": 1,
+            "output_port": 1
+          }
+        ],
+        "tag": 6
+      },
+      "10.0.0.2>10.0.0.3": {
+        "path": [
+          2,
+          3
+        ],
+        "cost": 10.000373934671213,
+        "outputs": [
+          {
+            "dpid": 2,
+            "output_port": 3
+          },
+          {
+            "dpid": 3,
+            "output_port": 1
+          }
+        ],
+        "tag": 7
+      },
+      "10.0.0.2>10.0.0.4": {
+        "path": [
+          2,
+          4
+        ],
+        "cost": 6.000280436858128,
+        "outputs": [
+          {
+            "dpid": 2,
+            "output_port": 5
+          },
+          {
+            "dpid": 4,
+            "output_port": 1
+          }
+        ],
+        "tag": 8
+      },
+      "10.0.0.2>10.0.0.5": {
+        "path": [
+          2,
+          5
+        ],
+        "cost": 12.000057232177385,
+        "outputs": [
+          {
+            "dpid": 2,
+            "output_port": 4
+          },
+          {
+            "dpid": 5,
+            "output_port": 1
+          }
+        ],
+        "tag": 9
+      },
+      "10.0.0.2>10.0.0.6": {
+        "path": [
+          2,
+          6
+        ],
+        "cost": 14.00005723763116,
+        "outputs": [
+          {
+            "dpid": 2,
+            "output_port": 6
+          },
+          {
+            "dpid": 6,
+            "output_port": 1
+          }
+        ],
+        "tag": 10
+      },
+      "10.0.0.3>10.0.0.1": {
+        "path": [
+          3,
+          2,
+          1
+        ],
+        "cost": 15.000581824266881,
+        "outputs": [
+          {
+            "dpid": 3,
+            "output_port": 2
+          },
+          {
+            "dpid": 2,
+            "output_port": 2
+          },
+          {
+            "dpid": 1,
+            "output_port": 1
+          }
+        ],
+        "tag": 11
+      },
+      "10.0.0.3>10.0.0.2": {
+        "path": [
+          3,
+          2
+        ],
+        "cost": 10.00043114811552,
+        "outputs": [
+          {
+            "dpid": 3,
+            "output_port": 2
+          },
+          {
+            "dpid": 2,
+            "output_port": 1
+          }
+        ],
+        "tag": 12
+      },
+      "10.0.0.3>10.0.0.4": {
+        "path": [
+          3,
+          2,
+          4
+        ],
+        "cost": 16.00071158497365,
+        "outputs": [
+          {
+            "dpid": 3,
+            "output_port": 2
+          },
+          {
+            "dpid": 2,
+            "output_port": 5
+          },
+          {
+            "dpid": 4,
+            "output_port": 1
+          }
+        ],
+        "tag": 13
+      },
+      "10.0.0.3>10.0.0.5": {
+        "path": [
+          3,
+          5
+        ],
+        "cost": 9.000093479223063,
+        "outputs": [
+          {
+            "dpid": 3,
+            "output_port": 4
+          },
+          {
+            "dpid": 5,
+            "output_port": 1
+          }
+        ],
+        "tag": 14
+      },
+      "10.0.0.3>10.0.0.6": {
+        "path": [
+          3,
+          6
+        ],
+        "cost": 7.00015072576205,
+        "outputs": [
+          {
+            "dpid": 3,
+            "output_port": 3
+          },
+          {
+            "dpid": 6,
+            "output_port": 1
+          }
+        ],
+        "tag": 15
+      },
+      "10.0.0.4>10.0.0.1": {
+        "path": [
+          4,
+          1
+        ],
+        "cost": 8.00015067615136,
+        "outputs": [
+          {
+            "dpid": 4,
+            "output_port": 3
+          },
+          {
+            "dpid": 1,
+            "output_port": 1
+          }
+        ],
+        "tag": 16
+      },
+      "10.0.0.4>10.0.0.2": {
+        "path": [
+          4,
+          2
+        ],
+        "cost": 6.000280437048591,
+        "outputs": [
+          {
+            "dpid": 4,
+            "output_port": 4
+          },
+          {
+            "dpid": 2,
+            "output_port": 1
+          }
+        ],
+        "tag": 17
+      },
+      "10.0.0.4>10.0.0.3": {
+        "path": [
+          4,
+          2,
+          3
+        ],
+        "cost": 16.000654371719804,
+        "outputs": [
+          {
+            "dpid": 4,
+            "output_port": 4
+          },
+          {
+            "dpid": 2,
+            "output_port": 3
+          },
+          {
+            "dpid": 3,
+            "output_port": 1
+          }
+        ],
+        "tag": 18
+      },
+      "10.0.0.4>10.0.0.5": {
+        "path": [
+          4,
+          5
+        ],
+        "cost": 15.000150711400448,
+        "outputs": [
+          {
+            "dpid": 4,
+            "output_port": 2
+          },
+          {
+            "dpid": 5,
+            "output_port": 1
+          }
+        ],
+        "tag": 19
+      },
+      "10.0.0.4>10.0.0.6": {
+        "path": [
+          4,
+          2,
+          6
+        ],
+        "cost": 20.00033767467975,
+        "outputs": [
+          {
+            "dpid": 4,
+            "output_port": 4
+          },
+          {
+            "dpid": 2,
+            "output_port": 6
+          },
+          {
+            "dpid": 6,
+            "output_port": 1
+          }
+        ],
+        "tag": 20
+      },
+      "10.0.0.5>10.0.0.1": {
+        "path": [
+          5,
+          2,
+          1
+        ],
+        "cost": 17.00015067615136,
+        "outputs": [
+          {
+            "dpid": 5,
+            "output_port": 4
+          },
+          {
+            "dpid": 2,
+            "output_port": 2
+          },
+          {
+            "dpid": 1,
+            "output_port": 1
+          }
+        ],
+        "tag": 21
+      },
+      "10.0.0.5>10.0.0.2": {
+        "path": [
+          5,
+          2
+        ],
+        "cost": 12.0,
+        "outputs": [
+          {
+            "dpid": 5,
+            "output_port": 4
+          },
+          {
+            "dpid": 2,
+            "output_port": 1
+          }
+        ],
+        "tag": 22
+      },
+      "10.0.0.5>10.0.0.3": {
+        "path": [
+          5,
+          3
+        ],
+        "cost": 9.000093483667802,
+        "outputs": [
+          {
+            "dpid": 5,
+            "output_port": 6
+          },
+          {
+            "dpid": 3,
+            "output_port": 1
+          }
+        ],
+        "tag": 23
+      },
+      "10.0.0.5>10.0.0.4": {
+        "path": [
+          5,
+          4
+        ],
+        "cost": 15.0,
+        "outputs": [
+          {
+            "dpid": 5,
+            "output_port": 2
+          },
+          {
+            "dpid": 4,
+            "output_port": 1
+          }
+        ],
+        "tag": 24
+      },
+      "10.0.0.5>10.0.0.6": {
+        "path": [
+          5,
+          3,
+          6
+        ],
+        "cost": 16.00024420942985,
+        "outputs": [
+          {
+            "dpid": 5,
+            "output_port": 6
+          },
+          {
+            "dpid": 3,
+            "output_port": 3
+          },
+          {
+            "dpid": 6,
+            "output_port": 1
+          }
+        ],
+        "tag": 25
+      },
+      "10.0.0.6>10.0.0.1": {
+        "path": [
+          6,
+          2,
+          1
+        ],
+        "cost": 19.00030138721829,
+        "outputs": [
+          {
+            "dpid": 6,
+            "output_port": 4
+          },
+          {
+            "dpid": 2,
+            "output_port": 2
+          },
+          {
+            "dpid": 1,
+            "output_port": 1
+          }
+        ],
+        "tag": 26
+      },
+      "10.0.0.6>10.0.0.2": {
+        "path": [
+          6,
+          2
+        ],
+        "cost": 14.00015071106693,
+        "outputs": [
+          {
+            "dpid": 6,
+            "output_port": 4
+          },
+          {
+            "dpid": 2,
+            "output_port": 1
+          }
+        ],
+        "tag": 27
+      },
+      "10.0.0.6>10.0.0.3": {
+        "path": [
+          6,
+          3
+        ],
+        "cost": 7.000150718566458,
+        "outputs": [
+          {
+            "dpid": 6,
+            "output_port": 3
+          },
+          {
+            "dpid": 3,
+            "output_port": 1
+          }
+        ],
+        "tag": 28
+      },
+      "10.0.0.6>10.0.0.4": {
+        "path": [
+          6,
+          2,
+          4
+        ],
+        "cost": 20.000431147925056,
+        "outputs": [
+          {
+            "dpid": 6,
+            "output_port": 4
+          },
+          {
+            "dpid": 2,
+            "output_port": 5
+          },
+          {
+            "dpid": 4,
+            "output_port": 1
+          }
+        ],
+        "tag": 29
+      },
+      "10.0.0.6>10.0.0.5": {
+        "path": [
+          6,
+          3,
+          5
+        ],
+        "cost": 16.00024419778952,
+        "outputs": [
+          {
+            "dpid": 6,
+            "output_port": 3
+          },
+          {
+            "dpid": 3,
+            "output_port": 4
+          },
+          {
+            "dpid": 5,
+            "output_port": 1
+          }
+        ],
+        "tag": 30
+      }
+    },
+    "scenario": "A",
+    "generation": 1,
+    "pending_retired_tags": []
+  },
+  "costs": {
+    "time": 1792134012.3353736,
+    "ready": true,
+    "links": {
+      "1>2": {
+        "src": 1,
+        "dst": 2,
+        "base": 5.0,
+        "received_bps": 1205.6885354380888,
+        "capacity_bps": 40000000,
+        "utilization": 3.014221338595222e-05,
+        "load_term": 0.0001507110669297611,
+        "penalty": 0,
+        "cost": 5.000150711066929,
+        "anomalous_sources": [],
+        "egress_port": 2,
+        "peer_ingress_port": 2,
+        "measured": true,
+        "source_tx_bps": 1205.409210885511
+      },
+      "1>4": {
+        "src": 1,
+        "dst": 4,
+        "base": 8.0,
+        "received_bps": 747.8316216753298,
+        "capacity_bps": 40000000,
+        "utilization": 1.8695790541883244e-05,
+        "load_term": 9.347895270941622e-05,
+        "penalty": 0,
+        "cost": 8.00009347895271,
+        "anomalous_sources": [],
+        "egress_port": 3,
+        "peer_ingress_port": 3,
+        "measured": true,
+        "source_tx_bps": 747.6588776378486
+      },
+      "1>5": {
+        "src": 1,
+        "dst": 5,
+        "base": 18.0,
+        "received_bps": 0.0,
+        "capacity_bps": 40000000,
+        "utilization": 0.0,
+        "load_term": 0.0,
+        "penalty": 0,
+        "cost": 18.0,
+        "anomalous_sources": [],
+        "egress_port": 4,
+        "peer_ingress_port": 5,
+        "measured": true,
+        "source_tx_bps": 0.0
+      },
+      "2>1": {
+        "src": 2,
+        "dst": 1,
+        "base": 5.0,
+        "received_bps": 1205.409210885511,
+        "capacity_bps": 40000000,
+        "utilization": 3.0135230272137772e-05,
+        "load_term": 0.00015067615136068885,
+        "penalty": 0,
+        "cost": 5.00015067615136,
+        "anomalous_sources": [],
+        "egress_port": 2,
+        "peer_ingress_port": 2,
+        "measured": true,
+        "source_tx_bps": 1205.6885354380888
+      },
+      "2>4": {
+        "src": 2,
+        "dst": 4,
+        "base": 6.0,
+        "received_bps": 2243.4948650259894,
+        "capacity_bps": 40000000,
+        "utilization": 5.6087371625649735e-05,
+        "load_term": 0.0002804368581282487,
+        "penalty": 0,
+        "cost": 6.000280436858128,
+        "anomalous_sources": [],
+        "egress_port": 5,
+        "peer_ingress_port": 4,
+        "measured": true,
+        "source_tx_bps": 2243.4963887265703
+      },
+      "2>3": {
+        "src": 2,
+        "dst": 3,
+        "base": 10.0,
+        "received_bps": 2991.4773697042033,
+        "capacity_bps": 40000000,
+        "utilization": 7.478693424260508e-05,
+        "load_term": 0.0003739346712130254,
+        "penalty": 0,
+        "cost": 10.000373934671213,
+        "anomalous_sources": [],
+        "egress_port": 3,
+        "peer_ingress_port": 2,
+        "measured": true,
+        "source_tx_bps": 2991.328518302094
+      },
+      "2>5": {
+        "src": 2,
+        "dst": 5,
+        "base": 12.0,
+        "received_bps": 457.8574190809639,
+        "capacity_bps": 40000000,
+        "utilization": 1.1446435477024097e-05,
+        "load_term": 5.7232177385120485e-05,
+        "penalty": 0,
+        "cost": 12.000057232177385,
+        "anomalous_sources": [],
+        "egress_port": 4,
+        "peer_ingress_port": 4,
+        "measured": true,
+        "source_tx_bps": 457.8564058625654
+      },
+      "2>6": {
+        "src": 2,
+        "dst": 6,
+        "base": 14.0,
+        "received_bps": 457.90104926706306,
+        "capacity_bps": 40000000,
+        "utilization": 1.1447526231676577e-05,
+        "load_term": 5.723763115838288e-05,
+        "penalty": 0,
+        "cost": 14.00005723763116,
+        "anomalous_sources": [],
+        "egress_port": 6,
+        "peer_ingress_port": 4,
+        "measured": true,
+        "source_tx_bps": 457.8564058625654
+      },
+      "3>2": {
+        "src": 3,
+        "dst": 2,
+        "base": 10.0,
+        "received_bps": 3449.184924164659,
+        "capacity_bps": 40000000,
+        "utilization": 8.622962310411649e-05,
+        "load_term": 0.0004311481155205824,
+        "penalty": 0,
+        "cost": 10.00043114811552,
+        "anomalous_sources": [],
+        "egress_port": 2,
+        "peer_ingress_port": 3,
+        "measured": true,
+        "source_tx_bps": 3449.356558944643
+      },
+      "3>5": {
+        "src": 3,
+        "dst": 5,
+        "base": 9.0,
+        "received_bps": 747.8337844989077,
+        "capacity_bps": 40000000,
+        "utilization": 1.869584461247269e-05,
+        "load_term": 9.347922306236345e-05,
+        "penalty": 0,
+        "cost": 9.000093479223063,
+        "anomalous_sources": [],
+        "egress_port": 4,
+        "peer_ingress_port": 6,
+        "measured": true,
+        "source_tx_bps": 747.8693424260508
+      },
+      "3>6": {
+        "src": 3,
+        "dst": 6,
+        "base": 7.0,
+        "received_bps": 1205.806096403266,
+        "capacity_bps": 40000000,
+        "utilization": 3.0145152410081653e-05,
+        "load_term": 0.00015072576205040825,
+        "penalty": 0,
+        "cost": 7.00015072576205,
+        "anomalous_sources": [],
+        "egress_port": 3,
+        "peer_ingress_port": 3,
+        "measured": true,
+        "source_tx_bps": 1205.7485316664902
+      },
+      "4>2": {
+        "src": 4,
+        "dst": 2,
+        "base": 6.0,
+        "received_bps": 2243.4963887265703,
+        "capacity_bps": 40000000,
+        "utilization": 5.6087409718164256e-05,
+        "load_term": 0.0002804370485908213,
+        "penalty": 0,
+        "cost": 6.000280437048591,
+        "anomalous_sources": [],
+        "egress_port": 4,
+        "peer_ingress_port": 5,
+        "measured": true,
+        "source_tx_bps": 2243.4948650259894
+      },
+      "4>1": {
+        "src": 4,
+        "dst": 1,
+        "base": 8.0,
+        "received_bps": 1205.409210885511,
+        "capacity_bps": 40000000,
+        "utilization": 3.0135230272137772e-05,
+        "load_term": 0.00015067615136068885,
+        "penalty": 0,
+        "cost": 8.00015067615136,
+        "anomalous_sources": [],
+        "egress_port": 3,
+        "peer_ingress_port": 3,
+        "measured": true,
+        "source_tx_bps": 1205.687716578593
+      },
+      "4>5": {
+        "src": 4,
+        "dst": 5,
+        "base": 15.0,
+        "received_bps": 1205.6912035798716,
+        "capacity_bps": 40000000,
+        "utilization": 3.014228008949679e-05,
+        "load_term": 0.00015071140044748394,
+        "penalty": 0,
+        "cost": 15.000150711400448,
+        "anomalous_sources": [],
+        "egress_port": 2,
+        "peer_ingress_port": 2,
+        "measured": true,
+        "source_tx_bps": 1205.687716578593
+      },
+      "5>1": {
+        "src": 5,
+        "dst": 1,
+        "base": 18.0,
+        "received_bps": 0.0,
+        "capacity_bps": 40000000,
+        "utilization": 0.0,
+        "load_term": 0.0,
+        "penalty": 0,
+        "cost": 18.0,
+        "anomalous_sources": [],
+        "egress_port": 5,
+        "peer_ingress_port": 4,
+        "measured": true,
+        "source_tx_bps": 0.0
+      },
+      "5>2": {
+        "src": 5,
+        "dst": 2,
+        "base": 12.0,
+        "received_bps": 0.0,
+        "capacity_bps": 40000000,
+        "utilization": 0.0,
+        "load_term": 0.0,
+        "penalty": 0,
+        "cost": 12.0,
+        "anomalous_sources": [],
+        "egress_port": 4,
+        "peer_ingress_port": 4,
+        "measured": true,
+        "source_tx_bps": 0.0
+      },
+      "5>4": {
+        "src": 5,
+        "dst": 4,
+        "base": 15.0,
+        "received_bps": 0.0,
+        "capacity_bps": 40000000,
+        "utilization": 0.0,
+        "load_term": 0.0,
+        "penalty": 0,
+        "cost": 15.0,
+        "anomalous_sources": [],
+        "egress_port": 2,
+        "peer_ingress_port": 2,
+        "measured": true,
+        "source_tx_bps": 0.0
+      },
+      "5>3": {
+        "src": 5,
+        "dst": 3,
+        "base": 9.0,
+        "received_bps": 747.8693424260508,
+        "capacity_bps": 40000000,
+        "utilization": 1.869673356065127e-05,
+        "load_term": 9.348366780325635e-05,
+        "penalty": 0,
+        "cost": 9.000093483667802,
+        "anomalous_sources": [],
+        "egress_port": 6,
+        "peer_ingress_port": 4,
+        "measured": true,
+        "source_tx_bps": 747.8337844989077
+      },
+      "5>6": {
+        "src": 5,
+        "dst": 6,
+        "base": 20.0,
+        "received_bps": 457.90104926706306,
+        "capacity_bps": 40000000,
+        "utilization": 1.1447526231676577e-05,
+        "load_term": 5.723763115838288e-05,
+        "penalty": 0,
+        "cost": 20.000057237631157,
+        "anomalous_sources": [],
+        "egress_port": 3,
+        "peer_ingress_port": 2,
+        "measured": true,
+        "source_tx_bps": 457.8574190809639
+      },
+      "6>3": {
+        "src": 6,
+        "dst": 3,
+        "base": 7.0,
+        "received_bps": 1205.7485316664902,
+        "capacity_bps": 40000000,
+        "utilization": 3.0143713291662256e-05,
+        "load_term": 0.0001507185664583113,
+        "penalty": 0,
+        "cost": 7.000150718566458,
+        "anomalous_sources": [],
+        "egress_port": 3,
+        "peer_ingress_port": 3,
+        "measured": true,
+        "source_tx_bps": 1205.806096403266
+      },
+      "6>5": {
+        "src": 6,
+        "dst": 5,
+        "base": 20.0,
+        "received_bps": 457.8574190809639,
+        "capacity_bps": 40000000,
+        "utilization": 1.1446435477024097e-05,
+        "load_term": 5.7232177385120485e-05,
+        "penalty": 0,
+        "cost": 20.000057232177387,
+        "anomalous_sources": [],
+        "egress_port": 2,
+        "peer_ingress_port": 3,
+        "measured": true,
+        "source_tx_bps": 457.90104926706306
+      },
+      "6>2": {
+        "src": 6,
+        "dst": 2,
+        "base": 14.0,
+        "received_bps": 1205.6885354380888,
+        "capacity_bps": 40000000,
+        "utilization": 3.014221338595222e-05,
+        "load_term": 0.0001507110669297611,
+        "penalty": 0,
+        "cost": 14.00015071106693,
+        "anomalous_sources": [],
+        "egress_port": 4,
+        "peer_ingress_port": 6,
+        "measured": true,
+        "source_tx_bps": 1205.806096403266
+      }
+    },
+    "stale_source_stats": [],
+    "blocked": [],
+    "alpha": 5,
+    "beta": 60,
+    "capacity_bps": 40000000,
+    "minimum_hold_seconds": 8,
+    "quiet_seconds": 5,
+    "rerouting": true,
+    "measurement": "Destination ingress rx_bytes for each directed link",
+    "routing": "Versioned downstream preparation and ingress switch",
+    "scenario": "A"
+  },
+  "drops": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": []
+  },
+  "interface_inventory": {
+    "data": [
+      [
+        "s1-eth1",
+        1
+      ],
+      [
+        "s6-eth2",
+        2
+      ],
+      [
+        "s4-eth2",
+        2
+      ],
+      [
+        "s3-eth3",
+        3
+      ],
+      [
+        "s2",
+        65534
+      ],
+      [
+        "s2-eth1",
+        1
+      ],
+      [
+        "s6",
+        65534
+      ],
+      [
+        "s3-eth2",
+        2
+      ],
+      [
+        "s4-eth4",
+        4
+      ],
+      [
+        "s4-eth1",
+        1
+      ],
+      [
+        "s3",
+        65534
+      ],
+      [
+        "s5-eth4",
+        4
+      ],
+      [
+        "s6-eth4",
+        4
+      ],
+      [
+        "s3-eth4",
+        4
+      ],
+      [
+        "s1-eth3",
+        3
+      ],
+      [
+        "s2-eth2",
+        2
+      ],
+      [
+        "s2-eth4",
+        4
+      ],
+      [
+        "s5",
+        65534
+      ],
+      [
+        "s5-eth2",
+        2
+      ],
+      [
+        "s1-eth4",
+        4
+      ],
+      [
+        "s4",
+        65534
+      ],
+      [
+        "s5-eth6",
+        6
+      ],
+      [
+        "s3-eth1",
+        1
+      ],
+      [
+        "s5-eth1",
+        1
+      ],
+      [
+        "s2-eth5",
+        5
+      ],
+      [
+        "s4-eth3",
+        3
+      ],
+      [
+        "s6-eth1",
+        1
+      ],
+      [
+        "s5-eth3",
+        3
+      ],
+      [
+        "s5-eth5",
+        5
+      ],
+      [
+        "s1",
+        65534
+      ],
+      [
+        "s2-eth6",
+        6
+      ],
+      [
+        "s1-eth2",
+        2
+      ],
+      [
+        "s2-eth3",
+        3
+      ],
+      [
+        "s6-eth3",
+        3
+      ]
+    ],
+    "headings": [
+      "name",
+      "ofport"
+    ]
+  },
+  "flows": {
+    "1": "OFPST_FLOW reply (OF1.3) (xid=0x2):\n cookie=0x0, duration=122.226s, table=0, n_packets=231, n_bytes=13860, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535\n cookie=0xca25000000000006, duration=121.937s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=6,nw_src=10.0.0.2,nw_dst=10.0.0.1 actions=pop_vlan,output:1\n cookie=0xca2500000000000b, duration=121.937s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=11,nw_src=10.0.0.3,nw_dst=10.0.0.1 actions=pop_vlan,output:1\n cookie=0xca25000000000010, duration=121.937s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=16,nw_src=10.0.0.4,nw_dst=10.0.0.1 actions=pop_vlan,output:1\n cookie=0xca25000000000015, duration=121.937s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=21,nw_src=10.0.0.5,nw_dst=10.0.0.1 actions=pop_vlan,output:1\n cookie=0xca2500000000001a, duration=121.937s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=26,nw_src=10.0.0.6,nw_dst=10.0.0.1 actions=pop_vlan,output:1\n cookie=0xca220001, duration=121.910s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.2,icmp_type=8 actions=push_vlan:0x8100,set_field:4097->vlan_vid,output:2\n cookie=0xca220001, duration=121.910s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.2,icmp_type=0 actions=push_vlan:0x8100,set_field:4097->vlan_vid,output:2\n cookie=0xca220001, duration=121.910s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.3,icmp_type=8 actions=push_vlan:0x8100,set_field:4098->vlan_vid,output:2\n cookie=0xca220001, duration=121.910s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.3,icmp_type=0 actions=push_vlan:0x8100,set_field:4098->vlan_vid,output:2\n cookie=0xca220001, duration=121.910s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.4,icmp_type=8 actions=push_vlan:0x8100,set_field:4099->vlan_vid,output:3\n cookie=0xca220001, duration=121.910s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.4,icmp_type=0 actions=push_vlan:0x8100,set_field:4099->vlan_vid,output:3\n cookie=0xca220001, duration=121.910s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.5,icmp_type=8 actions=push_vlan:0x8100,set_field:4100->vlan_vid,output:2\n cookie=0xca220001, duration=121.910s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.5,icmp_type=0 actions=push_vlan:0x8100,set_field:4100->vlan_vid,output:2\n cookie=0xca220001, duration=121.910s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.6,icmp_type=8 actions=push_vlan:0x8100,set_field:4101->vlan_vid,output:2\n cookie=0xca220001, duration=121.910s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.6,icmp_type=0 actions=push_vlan:0x8100,set_field:4101->vlan_vid,output:2\n cookie=0xca220001, duration=121.910s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.2 actions=push_vlan:0x8100,set_field:4097->vlan_vid,output:2\n cookie=0xca220001, duration=121.910s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.3 actions=push_vlan:0x8100,set_field:4098->vlan_vid,output:2\n cookie=0xca220001, duration=121.910s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.4 actions=push_vlan:0x8100,set_field:4099->vlan_vid,output:3\n cookie=0xca220001, duration=121.910s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.5 actions=push_vlan:0x8100,set_field:4100->vlan_vid,output:2\n cookie=0xca220001, duration=121.910s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.1,nw_dst=10.0.0.6 actions=push_vlan:0x8100,set_field:4101->vlan_vid,output:2\n cookie=0x0, duration=122.227s, table=0, n_packets=41, n_bytes=3018, priority=0 actions=CONTROLLER:65535\n",
+    "2": "OFPST_FLOW reply (OF1.3) (xid=0x2):\n cookie=0x0, duration=122.187s, table=0, n_packets=385, n_bytes=23100, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535\n cookie=0xca25000000000001, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=1,nw_src=10.0.0.1,nw_dst=10.0.0.2 actions=pop_vlan,output:1\n cookie=0xca25000000000002, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=2,nw_src=10.0.0.1,nw_dst=10.0.0.3 actions=output:3\n cookie=0xca25000000000004, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=4,nw_src=10.0.0.1,nw_dst=10.0.0.5 actions=output:4\n cookie=0xca25000000000005, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=5,nw_src=10.0.0.1,nw_dst=10.0.0.6 actions=output:6\n cookie=0xca2500000000000b, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=11,nw_src=10.0.0.3,nw_dst=10.0.0.1 actions=output:2\n cookie=0xca2500000000000c, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=12,nw_src=10.0.0.3,nw_dst=10.0.0.2 actions=pop_vlan,output:1\n cookie=0xca2500000000000d, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=13,nw_src=10.0.0.3,nw_dst=10.0.0.4 actions=output:5\n cookie=0xca25000000000011, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=17,nw_src=10.0.0.4,nw_dst=10.0.0.2 actions=pop_vlan,output:1\n cookie=0xca25000000000012, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=18,nw_src=10.0.0.4,nw_dst=10.0.0.3 actions=output:3\n cookie=0xca25000000000014, duration=121.940s, table=0, n_packets=1, n_bytes=102, priority=200,ip,dl_vlan=20,nw_src=10.0.0.4,nw_dst=10.0.0.6 actions=output:6\n cookie=0xca25000000000015, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=21,nw_src=10.0.0.5,nw_dst=10.0.0.1 actions=output:2\n cookie=0xca25000000000016, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=22,nw_src=10.0.0.5,nw_dst=10.0.0.2 actions=pop_vlan,output:1\n cookie=0xca2500000000001a, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=26,nw_src=10.0.0.6,nw_dst=10.0.0.1 actions=output:2\n cookie=0xca2500000000001b, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=27,nw_src=10.0.0.6,nw_dst=10.0.0.2 actions=pop_vlan,output:1\n cookie=0xca2500000000001d, duration=121.940s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=29,nw_src=10.0.0.6,nw_dst=10.0.0.4 actions=output:5\n cookie=0xca220001, duration=121.913s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.1,icmp_type=8 actions=push_vlan:0x8100,set_field:4102->vlan_vid,output:2\n cookie=0xca220001, duration=121.913s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.1,icmp_type=0 actions=push_vlan:0x8100,set_field:4102->vlan_vid,output:2\n cookie=0xca220001, duration=121.913s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.3,icmp_type=8 actions=push_vlan:0x8100,set_field:4103->vlan_vid,output:3\n cookie=0xca220001, duration=121.913s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.3,icmp_type=0 actions=push_vlan:0x8100,set_field:4103->vlan_vid,output:3\n cookie=0xca220001, duration=121.913s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.4,icmp_type=8 actions=push_vlan:0x8100,set_field:4104->vlan_vid,output:5\n cookie=0xca220001, duration=121.913s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.4,icmp_type=0 actions=push_vlan:0x8100,set_field:4104->vlan_vid,output:5\n cookie=0xca220001, duration=121.913s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.5,icmp_type=8 actions=push_vlan:0x8100,set_field:4105->vlan_vid,output:4\n cookie=0xca220001, duration=121.913s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.5,icmp_type=0 actions=push_vlan:0x8100,set_field:4105->vlan_vid,output:4\n cookie=0xca220001, duration=121.913s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.6,icmp_type=8 actions=push_vlan:0x8100,set_field:4106->vlan_vid,output:6\n cookie=0xca220001, duration=121.913s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.6,icmp_type=0 actions=push_vlan:0x8100,set_field:4106->vlan_vid,output:6\n cookie=0xca220001, duration=121.913s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.1 actions=push_vlan:0x8100,set_field:4102->vlan_vid,output:2\n cookie=0xca220001, duration=121.913s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.3 actions=push_vlan:0x8100,set_field:4103->vlan_vid,output:3\n cookie=0xca220001, duration=121.913s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.4 actions=push_vlan:0x8100,set_field:4104->vlan_vid,output:5\n cookie=0xca220001, duration=121.913s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.5 actions=push_vlan:0x8100,set_field:4105->vlan_vid,output:4\n cookie=0xca220001, duration=121.913s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.2,nw_dst=10.0.0.6 actions=push_vlan:0x8100,set_field:4106->vlan_vid,output:6\n cookie=0x0, duration=122.188s, table=0, n_packets=60, n_bytes=4496, priority=0 actions=CONTROLLER:65535\n",
+    "3": "OFPST_FLOW reply (OF1.3) (xid=0x2):\n cookie=0x0, duration=122.088s, table=0, n_packets=231, n_bytes=13860, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535\n cookie=0xca25000000000002, duration=121.942s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=2,nw_src=10.0.0.1,nw_dst=10.0.0.3 actions=pop_vlan,output:1\n cookie=0xca25000000000007, duration=121.942s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=7,nw_src=10.0.0.2,nw_dst=10.0.0.3 actions=pop_vlan,output:1\n cookie=0xca25000000000012, duration=121.942s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=18,nw_src=10.0.0.4,nw_dst=10.0.0.3 actions=pop_vlan,output:1\n cookie=0xca25000000000017, duration=121.942s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=23,nw_src=10.0.0.5,nw_dst=10.0.0.3 actions=pop_vlan,output:1\n cookie=0xca25000000000019, duration=121.942s, table=0, n_packets=1, n_bytes=102, priority=200,ip,dl_vlan=25,nw_src=10.0.0.5,nw_dst=10.0.0.6 actions=output:3\n cookie=0xca2500000000001c, duration=121.942s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=28,nw_src=10.0.0.6,nw_dst=10.0.0.3 actions=pop_vlan,output:1\n cookie=0xca2500000000001e, duration=121.942s, table=0, n_packets=1, n_bytes=102, priority=200,ip,dl_vlan=30,nw_src=10.0.0.6,nw_dst=10.0.0.5 actions=output:4\n cookie=0xca220001, duration=121.915s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.1,icmp_type=8 actions=push_vlan:0x8100,set_field:4107->vlan_vid,output:2\n cookie=0xca220001, duration=121.915s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.1,icmp_type=0 actions=push_vlan:0x8100,set_field:4107->vlan_vid,output:2\n cookie=0xca220001, duration=121.915s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.2,icmp_type=8 actions=push_vlan:0x8100,set_field:4108->vlan_vid,output:2\n cookie=0xca220001, duration=121.915s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.2,icmp_type=0 actions=push_vlan:0x8100,set_field:4108->vlan_vid,output:2\n cookie=0xca220001, duration=121.915s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.4,icmp_type=8 actions=push_vlan:0x8100,set_field:4109->vlan_vid,output:2\n cookie=0xca220001, duration=121.915s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.4,icmp_type=0 actions=push_vlan:0x8100,set_field:4109->vlan_vid,output:2\n cookie=0xca220001, duration=121.915s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.5,icmp_type=8 actions=push_vlan:0x8100,set_field:4110->vlan_vid,output:4\n cookie=0xca220001, duration=121.915s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.5,icmp_type=0 actions=push_vlan:0x8100,set_field:4110->vlan_vid,output:4\n cookie=0xca220001, duration=121.915s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.6,icmp_type=8 actions=push_vlan:0x8100,set_field:4111->vlan_vid,output:3\n cookie=0xca220001, duration=121.915s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.6,icmp_type=0 actions=push_vlan:0x8100,set_field:4111->vlan_vid,output:3\n cookie=0xca220001, duration=121.915s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.1 actions=push_vlan:0x8100,set_field:4107->vlan_vid,output:2\n cookie=0xca220001, duration=121.915s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.2 actions=push_vlan:0x8100,set_field:4108->vlan_vid,output:2\n cookie=0xca220001, duration=121.915s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.4 actions=push_vlan:0x8100,set_field:4109->vlan_vid,output:2\n cookie=0xca220001, duration=121.915s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.5 actions=push_vlan:0x8100,set_field:4110->vlan_vid,output:4\n cookie=0xca220001, duration=121.915s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.3,nw_dst=10.0.0.6 actions=push_vlan:0x8100,set_field:4111->vlan_vid,output:3\n cookie=0x0, duration=122.090s, table=0, n_packets=36, n_bytes=2596, priority=0 actions=CONTROLLER:65535\n",
+    "4": "OFPST_FLOW reply (OF1.3) (xid=0x2):\n cookie=0x0, duration=122.072s, table=0, n_packets=231, n_bytes=13860, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535\n cookie=0xca25000000000003, duration=121.944s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=3,nw_src=10.0.0.1,nw_dst=10.0.0.4 actions=pop_vlan,output:1\n cookie=0xca25000000000008, duration=121.944s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=8,nw_src=10.0.0.2,nw_dst=10.0.0.4 actions=pop_vlan,output:1\n cookie=0xca2500000000000d, duration=121.944s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=13,nw_src=10.0.0.3,nw_dst=10.0.0.4 actions=pop_vlan,output:1\n cookie=0xca25000000000018, duration=121.944s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=24,nw_src=10.0.0.5,nw_dst=10.0.0.4 actions=pop_vlan,output:1\n cookie=0xca2500000000001d, duration=121.944s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=29,nw_src=10.0.0.6,nw_dst=10.0.0.4 actions=pop_vlan,output:1\n cookie=0xca220001, duration=121.917s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.1,icmp_type=8 actions=push_vlan:0x8100,set_field:4112->vlan_vid,output:3\n cookie=0xca220001, duration=121.917s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.1,icmp_type=0 actions=push_vlan:0x8100,set_field:4112->vlan_vid,output:3\n cookie=0xca220001, duration=121.917s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.2,icmp_type=8 actions=push_vlan:0x8100,set_field:4113->vlan_vid,output:4\n cookie=0xca220001, duration=121.917s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.2,icmp_type=0 actions=push_vlan:0x8100,set_field:4113->vlan_vid,output:4\n cookie=0xca220001, duration=121.917s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.3,icmp_type=8 actions=push_vlan:0x8100,set_field:4114->vlan_vid,output:4\n cookie=0xca220001, duration=121.917s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.3,icmp_type=0 actions=push_vlan:0x8100,set_field:4114->vlan_vid,output:4\n cookie=0xca220001, duration=121.917s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.5,icmp_type=8 actions=push_vlan:0x8100,set_field:4115->vlan_vid,output:2\n cookie=0xca220001, duration=121.917s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.5,icmp_type=0 actions=push_vlan:0x8100,set_field:4115->vlan_vid,output:2\n cookie=0xca220001, duration=121.917s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.6,icmp_type=8 actions=push_vlan:0x8100,set_field:4116->vlan_vid,output:4\n cookie=0xca220001, duration=121.917s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.6,icmp_type=0 actions=push_vlan:0x8100,set_field:4116->vlan_vid,output:4\n cookie=0xca220001, duration=121.917s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.1 actions=push_vlan:0x8100,set_field:4112->vlan_vid,output:3\n cookie=0xca220001, duration=121.917s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.2 actions=push_vlan:0x8100,set_field:4113->vlan_vid,output:4\n cookie=0xca220001, duration=121.917s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.3 actions=push_vlan:0x8100,set_field:4114->vlan_vid,output:4\n cookie=0xca220001, duration=121.917s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.5 actions=push_vlan:0x8100,set_field:4115->vlan_vid,output:2\n cookie=0xca220001, duration=121.917s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.4,nw_dst=10.0.0.6 actions=push_vlan:0x8100,set_field:4116->vlan_vid,output:4\n cookie=0x0, duration=122.074s, table=0, n_packets=39, n_bytes=2822, priority=0 actions=CONTROLLER:65535\n",
+    "5": "OFPST_FLOW reply (OF1.3) (xid=0x2):\n cookie=0x0, duration=122.047s, table=0, n_packets=385, n_bytes=23100, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535\n cookie=0xca25000000000004, duration=121.946s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=4,nw_src=10.0.0.1,nw_dst=10.0.0.5 actions=pop_vlan,output:1\n cookie=0xca25000000000009, duration=121.946s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=9,nw_src=10.0.0.2,nw_dst=10.0.0.5 actions=pop_vlan,output:1\n cookie=0xca2500000000000e, duration=121.946s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=14,nw_src=10.0.0.3,nw_dst=10.0.0.5 actions=pop_vlan,output:1\n cookie=0xca25000000000013, duration=121.946s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=19,nw_src=10.0.0.4,nw_dst=10.0.0.5 actions=pop_vlan,output:1\n cookie=0xca2500000000001e, duration=121.946s, table=0, n_packets=1, n_bytes=102, priority=200,ip,dl_vlan=30,nw_src=10.0.0.6,nw_dst=10.0.0.5 actions=pop_vlan,output:1\n cookie=0xca220001, duration=121.919s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.1,icmp_type=8 actions=push_vlan:0x8100,set_field:4117->vlan_vid,output:4\n cookie=0xca220001, duration=121.919s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.1,icmp_type=0 actions=push_vlan:0x8100,set_field:4117->vlan_vid,output:4\n cookie=0xca220001, duration=121.919s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.2,icmp_type=8 actions=push_vlan:0x8100,set_field:4118->vlan_vid,output:4\n cookie=0xca220001, duration=121.919s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.2,icmp_type=0 actions=push_vlan:0x8100,set_field:4118->vlan_vid,output:4\n cookie=0xca220001, duration=121.919s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.3,icmp_type=8 actions=push_vlan:0x8100,set_field:4119->vlan_vid,output:6\n cookie=0xca220001, duration=121.919s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.3,icmp_type=0 actions=push_vlan:0x8100,set_field:4119->vlan_vid,output:6\n cookie=0xca220001, duration=121.919s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.4,icmp_type=8 actions=push_vlan:0x8100,set_field:4120->vlan_vid,output:2\n cookie=0xca220001, duration=121.919s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.4,icmp_type=0 actions=push_vlan:0x8100,set_field:4120->vlan_vid,output:2\n cookie=0xca220001, duration=121.919s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.6,icmp_type=8 actions=push_vlan:0x8100,set_field:4121->vlan_vid,output:6\n cookie=0xca220001, duration=121.919s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.6,icmp_type=0 actions=push_vlan:0x8100,set_field:4121->vlan_vid,output:6\n cookie=0xca220001, duration=121.919s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.1 actions=push_vlan:0x8100,set_field:4117->vlan_vid,output:4\n cookie=0xca220001, duration=121.919s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.2 actions=push_vlan:0x8100,set_field:4118->vlan_vid,output:4\n cookie=0xca220001, duration=121.919s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.3 actions=push_vlan:0x8100,set_field:4119->vlan_vid,output:6\n cookie=0xca220001, duration=121.919s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.4 actions=push_vlan:0x8100,set_field:4120->vlan_vid,output:2\n cookie=0xca220001, duration=121.919s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.5,nw_dst=10.0.0.6 actions=push_vlan:0x8100,set_field:4121->vlan_vid,output:6\n cookie=0x0, duration=122.049s, table=0, n_packets=53, n_bytes=3898, priority=0 actions=CONTROLLER:65535\n",
+    "6": "OFPST_FLOW reply (OF1.3) (xid=0x2):\n cookie=0x0, duration=121.997s, table=0, n_packets=230, n_bytes=13800, priority=65535,dl_dst=01:80:c2:00:00:0e,dl_type=0x88cc actions=CONTROLLER:65535\n cookie=0xca25000000000005, duration=121.948s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=5,nw_src=10.0.0.1,nw_dst=10.0.0.6 actions=pop_vlan,output:1\n cookie=0xca2500000000000a, duration=121.948s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=10,nw_src=10.0.0.2,nw_dst=10.0.0.6 actions=pop_vlan,output:1\n cookie=0xca2500000000000f, duration=121.948s, table=0, n_packets=2, n_bytes=204, priority=200,ip,dl_vlan=15,nw_src=10.0.0.3,nw_dst=10.0.0.6 actions=pop_vlan,output:1\n cookie=0xca25000000000014, duration=121.948s, table=0, n_packets=1, n_bytes=102, priority=200,ip,dl_vlan=20,nw_src=10.0.0.4,nw_dst=10.0.0.6 actions=pop_vlan,output:1\n cookie=0xca25000000000019, duration=121.948s, table=0, n_packets=1, n_bytes=102, priority=200,ip,dl_vlan=25,nw_src=10.0.0.5,nw_dst=10.0.0.6 actions=pop_vlan,output:1\n cookie=0xca220001, duration=121.921s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.1,icmp_type=8 actions=push_vlan:0x8100,set_field:4122->vlan_vid,output:4\n cookie=0xca220001, duration=121.921s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.1,icmp_type=0 actions=push_vlan:0x8100,set_field:4122->vlan_vid,output:4\n cookie=0xca220001, duration=121.921s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.2,icmp_type=8 actions=push_vlan:0x8100,set_field:4123->vlan_vid,output:4\n cookie=0xca220001, duration=121.921s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.2,icmp_type=0 actions=push_vlan:0x8100,set_field:4123->vlan_vid,output:4\n cookie=0xca220001, duration=121.921s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.3,icmp_type=8 actions=push_vlan:0x8100,set_field:4124->vlan_vid,output:3\n cookie=0xca220001, duration=121.921s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.3,icmp_type=0 actions=push_vlan:0x8100,set_field:4124->vlan_vid,output:3\n cookie=0xca220001, duration=121.921s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.4,icmp_type=8 actions=push_vlan:0x8100,set_field:4125->vlan_vid,output:4\n cookie=0xca220001, duration=121.921s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.4,icmp_type=0 actions=push_vlan:0x8100,set_field:4125->vlan_vid,output:4\n cookie=0xca220001, duration=121.921s, table=0, n_packets=1, n_bytes=98, priority=110,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.5,icmp_type=8 actions=push_vlan:0x8100,set_field:4126->vlan_vid,output:3\n cookie=0xca220001, duration=121.921s, table=0, n_packets=1, n_bytes=98, priority=109,icmp,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.5,icmp_type=0 actions=push_vlan:0x8100,set_field:4126->vlan_vid,output:3\n cookie=0xca220001, duration=121.921s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.1 actions=push_vlan:0x8100,set_field:4122->vlan_vid,output:4\n cookie=0xca220001, duration=121.921s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.2 actions=push_vlan:0x8100,set_field:4123->vlan_vid,output:4\n cookie=0xca220001, duration=121.921s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.3 actions=push_vlan:0x8100,set_field:4124->vlan_vid,output:3\n cookie=0xca220001, duration=121.921s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.4 actions=push_vlan:0x8100,set_field:4125->vlan_vid,output:4\n cookie=0xca220001, duration=121.921s, table=0, n_packets=0, n_bytes=0, priority=100,ip,in_port=1,vlan_tci=0x0000/0x1fff,nw_src=10.0.0.6,nw_dst=10.0.0.5 actions=push_vlan:0x8100,set_field:4126->vlan_vid,output:3\n cookie=0x0, duration=121.998s, table=0, n_packets=39, n_bytes=2830, priority=0 actions=CONTROLLER:65535\n"
+  }
+}

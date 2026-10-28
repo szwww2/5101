@@ -1,0 +1,721 @@
+{
+  "time": 1792127507.3111014,
+  "ready": true,
+  "failed": false,
+  "switches": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "directed_links": 22,
+  "links": [
+    {
+      "src": 1,
+      "dst": 2,
+      "port": 2,
+      "cost": 5.0
+    },
+    {
+      "src": 1,
+      "dst": 4,
+      "port": 3,
+      "cost": 8.0
+    },
+    {
+      "src": 1,
+      "dst": 5,
+      "port": 4,
+      "cost": 18.0
+    },
+    {
+      "src": 2,
+      "dst": 1,
+      "port": 2,
+      "cost": 5.0
+    },
+    {
+      "src": 2,
+      "dst": 3,
+      "port": 3,
+      "cost": 10.0
+    },
+    {
+      "src": 2,
+      "dst": 4,
+      "port": 5,
+      "cost": 6.0
+    },
+    {
+      "src": 2,
+      "dst": 5,
+      "port": 4,
+      "cost": 12.0
+    },
+    {
+      "src": 2,
+      "dst": 6,
+      "port": 6,
+      "cost": 14.0
+    },
+    {
+      "src": 3,
+      "dst": 2,
+      "port": 2,
+      "cost": 10.0
+    },
+    {
+      "src": 3,
+      "dst": 5,
+      "port": 4,
+      "cost": 9.0
+    },
+    {
+      "src": 3,
+      "dst": 6,
+      "port": 3,
+      "cost": 7.0
+    },
+    {
+      "src": 4,
+      "dst": 1,
+      "port": 3,
+      "cost": 8.0
+    },
+    {
+      "src": 4,
+      "dst": 2,
+      "port": 4,
+      "cost": 6.0
+    },
+    {
+      "src": 4,
+      "dst": 5,
+      "port": 2,
+      "cost": 15.0
+    },
+    {
+      "src": 5,
+      "dst": 1,
+      "port": 5,
+      "cost": 18.0
+    },
+    {
+      "src": 5,
+      "dst": 4,
+      "port": 2,
+      "cost": 15.0
+    },
+    {
+      "src": 5,
+      "dst": 2,
+      "port": 4,
+      "cost": 12.0
+    },
+    {
+      "src": 5,
+      "dst": 3,
+      "port": 6,
+      "cost": 9.0
+    },
+    {
+      "src": 5,
+      "dst": 6,
+      "port": 3,
+      "cost": 20.0
+    },
+    {
+      "src": 6,
+      "dst": 3,
+      "port": 3,
+      "cost": 7.0
+    },
+    {
+      "src": 6,
+      "dst": 2,
+      "port": 4,
+      "cost": 14.0
+    },
+    {
+      "src": 6,
+      "dst": 5,
+      "port": 2,
+      "cost": 20.0
+    }
+  ],
+  "routes": {
+    "10.0.0.1>10.0.0.2": {
+      "path": [
+        1,
+        2
+      ],
+      "outputs": [
+        {
+          "dpid": 1,
+          "output_port": 2
+        },
+        {
+          "dpid": 2,
+          "output_port": 1
+        }
+      ],
+      "cost": 5.0
+    },
+    "10.0.0.1>10.0.0.3": {
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "outputs": [
+        {
+          "dpid": 1,
+          "output_port": 2
+        },
+        {
+          "dpid": 2,
+          "output_port": 3
+        },
+        {
+          "dpid": 3,
+          "output_port": 1
+        }
+      ],
+      "cost": 15.0
+    },
+    "10.0.0.1>10.0.0.4": {
+      "path": [
+        1,
+        4
+      ],
+      "outputs": [
+        {
+          "dpid": 1,
+          "output_port": 3
+        },
+        {
+          "dpid": 4,
+          "output_port": 1
+        }
+      ],
+      "cost": 8.0
+    },
+    "10.0.0.1>10.0.0.5": {
+      "path": [
+        1,
+        2,
+        5
+      ],
+      "outputs": [
+        {
+          "dpid": 1,
+          "output_port": 2
+        },
+        {
+          "dpid": 2,
+          "output_port": 4
+        },
+        {
+          "dpid": 5,
+          "output_port": 1
+        }
+      ],
+      "cost": 17.0
+    },
+    "10.0.0.1>10.0.0.6": {
+      "path": [
+        1,
+        2,
+        6
+      ],
+      "outputs": [
+        {
+          "dpid": 1,
+          "output_port": 2
+        },
+        {
+          "dpid": 2,
+          "output_port": 6
+        },
+        {
+          "dpid": 6,
+          "output_port": 1
+        }
+      ],
+      "cost": 19.0
+    },
+    "10.0.0.2>10.0.0.1": {
+      "path": [
+        2,
+        1
+      ],
+      "outputs": [
+        {
+          "dpid": 2,
+          "output_port": 2
+        },
+        {
+          "dpid": 1,
+          "output_port": 1
+        }
+      ],
+      "cost": 5.0
+    },
+    "10.0.0.2>10.0.0.3": {
+      "path": [
+        2,
+        3
+      ],
+      "outputs": [
+        {
+          "dpid": 2,
+          "output_port": 3
+        },
+        {
+          "dpid": 3,
+          "output_port": 1
+        }
+      ],
+      "cost": 10.0
+    },
+    "10.0.0.2>10.0.0.4": {
+      "path": [
+        2,
+        4
+      ],
+      "outputs": [
+        {
+          "dpid": 2,
+          "output_port": 5
+        },
+        {
+          "dpid": 4,
+          "output_port": 1
+        }
+      ],
+      "cost": 6.0
+    },
+    "10.0.0.2>10.0.0.5": {
+      "path": [
+        2,
+        5
+      ],
+      "outputs": [
+        {
+          "dpid": 2,
+          "output_port": 4
+        },
+        {
+          "dpid": 5,
+          "output_port": 1
+        }
+      ],
+      "cost": 12.0
+    },
+    "10.0.0.2>10.0.0.6": {
+      "path": [
+        2,
+        6
+      ],
+      "outputs": [
+        {
+          "dpid": 2,
+          "output_port": 6
+        },
+        {
+          "dpid": 6,
+          "output_port": 1
+        }
+      ],
+      "cost": 14.0
+    },
+    "10.0.0.3>10.0.0.1": {
+      "path": [
+        3,
+        2,
+        1
+      ],
+      "outputs": [
+        {
+          "dpid": 3,
+          "output_port": 2
+        },
+        {
+          "dpid": 2,
+          "output_port": 2
+        },
+        {
+          "dpid": 1,
+          "output_port": 1
+        }
+      ],
+      "cost": 15.0
+    },
+    "10.0.0.3>10.0.0.2": {
+      "path": [
+        3,
+        2
+      ],
+      "outputs": [
+        {
+          "dpid": 3,
+          "output_port": 2
+        },
+        {
+          "dpid": 2,
+          "output_port": 1
+        }
+      ],
+      "cost": 10.0
+    },
+    "10.0.0.3>10.0.0.4": {
+      "path": [
+        3,
+        2,
+        4
+      ],
+      "outputs": [
+        {
+          "dpid": 3,
+          "output_port": 2
+        },
+        {
+          "dpid": 2,
+          "output_port": 5
+        },
+        {
+          "dpid": 4,
+          "output_port": 1
+        }
+      ],
+      "cost": 16.0
+    },
+    "10.0.0.3>10.0.0.5": {
+      "path": [
+        3,
+        5
+      ],
+      "outputs": [
+        {
+          "dpid": 3,
+          "output_port": 4
+        },
+        {
+          "dpid": 5,
+          "output_port": 1
+        }
+      ],
+      "cost": 9.0
+    },
+    "10.0.0.3>10.0.0.6": {
+      "path": [
+        3,
+        6
+      ],
+      "outputs": [
+        {
+          "dpid": 3,
+          "output_port": 3
+        },
+        {
+          "dpid": 6,
+          "output_port": 1
+        }
+      ],
+      "cost": 7.0
+    },
+    "10.0.0.4>10.0.0.1": {
+      "path": [
+        4,
+        1
+      ],
+      "outputs": [
+        {
+          "dpid": 4,
+          "output_port": 3
+        },
+        {
+          "dpid": 1,
+          "output_port": 1
+        }
+      ],
+      "cost": 8.0
+    },
+    "10.0.0.4>10.0.0.2": {
+      "path": [
+        4,
+        2
+      ],
+      "outputs": [
+        {
+          "dpid": 4,
+          "output_port": 4
+        },
+        {
+          "dpid": 2,
+          "output_port": 1
+        }
+      ],
+      "cost": 6.0
+    },
+    "10.0.0.4>10.0.0.3": {
+      "path": [
+        4,
+        2,
+        3
+      ],
+      "outputs": [
+        {
+          "dpid": 4,
+          "output_port": 4
+        },
+        {
+          "dpid": 2,
+          "output_port": 3
+        },
+        {
+          "dpid": 3,
+          "output_port": 1
+        }
+      ],
+      "cost": 16.0
+    },
+    "10.0.0.4>10.0.0.5": {
+      "path": [
+        4,
+        5
+      ],
+      "outputs": [
+        {
+          "dpid": 4,
+          "output_port": 2
+        },
+        {
+          "dpid": 5,
+          "output_port": 1
+        }
+      ],
+      "cost": 15.0
+    },
+    "10.0.0.4>10.0.0.6": {
+      "path": [
+        4,
+        2,
+        6
+      ],
+      "outputs": [
+        {
+          "dpid": 4,
+          "output_port": 4
+        },
+        {
+          "dpid": 2,
+          "output_port": 6
+        },
+        {
+          "dpid": 6,
+          "output_port": 1
+        }
+      ],
+      "cost": 20.0
+    },
+    "10.0.0.5>10.0.0.1": {
+      "path": [
+        5,
+        2,
+        1
+      ],
+      "outputs": [
+        {
+          "dpid": 5,
+          "output_port": 4
+        },
+        {
+          "dpid": 2,
+          "output_port": 2
+        },
+        {
+          "dpid": 1,
+          "output_port": 1
+        }
+      ],
+      "cost": 17.0
+    },
+    "10.0.0.5>10.0.0.2": {
+      "path": [
+        5,
+        2
+      ],
+      "outputs": [
+        {
+          "dpid": 5,
+          "output_port": 4
+        },
+        {
+          "dpid": 2,
+          "output_port": 1
+        }
+      ],
+      "cost": 12.0
+    },
+    "10.0.0.5>10.0.0.3": {
+      "path": [
+        5,
+        3
+      ],
+      "outputs": [
+        {
+          "dpid": 5,
+          "output_port": 6
+        },
+        {
+          "dpid": 3,
+          "output_port": 1
+        }
+      ],
+      "cost": 9.0
+    },
+    "10.0.0.5>10.0.0.4": {
+      "path": [
+        5,
+        4
+      ],
+      "outputs": [
+        {
+          "dpid": 5,
+          "output_port": 2
+        },
+        {
+          "dpid": 4,
+          "output_port": 1
+        }
+      ],
+      "cost": 15.0
+    },
+    "10.0.0.5>10.0.0.6": {
+      "path": [
+        5,
+        3,
+        6
+      ],
+      "outputs": [
+        {
+          "dpid": 5,
+          "output_port": 6
+        },
+        {
+          "dpid": 3,
+          "output_port": 3
+        },
+        {
+          "dpid": 6,
+          "output_port": 1
+        }
+      ],
+      "cost": 16.0
+    },
+    "10.0.0.6>10.0.0.1": {
+      "path": [
+        6,
+        2,
+        1
+      ],
+      "outputs": [
+        {
+          "dpid": 6,
+          "output_port": 4
+        },
+        {
+          "dpid": 2,
+          "output_port": 2
+        },
+        {
+          "dpid": 1,
+          "output_port": 1
+        }
+      ],
+      "cost": 19.0
+    },
+    "10.0.0.6>10.0.0.2": {
+      "path": [
+        6,
+        2
+      ],
+      "outputs": [
+        {
+          "dpid": 6,
+          "output_port": 4
+        },
+        {
+          "dpid": 2,
+          "output_port": 1
+        }
+      ],
+      "cost": 14.0
+    },
+    "10.0.0.6>10.0.0.3": {
+      "path": [
+        6,
+        3
+      ],
+      "outputs": [
+        {
+          "dpid": 6,
+          "output_port": 3
+        },
+        {
+          "dpid": 3,
+          "output_port": 1
+        }
+      ],
+      "cost": 7.0
+    },
+    "10.0.0.6>10.0.0.4": {
+      "path": [
+        6,
+        2,
+        4
+      ],
+      "outputs": [
+        {
+          "dpid": 6,
+          "output_port": 4
+        },
+        {
+          "dpid": 2,
+          "output_port": 5
+        },
+        {
+          "dpid": 4,
+          "output_port": 1
+        }
+      ],
+      "cost": 20.0
+    },
+    "10.0.0.6>10.0.0.5": {
+      "path": [
+        6,
+        3,
+        5
+      ],
+      "outputs": [
+        {
+          "dpid": 6,
+          "output_port": 3
+        },
+        {
+          "dpid": 3,
+          "output_port": 4
+        },
+        {
+          "dpid": 5,
+          "output_port": 1
+        }
+      ],
+      "cost": 16.0
+    }
+  },
+  "host_assumption": "Fixed IP/MAC and switch port inventory; proxy ARP"
+}

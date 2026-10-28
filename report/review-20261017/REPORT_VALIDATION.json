@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "reports": {
+    "English": {
+      "path": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\report\\review-20261017\\CEG5101_CA2_Report_English.pdf",
+      "pages": 17,
+      "sha256": "e86f2bce5205903186a03dcd6f8dce5cd76e220dad7031525583023bf10846d2"
+    },
+    "Chinese": {
+      "path": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\report\\review-20261017\\CEG5101_CA2_Report_Chinese.pdf",
+      "pages": 17,
+      "sha256": "6801d60cef7fae47d8337efac07439d1bb9e039c7d215bcbbe5ee320216e2ff0"
+    }
+  },
+  "figures_copied_and_sha256_verified": 12,
+  "builder_sha256": "5a71a318726efb5be4fcb9ad69edd64357330dfee84c29146b66aaaf63ff3fbd",
+  "source_files_hashed": 20,
+  "html_image_references": "12 each, all exist",
+  "visual_review": {
+    "initial_all_pages_inspected": 34,
+    "final_unchanged_pixels": [
+      "Chinese-01.png",
+      "Chinese-02.png",
+      "Chinese-03.png",
+      "Chinese-05.png",
+      "Chinese-10.png",
+      "Chinese-11.png",
+      "Chinese-12.png",
+      "Chinese-13.png",
+      "Chinese-14.png",
+      "Chinese-15.png",
+      "Chinese-16.png",
+      "Chinese-17.png",
+      "English-01.png",
+      "English-02.png",
+      "English-03.png",
+      "English-05.png",
+      "English-06.png",
+      "English-10.png",
+      "English-11.png",
+      "English-12.png",
+      "English-13.png",
+      "English-14.png",
+      "English-15.png",
+      "English-17.png"
+    ],
+    "final_changed_pages_reinspected": [
+      "Chinese-04.png",
+      "Chinese-06.png",
+      "Chinese-07.png",
+      "Chinese-08.png",
+      "Chinese-09.png",
+      "English-04.png",
+      "English-07.png",
+      "English-08.png",
+      "English-09.png",
+      "English-16.png"
+    ],
+    "review": "Every page checked for layout and glyphs; no clipping, overflow, blank pages or missing glyphs observed"
+  },
+  "metadata": "Omitted at user request",
+  "pending": "Case C injection constraint requires instructional confirmation",
+  "network_experiments_started": false
+}

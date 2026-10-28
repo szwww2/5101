@@ -1,0 +1,12 @@
+Excerpt of terminal results pasted by the user; full live flow tables archived separately.
+
+mininet> sh ovs-ofctl -O OpenFlow13 dump-flows s2 "ip,nw_src=10.0.0.2"
+cookie=0xca230002, duration=9.233s, table=0, n_packets=478615, n_bytes=20101830, priority=5000,ip,nw_src=10.0.0.2 actions=drop
+cookie=0xca220001, duration=384s, table=0, n_packets=44190, n_bytes=1857100, priority=110,icmp,nw_src=10.0.0.2,nw_dst=10.0.0.6,icmp_type=8 actions=output:"s2-eth6"
+
+mininet> h2 ping -c 3 -W 1 10.0.0.6
+3 packets transmitted, 0 received, 100% packet loss, time 2044ms
+
+mininet> h1 ping -c 3 -W 1 10.0.0.6
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 98.743/98.934/99.175/0.179 ms

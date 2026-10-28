@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "B_trial_count": 3,
+  "A_trial_count": 1,
+  "C_trial_count": 1,
+  "B_frozen_input_hashes_verified": 24,
+  "copied_artifacts_sha256_verified": 32,
+  "B_loss_counts": [
+    43,
+    78,
+    22
+  ],
+  "receiver_bins_per_B_trial": 60,
+  "B_actual_routes_verified": "1-2-6 -> 1-2-3-6 -> 1-2-6 in each trial",
+  "visual_review": "Original scenario figures inspected previously and copied byte-identically; new three-trial plot inspected",
+  "metric_regression_tests_passed": 6,
+  "report_images_resolve": true,
+  "scope": "Task5 measurements, plots and analysis complete; whole-assignment report integration and C-condition confirmation pending"
+}

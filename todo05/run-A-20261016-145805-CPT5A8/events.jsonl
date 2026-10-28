@@ -1,0 +1,71 @@
+{"time": 1792133886.3679538, "event": "detection_parameters", "sample_interval_seconds": 1, "theta": 0.3, "multiplier": 3, "floor_pps": 2000, "warmup_samples": 5, "excluded_traffic": "ICMP echo replies", "block_scope": "IPv4 source; all switches", "recovery": "Cost/legitimate-route recovery preserves source block; restart each scenario"}
+{"time": 1792133886.391002, "event": "cost_parameters", "capacity_bps": 40000000, "alpha": 5, "beta": 60, "minimum_hold_seconds": 8, "quiet_seconds": 5, "measurement": "Directed link rate from peer ingress rx_bytes; source tx_bytes also recorded", "routing": "Measured costs applied by versioned ReroutingController"}
+{"time": 1792133886.410266, "event": "routing_parameters", "scenario": "A", "improvement_margin": 1, "minimum_route_hold_seconds": 3, "old_version_retention_seconds": 5, "transition": "Prepare tagged downstream rules; barrier; switch untagged ingress; barrier; drain old version", "case_c_condition": null}
+{"time": 1792133887.9063106, "event": "switch_connected", "dpid": 6}
+{"time": 1792133887.9243093, "event": "switch_connected", "dpid": 3}
+{"time": 1792133887.9410505, "event": "switch_connected", "dpid": 5}
+{"time": 1792133887.9549675, "event": "switch_connected", "dpid": 1}
+{"time": 1792133887.9726417, "event": "switch_connected", "dpid": 2}
+{"time": 1792133887.9872417, "event": "switch_connected", "dpid": 4}
+{"time": 1792133890.411769, "event": "switch_connected", "dpid": 1}
+{"time": 1792133890.455016, "event": "switch_connected", "dpid": 2}
+{"time": 1792133890.5548823, "event": "switch_connected", "dpid": 3}
+{"time": 1792133890.5696404, "event": "switch_connected", "dpid": 4}
+{"time": 1792133890.5997777, "event": "switch_connected", "dpid": 5}
+{"time": 1792133890.6527517, "event": "switch_connected", "dpid": 6}
+{"time": 1792133890.7196755, "event": "route_prepare_confirmed", "keys": ["10.0.0.1>10.0.0.2", "10.0.0.1>10.0.0.3", "10.0.0.1>10.0.0.4", "10.0.0.1>10.0.0.5", "10.0.0.1>10.0.0.6", "10.0.0.2>10.0.0.1", "10.0.0.2>10.0.0.3", "10.0.0.2>10.0.0.4", "10.0.0.2>10.0.0.5", "10.0.0.2>10.0.0.6", "10.0.0.3>10.0.0.1", "10.0.0.3>10.0.0.2", "10.0.0.3>10.0.0.4", "10.0.0.3>10.0.0.5", "10.0.0.3>10.0.0.6", "10.0.0.4>10.0.0.1", "10.0.0.4>10.0.0.2", "10.0.0.4>10.0.0.3", "10.0.0.4>10.0.0.5", "10.0.0.4>10.0.0.6", "10.0.0.5>10.0.0.1", "10.0.0.5>10.0.0.2", "10.0.0.5>10.0.0.3", "10.0.0.5>10.0.0.4", "10.0.0.5>10.0.0.6", "10.0.0.6>10.0.0.1", "10.0.0.6>10.0.0.2", "10.0.0.6>10.0.0.3", "10.0.0.6>10.0.0.4", "10.0.0.6>10.0.0.5"]}
+{"time": 1792133890.745718, "event": "route_committed", "flow": "10.0.0.1>10.0.0.2", "old_path": null, "new_path": [1, 2], "old_cost": null, "new_cost": 5.0, "tag": 1, "generation": 1}
+{"time": 1792133890.7608106, "event": "route_committed", "flow": "10.0.0.1>10.0.0.3", "old_path": null, "new_path": [1, 2, 3], "old_cost": null, "new_cost": 15.0, "tag": 2, "generation": 1}
+{"time": 1792133890.784677, "event": "route_committed", "flow": "10.0.0.1>10.0.0.4", "old_path": null, "new_path": [1, 4], "old_cost": null, "new_cost": 8.0, "tag": 3, "generation": 1}
+{"time": 1792133890.7974298, "event": "route_committed", "flow": "10.0.0.1>10.0.0.5", "old_path": null, "new_path": [1, 2, 5], "old_cost": null, "new_cost": 17.0, "tag": 4, "generation": 1}
+{"time": 1792133890.8118823, "event": "route_committed", "flow": "10.0.0.1>10.0.0.6", "old_path": null, "new_path": [1, 2, 6], "old_cost": null, "new_cost": 19.0, "tag": 5, "generation": 1}
+{"time": 1792133890.831362, "event": "route_committed", "flow": "10.0.0.2>10.0.0.1", "old_path": null, "new_path": [2, 1], "old_cost": null, "new_cost": 5.0, "tag": 6, "generation": 1}
+{"time": 1792133890.8454487, "event": "route_committed", "flow": "10.0.0.2>10.0.0.3", "old_path": null, "new_path": [2, 3], "old_cost": null, "new_cost": 10.0, "tag": 7, "generation": 1}
+{"time": 1792133890.857881, "event": "route_committed", "flow": "10.0.0.2>10.0.0.4", "old_path": null, "new_path": [2, 4], "old_cost": null, "new_cost": 6.0, "tag": 8, "generation": 1}
+{"time": 1792133890.870195, "event": "route_committed", "flow": "10.0.0.2>10.0.0.5", "old_path": null, "new_path": [2, 5], "old_cost": null, "new_cost": 12.0, "tag": 9, "generation": 1}
+{"time": 1792133890.8836749, "event": "route_committed", "flow": "10.0.0.2>10.0.0.6", "old_path": null, "new_path": [2, 6], "old_cost": null, "new_cost": 14.0, "tag": 10, "generation": 1}
+{"time": 1792133890.8983524, "event": "route_committed", "flow": "10.0.0.3>10.0.0.1", "old_path": null, "new_path": [3, 2, 1], "old_cost": null, "new_cost": 15.0, "tag": 11, "generation": 1}
+{"time": 1792133890.9089665, "event": "route_committed", "flow": "10.0.0.3>10.0.0.2", "old_path": null, "new_path": [3, 2], "old_cost": null, "new_cost": 10.0, "tag": 12, "generation": 1}
+{"time": 1792133890.9230688, "event": "route_committed", "flow": "10.0.0.3>10.0.0.4", "old_path": null, "new_path": [3, 2, 4], "old_cost": null, "new_cost": 16.0, "tag": 13, "generation": 1}
+{"time": 1792133890.9343836, "event": "route_committed", "flow": "10.0.0.3>10.0.0.5", "old_path": null, "new_path": [3, 5], "old_cost": null, "new_cost": 9.0, "tag": 14, "generation": 1}
+{"time": 1792133890.9478767, "event": "route_committed", "flow": "10.0.0.3>10.0.0.6", "old_path": null, "new_path": [3, 6], "old_cost": null, "new_cost": 7.0, "tag": 15, "generation": 1}
+{"time": 1792133890.9658942, "event": "route_committed", "flow": "10.0.0.4>10.0.0.1", "old_path": null, "new_path": [4, 1], "old_cost": null, "new_cost": 8.0, "tag": 16, "generation": 1}
+{"time": 1792133890.9843347, "event": "route_committed", "flow": "10.0.0.4>10.0.0.2", "old_path": null, "new_path": [4, 2], "old_cost": null, "new_cost": 6.0, "tag": 17, "generation": 1}
+{"time": 1792133890.9970064, "event": "route_committed", "flow": "10.0.0.4>10.0.0.3", "old_path": null, "new_path": [4, 2, 3], "old_cost": null, "new_cost": 16.0, "tag": 18, "generation": 1}
+{"time": 1792133891.0106738, "event": "route_committed", "flow": "10.0.0.4>10.0.0.5", "old_path": null, "new_path": [4, 5], "old_cost": null, "new_cost": 15.0, "tag": 19, "generation": 1}
+{"time": 1792133891.025493, "event": "route_committed", "flow": "10.0.0.4>10.0.0.6", "old_path": null, "new_path": [4, 2, 6], "old_cost": null, "new_cost": 20.0, "tag": 20, "generation": 1}
+{"time": 1792133891.0423844, "event": "route_committed", "flow": "10.0.0.5>10.0.0.1", "old_path": null, "new_path": [5, 2, 1], "old_cost": null, "new_cost": 17.0, "tag": 21, "generation": 1}
+{"time": 1792133891.0648513, "event": "route_committed", "flow": "10.0.0.5>10.0.0.2", "old_path": null, "new_path": [5, 2], "old_cost": null, "new_cost": 12.0, "tag": 22, "generation": 1}
+{"time": 1792133891.0828886, "event": "route_committed", "flow": "10.0.0.5>10.0.0.3", "old_path": null, "new_path": [5, 3], "old_cost": null, "new_cost": 9.0, "tag": 23, "generation": 1}
+{"time": 1792133891.0981448, "event": "route_committed", "flow": "10.0.0.5>10.0.0.4", "old_path": null, "new_path": [5, 4], "old_cost": null, "new_cost": 15.0, "tag": 24, "generation": 1}
+{"time": 1792133891.1098404, "event": "route_committed", "flow": "10.0.0.5>10.0.0.6", "old_path": null, "new_path": [5, 3, 6], "old_cost": null, "new_cost": 16.0, "tag": 25, "generation": 1}
+{"time": 1792133891.1221886, "event": "route_committed", "flow": "10.0.0.6>10.0.0.1", "old_path": null, "new_path": [6, 2, 1], "old_cost": null, "new_cost": 19.0, "tag": 26, "generation": 1}
+{"time": 1792133891.1352232, "event": "route_committed", "flow": "10.0.0.6>10.0.0.2", "old_path": null, "new_path": [6, 2], "old_cost": null, "new_cost": 14.0, "tag": 27, "generation": 1}
+{"time": 1792133891.1499662, "event": "route_committed", "flow": "10.0.0.6>10.0.0.3", "old_path": null, "new_path": [6, 3], "old_cost": null, "new_cost": 7.0, "tag": 28, "generation": 1}
+{"time": 1792133891.1635687, "event": "route_committed", "flow": "10.0.0.6>10.0.0.4", "old_path": null, "new_path": [6, 2, 4], "old_cost": null, "new_cost": 20.0, "tag": 29, "generation": 1}
+{"time": 1792133891.1758447, "event": "route_committed", "flow": "10.0.0.6>10.0.0.5", "old_path": null, "new_path": [6, 3, 5], "old_cost": null, "new_cost": 16.0, "tag": 30, "generation": 1}
+{"time": 1792134025.6941538, "event": "block", "source": "10.0.0.2", "pps": 16455.58050152628, "old_ema_pps": 0.009752300084201979, "new_ema_pps": 0.009752300084201979, "threshold_pps": 2000, "samples": 131, "warmed": true, "blocked": true, "newly_blocked": true, "dpid": 2, "destination": "10.0.0.3", "forward_pps": 16455.58050152628, "drop_pps": 0.0, "forward_bps": 5529075.0485128295, "drop_bps": 0.0, "attack_path": [2, 3]}
+{"time": 1792134025.7108693, "event": "penalty_added", "source": "10.0.0.2", "path": [2, 3], "beta": 60}
+{"time": 1792134025.8377233, "event": "route_prepare_confirmed", "keys": ["10.0.0.1>10.0.0.3", "10.0.0.4>10.0.0.3"]}
+{"time": 1792134025.854843, "event": "route_committed", "flow": "10.0.0.1>10.0.0.3", "old_path": [1, 2, 3], "new_path": [1, 5, 3], "old_cost": 77.3708764180236, "new_cost": 27.0, "tag": 31, "generation": 2}
+{"time": 1792134025.868172, "event": "route_committed", "flow": "10.0.0.4>10.0.0.3", "old_path": [4, 2, 3], "new_path": [4, 5, 3], "old_cost": 77.0855103321221, "new_cost": 24.0, "tag": 32, "generation": 2}
+{"time": 1792134030.8919015, "event": "old_version_removed", "tag": 2}
+{"time": 1792134030.9168036, "event": "old_version_removed", "tag": 18}
+{"time": 1792134044.917436, "event": "penalty_restored", "source": "10.0.0.2", "reason": "Minimum hold passed and ingress drop counter quiet for 5 seconds"}
+{"time": 1792134045.039881, "event": "route_prepare_confirmed", "keys": ["10.0.0.1>10.0.0.3", "10.0.0.4>10.0.0.3"]}
+{"time": 1792134045.0546088, "event": "route_committed", "flow": "10.0.0.1>10.0.0.3", "old_path": [1, 5, 3], "new_path": [1, 2, 3], "old_cost": 27.000060903923487, "new_cost": 16.323583383831682, "tag": 2, "generation": 3}
+{"time": 1792134045.0693877, "event": "route_committed", "flow": "10.0.0.4>10.0.0.3", "old_path": [4, 5, 3], "new_path": [4, 2, 3], "old_cost": 24.000060903923483, "new_cost": 16.0, "tag": 18, "generation": 3}
+{"time": 1792134050.1415696, "event": "old_version_removed", "tag": 31}
+{"time": 1792134050.157285, "event": "old_version_removed", "tag": 32}
+{"time": 1792134076.5247056, "event": "penalty_reactivated", "source": "10.0.0.2", "reason": "New packets at blocked source ingress; retain previously observed attack path"}
+{"time": 1792134076.6769285, "event": "route_prepare_confirmed", "keys": ["10.0.0.1>10.0.0.3", "10.0.0.4>10.0.0.3"]}
+{"time": 1792134076.694204, "event": "route_committed", "flow": "10.0.0.1>10.0.0.3", "old_path": [1, 2, 3], "new_path": [1, 2, 6, 3], "old_cost": 75.00005934976093, "new_cost": 26.00005934976093, "tag": 31, "generation": 4}
+{"time": 1792134076.7139657, "event": "route_committed", "flow": "10.0.0.4>10.0.0.3", "old_path": [4, 2, 3], "new_path": [4, 5, 3], "old_cost": 76.0001186980004, "new_cost": 24.000118700968137, "tag": 32, "generation": 4}
+{"time": 1792134081.9544969, "event": "old_version_removed", "tag": 2}
+{"time": 1792134081.9722142, "event": "old_version_removed", "tag": 18}
+{"time": 1792134084.6764886, "event": "penalty_restored", "source": "10.0.0.2", "reason": "Minimum hold passed and ingress drop counter quiet for 5 seconds"}
+{"time": 1792134084.8802025, "event": "route_prepare_confirmed", "keys": ["10.0.0.1>10.0.0.3", "10.0.0.4>10.0.0.3"]}
+{"time": 1792134084.8990924, "event": "route_committed", "flow": "10.0.0.1>10.0.0.3", "old_path": [1, 2, 6, 3], "new_path": [1, 2, 3], "old_cost": 26.000173825094343, "new_cost": 15.000057951605744, "tag": 2, "generation": 5}
+{"time": 1792134084.9157858, "event": "route_committed", "flow": "10.0.0.4>10.0.0.3", "old_path": [4, 5, 3], "new_path": [4, 2, 3], "old_cost": 24.00005794775818, "new_cost": 16.0, "tag": 18, "generation": 5}
+{"time": 1792134090.1645937, "event": "old_version_removed", "tag": 31}
+{"time": 1792134090.1885872, "event": "old_version_removed", "tag": 32}

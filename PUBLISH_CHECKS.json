@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-28",
+  "source_files_checked": 256,
+  "unchanged_algorithm_files": [
+    "baseline_controller.py",
+    "traffic_stats.py",
+    "anomaly_controller.py",
+    "link_costs.py",
+    "dynamic_cost_controller.py",
+    "rerouting_controller.py"
+  ],
+  "offline_unit_tests": {
+    "passed": 19,
+    "failed": 0
+  },
+  "shell_syntax_checks": 7,
+  "prerequisite_check": "PASS on original Ubuntu 22.04 environment",
+  "historical_three_case_plot_regeneration": "PASS",
+  "historical_B_repeat_regeneration": "PASS",
+  "new_isolated_integration": {
+    "scope": "Publication checkout validation, not a new student trial",
+    "status": "PASS",
+    "case": "B",
+    "initial_path": [
+      1,
+      2,
+      6
+    ],
+    "during_path": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "recovered_path": [
+      1,
+      2,
+      6
+    ],
+    "bridges_preserved": true,
+    "receiver_mbps": 9.99,
+    "lost": 37,
+    "total": 51024
+  },
+  "limitations": [
+    "Fresh-machine dependency installation was not repeated",
+    "Virtual-display branch documented but this check used existing WSLg DISPLAY",
+    "New independent validation is excluded from the historical student performance statistics"
+  ]
+}

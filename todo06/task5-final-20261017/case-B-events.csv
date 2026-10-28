@@ -1,0 +1,6 @@
+﻿seconds,event,source,old_path,new_path
+12.783638954162598,block,10.0.0.2,,
+12.79934048652649,penalty_added,10.0.0.2,,
+12.959541082382202,route_committed,,"[1, 2, 6]","[1, 2, 3, 6]"
+32.11329364776611,penalty_restored,10.0.0.2,,
+32.15197992324829,route_committed,,"[1, 2, 3, 6]","[1, 2, 6]"

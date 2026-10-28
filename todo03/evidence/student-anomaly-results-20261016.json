@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "run": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo03/run-20261016-110058-l1Y3aJ",
+  "blocked": [
+    "10.0.0.2"
+  ],
+  "block_events": [
+    {
+      "time": 1792120047.4133537,
+      "event": "block",
+      "source": "10.0.0.2",
+      "pps": 13339.815061862535,
+      "old_ema_pps": 1.3836557838635406E-53,
+      "new_ema_pps": 1.3836557838635406E-53,
+      "threshold_pps": 2000,
+      "samples": 363,
+      "warmed": true,
+      "blocked": true,
+      "newly_blocked": true,
+      "dpid": 2,
+      "destination": "10.0.0.6",
+      "forward_pps": 13339.815061862535,
+      "drop_pps": 0.0,
+      "forward_bps": 4482177.860785812,
+      "drop_bps": 0.0,
+      "attack_path": [
+        2,
+        6
+      ]
+    }
+  ],
+  "matching_background_ping_stopped": [
+    8450
+  ],
+  "archive": {
+    "legitimate-h1-ping-during-anomaly-20261016.log": {
+      "sha256": "70b3fffa622a791a78d64ffcedb543de071c618d5538efb4636de5b06035090c",
+      "bytes": 22544
+    },
+    "h2-flood-20261016.log": {
+      "sha256": "1a3c056f76d935316e437a68d3f0bbf77b3419aa26b27e86875b204b5752dd77",
+      "bytes": 262
+    },
+    "controller-events-after-block-20261016.jsonl": {
+      "sha256": "b8838c30a3d2ea7e037fb7126f8e504f3320a59a2b9ab848e2485ae4eef4fe41",
+      "bytes": 1353
+    },
+    "source-rates-after-block-20261016.jsonl": {
+      "sha256": "b7514078dcf7ccc6c879e4b289ad217883c886e731907f41b815043ce6021fb0",
+      "bytes": 946410
+    },
+    "anomaly-state-after-block-20261016.json": {
+      "sha256": "b7d7e59c2187efdbabadd11da97825c36191bd913f87e4a4ebb9e5b015be849a",
+      "bytes": 3455
+    },
+    "routing-state-after-block-20261016.json": {
+      "sha256": "3eaf475119b0e1aca5eb8fc35d79fb4a99117334545f6ee7ca55bdc7045c3d41",
+      "bytes": 10904
+    }
+  },
+  "user_reported_ingress_drop_packets": 478615,
+  "user_reported_blocked_h2_ping": {
+    "transmitted": 3,
+    "received": 0,
+    "loss_percent": 100
+  },
+  "user_reported_legal_h1_ping": {
+    "transmitted": 3,
+    "received": 3,
+    "loss_percent": 0,
+    "rtt_avg_ms": 98.934
+  },
+  "continuous_legal_ping": {
+    "transmitted": 293,
+    "received": 292,
+    "loss_percent": 0.341297,
+    "missing_reply_sequences": [
+      9
+    ],
+    "observation_duration_ms": 146286,
+    "rtt_average_ms": 100.223,
+    "window_scope": "Entire background observation, not only the 8-second flood"
+  },
+  "current_ingress_drop_packets_at_archive": 478618
+}

@@ -1,0 +1,18 @@
+* -text
+*.py -text
+*.sh text eol=lf
+*.md -text
+*.json -text
+*.jsonl -text
+*.csv -text
+*.log -text
+*.mn -text
+*.pdf binary
+*.png binary
+*.gz binary
+*.svg -text
+# Historical evidence and upstream MiniEdit are preserved byte for byte.
+todo*/** -whitespace
+report/** -whitespace
+third_party/** -whitespace
+miniedit_compat.py -whitespace

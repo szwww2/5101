@@ -1,0 +1,444 @@
+{
+  "scope": "One student trial per scenario; source observations, no synthetic measurements or repeated-trial confidence intervals",
+  "normalization": "Directed link cost divided by its original fixed base cost: A/10, B/14, C/20",
+  "measurement": "UDP receiver loss=100*lost/total; Mbps from receiver iperf report, rounded at source; per-second data not smoothed",
+  "cases": {
+    "A": {
+      "case": "A",
+      "label": "h2 -> h3",
+      "run": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo05/run-A-20261016-145805-CPT5A8",
+      "target_edge": "2>3",
+      "base_cost": 10,
+      "origin": 1792134013.1750467,
+      "clock_quality": "sender-launch timestamp",
+      "scheduled_attack_on": 12.001190662384033,
+      "scheduled_attack_off": 26.001190662384033,
+      "timeout_note": "Off marker is the planned 14-second timeout; actual process exit was not timestamped",
+      "receiver_alignment": "Receiver bins start at first UDP datagram; overlaid against sender-launch clock at about one-second resolution. No sub-second synchronization claim.",
+      "events": [
+        {
+          "time": 1792134025.6941538,
+          "event": "block",
+          "source": "10.0.0.2",
+          "pps": 16455.58050152628,
+          "old_ema_pps": 0.009752300084201979,
+          "new_ema_pps": 0.009752300084201979,
+          "threshold_pps": 2000,
+          "samples": 131,
+          "warmed": true,
+          "blocked": true,
+          "newly_blocked": true,
+          "dpid": 2,
+          "destination": "10.0.0.3",
+          "forward_pps": 16455.58050152628,
+          "drop_pps": 0.0,
+          "forward_bps": 5529075.0485128295,
+          "drop_bps": 0.0,
+          "attack_path": [
+            2,
+            3
+          ],
+          "seconds": 12.519107103347778
+        },
+        {
+          "time": 1792134025.7108693,
+          "event": "penalty_added",
+          "source": "10.0.0.2",
+          "path": [
+            2,
+            3
+          ],
+          "beta": 60,
+          "seconds": 12.535822629928589
+        },
+        {
+          "time": 1792134044.917436,
+          "event": "penalty_restored",
+          "source": "10.0.0.2",
+          "reason": "Minimum hold passed and ingress drop counter quiet for 5 seconds",
+          "seconds": 31.74238920211792
+        }
+      ],
+      "metrics": {
+        "receiver_mbps_reported": 10.0,
+        "lost": 0,
+        "total": 51024,
+        "whole_loss_percent": 0.0,
+        "printed_whole_loss_percent": 0.0,
+        "interval_total": 51022,
+        "interval_loss_percent": 0.0,
+        "min_one_second_mbps": 9.97,
+        "max_one_second_loss_percent": 0.0,
+        "receiver_mean_one_second_mbps": 9.998833333333334,
+        "min_normalized_cost": 1.0,
+        "max_normalized_cost": 7.108545191400298,
+        "block_seconds": 12.519107103347778,
+        "penalty_restored_seconds": 31.74238920211792,
+        "initial_path": [
+          1,
+          2,
+          6
+        ],
+        "during_path": [
+          1,
+          2,
+          6
+        ],
+        "recovered_path": [
+          1,
+          2,
+          6
+        ],
+        "source_drop_packets": 905435,
+        "windows": {
+          "before": {
+            "start_seconds": 4,
+            "end_seconds": 10,
+            "intervals": 6,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 5102
+          },
+          "during": {
+            "start_seconds": 15,
+            "end_seconds": 24,
+            "intervals": 9,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 7653
+          },
+          "after": {
+            "start_seconds": 40,
+            "end_seconds": 55,
+            "intervals": 15,
+            "receiver_mbps": 9.997333333333334,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 12756
+          }
+        },
+        "ping_sent": 121,
+        "ping_received": 120,
+        "ping_loss_percent": 0.826446
+      },
+      "provenance": {
+        "todo05/run-A-20261016-145805-CPT5A8/results.json": "8c053af5cd7749be4c3643ebe1259f1cea683df2e70b82e9ee8f942b24b69692",
+        "todo05/run-A-20261016-145805-CPT5A8/sender.log": "bfb83fa78fcf142e48febf3fe6c8ffd992ae90e4639d3ac3d592a577137ce378",
+        "todo05/run-A-20261016-145805-CPT5A8/receiver.log": "724cb3412cce322ec4f3bffe56b3cea9c1b6ecc192488d0aca0394ea072bfb0d",
+        "todo05/run-A-20261016-145805-CPT5A8/continuous-ping.log": "eafc251ef736754748ac728709f1949e1635da2f3fc5edf176a8ff6ee517f791",
+        "todo05/run-A-20261016-145805-CPT5A8/dataplane-samples.jsonl": "b35009b9936e1659b2496f386f57799a84e940250ba36b6ac17dc1c5d37a500a",
+        "todo05/run-A-20261016-145805-CPT5A8/link-costs.jsonl": "e41773720e797ced55710900ac77996c380e47caeb92b39a3f83c84cfeecd0e8",
+        "todo05/run-A-20261016-145805-CPT5A8/evidence/events-at-final-review.jsonl": "b3545efbc771b9032730a13be1045f147875bcc005b6d37065fcc125f63dcdbc",
+        "todo05/run-A-20261016-145805-CPT5A8/evidence/student-A-reviewed-results.json": "cb4e67da3e3522a38e6d4af2fad31eccfd15ad47a0bc3db61337433836d52767"
+      }
+    },
+    "B": {
+      "case": "B",
+      "label": "h2 -> h6",
+      "run": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo05/run-B-20261016-144402-YuFNPf",
+      "target_edge": "2>6",
+      "base_cost": 14,
+      "origin": 1792133212.6221352,
+      "clock_quality": "estimated from sample timestamps; sub-second bias unknown",
+      "scheduled_attack_on": 12.0,
+      "scheduled_attack_off": 26.0,
+      "timeout_note": "Off marker is the planned 14-second timeout; actual process exit was not timestamped",
+      "receiver_alignment": "Receiver bins start at first UDP datagram; overlaid against sender-launch clock at about one-second resolution. No sub-second synchronization claim.",
+      "events": [
+        {
+          "time": 1792133225.405774,
+          "event": "block",
+          "source": "10.0.0.2",
+          "pps": 36017.86274391134,
+          "old_ema_pps": 0.00901623620278144,
+          "new_ema_pps": 0.00901623620278144,
+          "threshold_pps": 2000,
+          "samples": 170,
+          "warmed": true,
+          "blocked": true,
+          "newly_blocked": true,
+          "dpid": 2,
+          "destination": "10.0.0.6",
+          "forward_pps": 36017.86274391134,
+          "drop_pps": 0.0,
+          "forward_bps": 12102001.881954212,
+          "drop_bps": 0.0,
+          "attack_path": [
+            2,
+            6
+          ],
+          "seconds": 12.783638954162598
+        },
+        {
+          "time": 1792133225.4214756,
+          "event": "penalty_added",
+          "source": "10.0.0.2",
+          "path": [
+            2,
+            6
+          ],
+          "beta": 60,
+          "seconds": 12.79934048652649
+        },
+        {
+          "time": 1792133225.5816762,
+          "event": "route_committed",
+          "flow": "10.0.0.1>10.0.0.6",
+          "old_path": [
+            1,
+            2,
+            6
+          ],
+          "new_path": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "old_cost": 83.41044534925446,
+          "new_cost": 23.283855239133914,
+          "tag": 31,
+          "generation": 2,
+          "seconds": 12.959541082382202
+        },
+        {
+          "time": 1792133244.7354288,
+          "event": "penalty_restored",
+          "source": "10.0.0.2",
+          "reason": "Minimum hold passed and ingress drop counter quiet for 5 seconds",
+          "seconds": 32.11329364776611
+        },
+        {
+          "time": 1792133244.774115,
+          "event": "route_committed",
+          "flow": "10.0.0.1>10.0.0.6",
+          "old_path": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "new_path": [
+            1,
+            2,
+            6
+          ],
+          "old_cost": 25.868080578334087,
+          "new_cost": 20.285971135394846,
+          "tag": 5,
+          "generation": 3,
+          "seconds": 32.15197992324829
+        }
+      ],
+      "metrics": {
+        "receiver_mbps_reported": 9.99,
+        "lost": 43,
+        "total": 51024,
+        "whole_loss_percent": 0.08427406710567575,
+        "printed_whole_loss_percent": 0.084,
+        "interval_total": 51021,
+        "interval_loss_percent": 0.08427902236334059,
+        "min_one_second_mbps": 9.47,
+        "max_one_second_loss_percent": 5.070754716981132,
+        "receiver_mean_one_second_mbps": 9.991166666666667,
+        "min_normalized_cost": 1.0,
+        "max_normalized_cost": 5.509046374252662,
+        "block_seconds": 12.783638954162598,
+        "penalty_restored_seconds": 32.11329364776611,
+        "initial_path": [
+          1,
+          2,
+          6
+        ],
+        "during_path": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "recovered_path": [
+          1,
+          2,
+          6
+        ],
+        "source_drop_packets": 888103,
+        "windows": {
+          "before": {
+            "start_seconds": 4,
+            "end_seconds": 10,
+            "intervals": 6,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 5103
+          },
+          "during": {
+            "start_seconds": 15,
+            "end_seconds": 24,
+            "intervals": 9,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 7655
+          },
+          "after": {
+            "start_seconds": 40,
+            "end_seconds": 55,
+            "intervals": 15,
+            "receiver_mbps": 9.996666666666666,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 12756
+          }
+        },
+        "ping_sent": 121,
+        "ping_received": 120,
+        "ping_loss_percent": 0.826446
+      },
+      "provenance": {
+        "todo05/run-B-20261016-144402-YuFNPf/results.json": "acf5b60ab30cac2daf8d54ed8911280727e113d853df0ba67731d61db4467973",
+        "todo05/run-B-20261016-144402-YuFNPf/sender.log": "7f3b6822cf4ba1eec9f3b9d1031b078752819e3e0e018cd15c736e59cf7cdae8",
+        "todo05/run-B-20261016-144402-YuFNPf/receiver.log": "e67c97772d5ad4f6c3148866773043ab867d3361b8eb0a8dfb4c6c94f2969660",
+        "todo05/run-B-20261016-144402-YuFNPf/continuous-ping.log": "458a6b032e3846a4a24c29aba880fbacd7b3af060d3a198d38857fff3cb0e504",
+        "todo05/run-B-20261016-144402-YuFNPf/dataplane-samples.jsonl": "d54060d9eb1cc93938b6f46eb352498467877c797e7819cedf10d03650698a0e",
+        "todo05/run-B-20261016-144402-YuFNPf/link-costs.jsonl": "da25339acd288118e931276068494bb3c683b65430490fc68f76de735368477c",
+        "todo05/run-B-20261016-144402-YuFNPf/evidence/events-at-offline-review.jsonl": "8cec018e96dd040359158cca1265b57662cd93482243a4fbdf4193add50dba00",
+        "todo05/run-B-20261016-144402-YuFNPf/evidence/student-B-reviewed-results.json": "1c3b54d20031ace1aaad29d8301a66f6ad19a8a348104eccfaa4477f783575dd"
+      }
+    },
+    "C": {
+      "case": "C",
+      "label": "h5 -> h6; direct link pinned",
+      "run": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo05/run-C-20261016-153103-Ho9Y7P",
+      "target_edge": "5>6",
+      "base_cost": 20,
+      "origin": 1792135995.4239888,
+      "clock_quality": "sender-launch timestamp",
+      "scheduled_attack_on": 12.002792596817017,
+      "scheduled_attack_off": 26.002792596817017,
+      "timeout_note": "Off marker is the planned 14-second timeout; actual process exit was not timestamped",
+      "receiver_alignment": "Receiver bins start at first UDP datagram; overlaid against sender-launch clock at about one-second resolution. No sub-second synchronization claim.",
+      "events": [
+        {
+          "time": 1792136008.2914703,
+          "event": "block",
+          "source": "10.0.0.5",
+          "pps": 25340.75646603012,
+          "old_ema_pps": 0.01769450836890914,
+          "new_ema_pps": 0.01769450836890914,
+          "threshold_pps": 2000,
+          "samples": 138,
+          "warmed": true,
+          "blocked": true,
+          "newly_blocked": true,
+          "dpid": 5,
+          "destination": "10.0.0.6",
+          "forward_pps": 25340.75646603012,
+          "drop_pps": 0.0,
+          "forward_bps": 8514494.17258612,
+          "drop_bps": 0.0,
+          "attack_path": [
+            5,
+            6
+          ],
+          "seconds": 12.867481470108032
+        },
+        {
+          "time": 1792136008.3084733,
+          "event": "penalty_added",
+          "source": "10.0.0.5",
+          "path": [
+            5,
+            6
+          ],
+          "beta": 60,
+          "seconds": 12.88448452949524
+        },
+        {
+          "time": 1792136027.6525111,
+          "event": "penalty_restored",
+          "source": "10.0.0.5",
+          "reason": "Minimum hold passed and ingress drop counter quiet for 5 seconds",
+          "seconds": 32.228522300720215
+        }
+      ],
+      "metrics": {
+        "receiver_mbps_reported": 10.0,
+        "lost": 0,
+        "total": 51024,
+        "whole_loss_percent": 0.0,
+        "printed_whole_loss_percent": 0.0,
+        "interval_total": 51023,
+        "interval_loss_percent": 0.0,
+        "min_one_second_mbps": 9.96,
+        "max_one_second_loss_percent": 0.0,
+        "receiver_mean_one_second_mbps": 9.997666666666667,
+        "min_normalized_cost": 1.0,
+        "max_normalized_cost": 4.057331533146483,
+        "block_seconds": 12.867481470108032,
+        "penalty_restored_seconds": 32.228522300720215,
+        "initial_path": [
+          1,
+          2,
+          6
+        ],
+        "during_path": [
+          1,
+          2,
+          6
+        ],
+        "recovered_path": [
+          1,
+          2,
+          6
+        ],
+        "source_drop_packets": 898283,
+        "windows": {
+          "before": {
+            "start_seconds": 4,
+            "end_seconds": 10,
+            "intervals": 6,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 5102
+          },
+          "during": {
+            "start_seconds": 15,
+            "end_seconds": 24,
+            "intervals": 9,
+            "receiver_mbps": 9.995555555555557,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 7653
+          },
+          "after": {
+            "start_seconds": 40,
+            "end_seconds": 55,
+            "intervals": 15,
+            "receiver_mbps": 9.997333333333334,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 12755
+          }
+        },
+        "ping_sent": 121,
+        "ping_received": 120,
+        "ping_loss_percent": 0.826446
+      },
+      "provenance": {
+        "todo05/run-C-20261016-153103-Ho9Y7P/results.json": "a4164f8699a527cad77a9e8b9a7368d4306f6b4e2d9719bc73051124f0b27eab",
+        "todo05/run-C-20261016-153103-Ho9Y7P/sender.log": "3bdd7201395163c283d8a087790d91546a7ffdb0e509ea7b8aacd2a65cce245c",
+        "todo05/run-C-20261016-153103-Ho9Y7P/receiver.log": "40a771794af2b41e77f54155a865ff52f125e6697dc5b531e6c5f626ed918711",
+        "todo05/run-C-20261016-153103-Ho9Y7P/continuous-ping.log": "8f8cf8b13438db0481d59a135adbd8408da95efbf09072f749bfc47327c270b6",
+        "todo05/run-C-20261016-153103-Ho9Y7P/dataplane-samples.jsonl": "b9939db25f0836138c6fae4645bfb6041bbb42778fef3f0d9d68a2b3ae94d84a",
+        "todo05/run-C-20261016-153103-Ho9Y7P/link-costs.jsonl": "9aeb725bdbdcf73a199913857727d972a3f7db3fcd8678b5d332e0793cafec9c",
+        "todo05/run-C-20261016-153103-Ho9Y7P/evidence/events-at-final-review.jsonl": "b6fd9762d029b34f358b9dba4d25e99ff13ed5ed6806c4210a34e8b1f9e43bbc",
+        "todo05/run-C-20261016-153103-Ho9Y7P/evidence/student-C-reviewed-results.json": "d8057b9239caab61c5beb4e3cd8b866bf4fc334952b1004287d279bb9453c9df"
+      }
+    }
+  },
+  "analysis_source_sha256": "da8988e9a18382a2bc547eef6e7d0beb44e815a54a6dc6e03cae33325818c88d"
+}

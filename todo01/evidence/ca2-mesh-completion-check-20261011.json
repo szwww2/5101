@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "saved_topology": "/home/robot/CEG5101/todo01/ca2-mesh-my.mn",
+  "archive": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo01/ca2-mesh-my.mn",
+  "sha256": "d304e074e96852d38e6ec011ca98c74de6b248bf55c59d0c54fefbb34fe6a77c",
+  "saved_parameters_match_prepared": true,
+  "miniedit_hidden_load": {
+    "hosts": 6,
+    "switches": 6,
+    "data_links": 17
+  },
+  "actual_switch_ports": 28,
+  "switch_link_directions_verified": 22,
+  "host_attachment_evidence": "User net screenshot and saved topology",
+  "student_pingall": {
+    "received": 30,
+    "total": 30,
+    "loss_percent": 0
+  },
+  "student_h1_h6_ping": {
+    "received": 5,
+    "total": 5,
+    "loss_percent": 0,
+    "rtt_avg_ms": 99.038
+  },
+  "runtime_untouched": true
+}

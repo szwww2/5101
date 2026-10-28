@@ -1,0 +1,12 @@
+{
+  "n": 3,
+  "mean_whole_loss_percent": 0.09342008989233824,
+  "sample_standard_deviation_percentage_points": 0.05544481653788739,
+  "min_whole_loss_percent": 0.043116964565694575,
+  "max_whole_loss_percent": 0.1528692380056444,
+  "pooled_lost": 143,
+  "pooled_total": 153072,
+  "pooled_loss_percent": 0.09342008989233824,
+  "all_rerouted_and_recovered": true,
+  "inference_limit": "Three observed repeats only; descriptive statistics, no long-term reliability or causal guarantee"
+}

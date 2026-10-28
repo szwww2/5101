@@ -1,0 +1,1113 @@
+{
+  "status": "PASS",
+  "scenario": "B",
+  "scope": "Offline review of original saved experiment; no replay",
+  "output": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo05\\run-B-20261017-105957-DfB6RZ",
+  "original_result": {
+    "status": "PASS",
+    "scenario": "B",
+    "output": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo05/run-B-20261017-105957-DfB6RZ",
+    "scope": "Student current MiniEdit network",
+    "initial_path": [
+      1,
+      2,
+      6
+    ],
+    "during_path": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "recovered_path": [
+      1,
+      2,
+      6
+    ],
+    "receiver_mbps": 9.99,
+    "loss_percent": 0.15,
+    "lost": 78,
+    "total": 51024,
+    "windows": {
+      "before": {
+        "start_seconds": 4,
+        "end_seconds": 10,
+        "intervals": 6,
+        "receiver_mbps": 10.0,
+        "loss_percent": 0.0,
+        "lost": 0,
+        "total": 5102
+      },
+      "during": {
+        "start_seconds": 15,
+        "end_seconds": 24,
+        "intervals": 9,
+        "receiver_mbps": 10.0,
+        "loss_percent": 0.0,
+        "lost": 0,
+        "total": 7653
+      },
+      "after": {
+        "start_seconds": 40,
+        "end_seconds": 55,
+        "intervals": 15,
+        "receiver_mbps": 10.0,
+        "loss_percent": 0.0,
+        "lost": 0,
+        "total": 12755
+      }
+    },
+    "receiver_intervals": [
+      {
+        "start": 0.0,
+        "end": 1.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.038,
+        "lost": 0,
+        "total": 852
+      },
+      {
+        "start": 1.0,
+        "end": 2.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.058,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 2.0,
+        "end": 3.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.084,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 3.0,
+        "end": 4.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.14,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 4.0,
+        "end": 5.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.081,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 5.0,
+        "end": 6.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.081,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 6.0,
+        "end": 7.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.05,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 7.0,
+        "end": 8.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.103,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 8.0,
+        "end": 9.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.088,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 9.0,
+        "end": 10.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.293,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 10.0,
+        "end": 11.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.126,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 11.0,
+        "end": 12.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.083,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 12.0,
+        "end": 13.0,
+        "mbps": 9.4,
+        "jitter_ms": 0.108,
+        "lost": 51,
+        "total": 850
+      },
+      {
+        "start": 13.0,
+        "end": 14.0,
+        "mbps": 9.64,
+        "jitter_ms": 0.274,
+        "lost": 27,
+        "total": 847
+      },
+      {
+        "start": 14.0,
+        "end": 15.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.889,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 15.0,
+        "end": 16.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.325,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 16.0,
+        "end": 17.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.033,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 17.0,
+        "end": 18.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.069,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 18.0,
+        "end": 19.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.133,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 19.0,
+        "end": 20.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.148,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 20.0,
+        "end": 21.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.263,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 21.0,
+        "end": 22.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.056,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 22.0,
+        "end": 23.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.141,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 23.0,
+        "end": 24.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.063,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 24.0,
+        "end": 25.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.686,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 25.0,
+        "end": 26.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.1,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 26.0,
+        "end": 27.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.05,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 27.0,
+        "end": 28.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.134,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 28.0,
+        "end": 29.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.1,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 29.0,
+        "end": 30.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.062,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 30.0,
+        "end": 31.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.105,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 31.0,
+        "end": 32.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.028,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 32.0,
+        "end": 33.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.079,
+        "lost": 0,
+        "total": 853
+      },
+      {
+        "start": 33.0,
+        "end": 34.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.067,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 34.0,
+        "end": 35.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.089,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 35.0,
+        "end": 36.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.078,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 36.0,
+        "end": 37.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.061,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 37.0,
+        "end": 38.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.065,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 38.0,
+        "end": 39.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.037,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 39.0,
+        "end": 40.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.123,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 40.0,
+        "end": 41.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.162,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 41.0,
+        "end": 42.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.286,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 42.0,
+        "end": 43.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.035,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 43.0,
+        "end": 44.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.174,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 44.0,
+        "end": 45.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.096,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 45.0,
+        "end": 46.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.084,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 46.0,
+        "end": 47.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.057,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 47.0,
+        "end": 48.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.087,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 48.0,
+        "end": 49.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.147,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 49.0,
+        "end": 50.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.078,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 50.0,
+        "end": 51.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.215,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 51.0,
+        "end": 52.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.083,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 52.0,
+        "end": 53.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.101,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 53.0,
+        "end": 54.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.087,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 54.0,
+        "end": 55.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.108,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 55.0,
+        "end": 56.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.072,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 56.0,
+        "end": 57.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.101,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 57.0,
+        "end": 58.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.08,
+        "lost": 0,
+        "total": 850
+      },
+      {
+        "start": 58.0,
+        "end": 59.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.067,
+        "lost": 0,
+        "total": 851
+      },
+      {
+        "start": 59.0,
+        "end": 60.0,
+        "mbps": 10.0,
+        "jitter_ms": 0.131,
+        "lost": 0,
+        "total": 850
+      }
+    ],
+    "dropped_packets": 825016,
+    "drops_preserved_all_samples": true,
+    "source_remains_blocked_after_cost_and_route_recovery": true,
+    "source": "10.0.0.2",
+    "attack_path": [
+      2,
+      6
+    ],
+    "attack_started": 1792206341.5874507,
+    "legitimate_started": 1792206329.5863862,
+    "scenario_c_pin_disclosed": false,
+    "receiver_positive_every_one_second_interval": true,
+    "continuous_ping_replies": 120,
+    "maximum_ping_reply_gap_seconds": 0.5073199272155762,
+    "controller_log_check": "External controller terminal not captured; controller events checked separately",
+    "original_bridges_preserved": true
+  },
+  "initial_path": [
+    1,
+    2,
+    6
+  ],
+  "during_path": [
+    1,
+    2,
+    3,
+    6
+  ],
+  "recovered_path": [
+    1,
+    2,
+    6
+  ],
+  "dropped_packets": 825016,
+  "drops_preserved_all_samples": true,
+  "source_remains_blocked_after_cost_and_route_recovery": true,
+  "controller_log_check": "External controller terminal not captured; controller events checked separately",
+  "receiver_mbps": 9.99,
+  "loss_percent": 0.15,
+  "lost": 78,
+  "total": 51024,
+  "windows": {
+    "before": {
+      "start_seconds": 4,
+      "end_seconds": 10,
+      "intervals": 6,
+      "receiver_mbps": 10.0,
+      "loss_percent": 0.0,
+      "lost": 0,
+      "total": 5102
+    },
+    "during": {
+      "start_seconds": 15,
+      "end_seconds": 24,
+      "intervals": 9,
+      "receiver_mbps": 10.0,
+      "loss_percent": 0.0,
+      "lost": 0,
+      "total": 7653
+    },
+    "after": {
+      "start_seconds": 40,
+      "end_seconds": 55,
+      "intervals": 15,
+      "receiver_mbps": 10.0,
+      "loss_percent": 0.0,
+      "lost": 0,
+      "total": 12755
+    }
+  },
+  "receiver_intervals": [
+    {
+      "start": 0.0,
+      "end": 1.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.038,
+      "lost": 0,
+      "total": 852
+    },
+    {
+      "start": 1.0,
+      "end": 2.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.058,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 2.0,
+      "end": 3.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.084,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 3.0,
+      "end": 4.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.14,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 4.0,
+      "end": 5.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.081,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 5.0,
+      "end": 6.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.081,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 6.0,
+      "end": 7.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.05,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 7.0,
+      "end": 8.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.103,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 8.0,
+      "end": 9.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.088,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 9.0,
+      "end": 10.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.293,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 10.0,
+      "end": 11.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.126,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 11.0,
+      "end": 12.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.083,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 12.0,
+      "end": 13.0,
+      "mbps": 9.4,
+      "jitter_ms": 0.108,
+      "lost": 51,
+      "total": 850
+    },
+    {
+      "start": 13.0,
+      "end": 14.0,
+      "mbps": 9.64,
+      "jitter_ms": 0.274,
+      "lost": 27,
+      "total": 847
+    },
+    {
+      "start": 14.0,
+      "end": 15.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.889,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 15.0,
+      "end": 16.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.325,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 16.0,
+      "end": 17.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.033,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 17.0,
+      "end": 18.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.069,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 18.0,
+      "end": 19.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.133,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 19.0,
+      "end": 20.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.148,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 20.0,
+      "end": 21.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.263,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 21.0,
+      "end": 22.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.056,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 22.0,
+      "end": 23.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.141,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 23.0,
+      "end": 24.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.063,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 24.0,
+      "end": 25.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.686,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 25.0,
+      "end": 26.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.1,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 26.0,
+      "end": 27.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.05,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 27.0,
+      "end": 28.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.134,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 28.0,
+      "end": 29.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.1,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 29.0,
+      "end": 30.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.062,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 30.0,
+      "end": 31.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.105,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 31.0,
+      "end": 32.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.028,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 32.0,
+      "end": 33.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.079,
+      "lost": 0,
+      "total": 853
+    },
+    {
+      "start": 33.0,
+      "end": 34.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.067,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 34.0,
+      "end": 35.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.089,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 35.0,
+      "end": 36.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.078,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 36.0,
+      "end": 37.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.061,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 37.0,
+      "end": 38.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.065,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 38.0,
+      "end": 39.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.037,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 39.0,
+      "end": 40.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.123,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 40.0,
+      "end": 41.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.162,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 41.0,
+      "end": 42.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.286,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 42.0,
+      "end": 43.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.035,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 43.0,
+      "end": 44.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.174,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 44.0,
+      "end": 45.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.096,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 45.0,
+      "end": 46.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.084,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 46.0,
+      "end": 47.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.057,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 47.0,
+      "end": 48.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.087,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 48.0,
+      "end": 49.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.147,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 49.0,
+      "end": 50.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.078,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 50.0,
+      "end": 51.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.215,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 51.0,
+      "end": 52.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.083,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 52.0,
+      "end": 53.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.101,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 53.0,
+      "end": 54.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.087,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 54.0,
+      "end": 55.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.108,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 55.0,
+      "end": 56.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.072,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 56.0,
+      "end": 57.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.101,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 57.0,
+      "end": 58.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.08,
+      "lost": 0,
+      "total": 850
+    },
+    {
+      "start": 58.0,
+      "end": 59.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.067,
+      "lost": 0,
+      "total": 851
+    },
+    {
+      "start": 59.0,
+      "end": 60.0,
+      "mbps": 10.0,
+      "jitter_ms": 0.131,
+      "lost": 0,
+      "total": 850
+    }
+  ],
+  "receiver_positive_every_one_second_interval": true,
+  "continuous_ping_replies": 120,
+  "maximum_ping_reply_gap_seconds": 0.5073199272155762,
+  "ping_sent": 121,
+  "ping_received": 120,
+  "ping_loss_percent": 0.826446,
+  "repeat_index": 2,
+  "evidence_sha256": {
+    "results.json": "0bb861b3f6750254ce649af030826f0ad0aa7965eed3b20e382dfde6fd6c0e88",
+    "sender.log": "bfea0b6cd0f8d7e3687f39d2bd51e353414999eab1e5c431704003820f4b132b",
+    "receiver.log": "c0eabdb9e5f8e27e774bfc570f74798b12de9b41c4beaf60c094150413645994",
+    "continuous-ping.log": "017447edbf62ac797de318674d44cf484afac3fe8a036c1153e912f72fa4094b",
+    "post-pings.txt": "2d444f2256d512c0b225ba8eb23d53fbc14af6f6304b4806e9fbd8c03b006e05",
+    "dataplane-samples.jsonl": "1816d006eebf114d0cf989805d98f601d45c37a877deb6c6f6962385110219cd",
+    "evidence\\initial.json": "202dfa9895c50da37b588133f988fea391d371ee5046fe67b00d5213ae889e59",
+    "evidence\\recovered.json": "dbaf109c379197ec2a2a574ecea2ad6d5890aff15fbef9b56445f828888ade65",
+    "evidence\\events-at-offline-review.jsonl": "5330e4ba85064e45c11640c84f226e69c211c4ecfa06ec17c74ad8f25fa67ee8",
+    "evidence\\student-B-repeat2-pass-summary-20261017.png": "cecdeb2c93a9c57132086c4c8ba78b89acdc6a89511f4262f1b54c406854e793"
+  }
+}

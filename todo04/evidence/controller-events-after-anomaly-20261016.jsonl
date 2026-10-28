@@ -1,0 +1,12 @@
+{"time": 1792122337.3163192, "event": "detection_parameters", "sample_interval_seconds": 1, "theta": 0.3, "multiplier": 3, "floor_pps": 2000, "warmup_samples": 5, "excluded_traffic": "ICMP echo replies", "block_scope": "IPv4 source; all switches", "recovery": "Restart isolated experiment; no automatic unblock in TODO3"}
+{"time": 1792122337.3381445, "event": "cost_parameters", "capacity_bps": 40000000, "alpha": 5, "beta": 60, "minimum_hold_seconds": 8, "quiet_seconds": 5, "measurement": "Directed link rate from peer ingress rx_bytes; source tx_bytes also recorded", "routing": "Static route rules retained in TODO4; no rerouting yet"}
+{"time": 1792122349.8627508, "event": "switch_connected", "dpid": 1}
+{"time": 1792122349.910534, "event": "switch_connected", "dpid": 2}
+{"time": 1792122349.976353, "event": "switch_connected", "dpid": 3}
+{"time": 1792122350.019093, "event": "switch_connected", "dpid": 4}
+{"time": 1792122350.0709925, "event": "switch_connected", "dpid": 5}
+{"time": 1792122350.1420915, "event": "switch_connected", "dpid": 6}
+{"time": 1792122350.4784627, "event": "ready", "path": [1, 2, 6], "outputs": [{"dpid": 1, "output_port": 2}, {"dpid": 2, "output_port": 6}, {"dpid": 6, "output_port": 1}], "cost": 19.0}
+{"time": 1792127244.695838, "event": "block", "source": "10.0.0.2", "pps": 23940.800173598276, "old_ema_pps": 0.0, "new_ema_pps": 0.0, "threshold_pps": 2000, "samples": 4689, "warmed": true, "blocked": true, "newly_blocked": true, "dpid": 2, "destination": "10.0.0.6", "forward_pps": 23940.800173598276, "drop_pps": 0.0, "forward_bps": 8044108.85832902, "drop_bps": 0.0, "attack_path": [2, 6]}
+{"time": 1792127244.710884, "event": "penalty_added", "source": "10.0.0.2", "path": [2, 6], "beta": 60}
+{"time": 1792127257.9293895, "event": "penalty_restored", "source": "10.0.0.2", "reason": "Minimum hold passed and ingress drop counter quiet for 5 seconds"}

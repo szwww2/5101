@@ -1,0 +1,280 @@
+{
+  "scope": "Repeated student B measurements; all included, no best-run selection",
+  "trial_count": 3,
+  "frozen_input_root": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo06/B-repeats-20261017-three-trials-final/inputs",
+  "frozen_input_sha256": {
+    "todo05/run-B-20261016-144402-YuFNPf/results.json": "acf5b60ab30cac2daf8d54ed8911280727e113d853df0ba67731d61db4467973",
+    "todo05/run-B-20261016-144402-YuFNPf/sender.log": "7f3b6822cf4ba1eec9f3b9d1031b078752819e3e0e018cd15c736e59cf7cdae8",
+    "todo05/run-B-20261016-144402-YuFNPf/receiver.log": "e67c97772d5ad4f6c3148866773043ab867d3361b8eb0a8dfb4c6c94f2969660",
+    "todo05/run-B-20261016-144402-YuFNPf/continuous-ping.log": "458a6b032e3846a4a24c29aba880fbacd7b3af060d3a198d38857fff3cb0e504",
+    "todo05/run-B-20261016-144402-YuFNPf/dataplane-samples.jsonl": "d54060d9eb1cc93938b6f46eb352498467877c797e7819cedf10d03650698a0e",
+    "todo05/run-B-20261016-144402-YuFNPf/link-costs.jsonl": "da25339acd288118e931276068494bb3c683b65430490fc68f76de735368477c",
+    "todo05/run-B-20261016-144402-YuFNPf/evidence/events-at-offline-review.jsonl": "8cec018e96dd040359158cca1265b57662cd93482243a4fbdf4193add50dba00",
+    "todo05/run-B-20261016-144402-YuFNPf/evidence/student-B-reviewed-results.json": "1c3b54d20031ace1aaad29d8301a66f6ad19a8a348104eccfaa4477f783575dd",
+    "todo05/run-B-20261017-105957-DfB6RZ/results.json": "0bb861b3f6750254ce649af030826f0ad0aa7965eed3b20e382dfde6fd6c0e88",
+    "todo05/run-B-20261017-105957-DfB6RZ/sender.log": "bfea0b6cd0f8d7e3687f39d2bd51e353414999eab1e5c431704003820f4b132b",
+    "todo05/run-B-20261017-105957-DfB6RZ/receiver.log": "c0eabdb9e5f8e27e774bfc570f74798b12de9b41c4beaf60c094150413645994",
+    "todo05/run-B-20261017-105957-DfB6RZ/continuous-ping.log": "017447edbf62ac797de318674d44cf484afac3fe8a036c1153e912f72fa4094b",
+    "todo05/run-B-20261017-105957-DfB6RZ/dataplane-samples.jsonl": "1816d006eebf114d0cf989805d98f601d45c37a877deb6c6f6962385110219cd",
+    "todo05/run-B-20261017-105957-DfB6RZ/link-costs.jsonl": "de4d805c11061e9440405d049fb1289fc983dd753067d9c8a77d488187e0e0c1",
+    "todo05/run-B-20261017-105957-DfB6RZ/evidence/events-at-offline-review.jsonl": "5330e4ba85064e45c11640c84f226e69c211c4ecfa06ec17c74ad8f25fa67ee8",
+    "todo05/run-B-20261017-105957-DfB6RZ/evidence/student-B-reviewed-results.json": "d815e91c92e38c1b29f6289cd0b3c0938d72b368118464a5bf5ccce507944a69",
+    "todo05/run-B-20261017-111734-b9lfbt/results.json": "c6c56c7bb7a9bd9f946e979073c0c0919a5a3596e3d35ec00142c7f8612bc540",
+    "todo05/run-B-20261017-111734-b9lfbt/sender.log": "5d908e7eae92d82985378f2d47543042841279cb897b3187858ccdc8717c3825",
+    "todo05/run-B-20261017-111734-b9lfbt/receiver.log": "505ef4f06c182c01debfe184857f5a68825ce1e7d57aa8db2e36c48e511b2714",
+    "todo05/run-B-20261017-111734-b9lfbt/continuous-ping.log": "8590a79227ee5581e7febbe42695fe6383331945e3c1802088c0a1f549937769",
+    "todo05/run-B-20261017-111734-b9lfbt/dataplane-samples.jsonl": "e2179cf288bffb762a515bef95405e1f231f8aefbf21a1b7de1cb2c440ebc563",
+    "todo05/run-B-20261017-111734-b9lfbt/link-costs.jsonl": "15fc4dd80d8f8df7548f66b8d5e0bd13c72084dfc0b4bc52a4ca51b7c48d9eb2",
+    "todo05/run-B-20261017-111734-b9lfbt/evidence/events-at-offline-review.jsonl": "7c344c9fbd10c7f9a3c56b6845b9bb464a890d670fade359654c129c28f5f620",
+    "todo05/run-B-20261017-111734-b9lfbt/evidence/student-B-reviewed-results.json": "e424d90d07628046e84a39ba988d8b54f847b249f57889b5200ff8cecc66131c"
+  },
+  "trials": [
+    {
+      "index": 1,
+      "run": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo05/run-B-20261016-144402-YuFNPf",
+      "frozen_run": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo06/B-repeats-20261017-three-trials-final/inputs/todo05/run-B-20261016-144402-YuFNPf",
+      "clock_quality": "estimated from sample timestamps; sub-second bias unknown",
+      "metrics": {
+        "receiver_mbps_reported": 9.99,
+        "lost": 43,
+        "total": 51024,
+        "whole_loss_percent": 0.08427406710567575,
+        "printed_whole_loss_percent": 0.084,
+        "interval_total": 51021,
+        "interval_loss_percent": 0.08427902236334059,
+        "min_one_second_mbps": 9.47,
+        "max_one_second_loss_percent": 5.070754716981132,
+        "receiver_mean_one_second_mbps": 9.991166666666667,
+        "min_normalized_cost": 1.0,
+        "max_normalized_cost": 5.509046374252662,
+        "block_seconds": 12.783638954162598,
+        "penalty_restored_seconds": 32.11329364776611,
+        "initial_path": [
+          1,
+          2,
+          6
+        ],
+        "during_path": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "recovered_path": [
+          1,
+          2,
+          6
+        ],
+        "source_drop_packets": 888103,
+        "windows": {
+          "before": {
+            "start_seconds": 4,
+            "end_seconds": 10,
+            "intervals": 6,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 5103
+          },
+          "during": {
+            "start_seconds": 15,
+            "end_seconds": 24,
+            "intervals": 9,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 7655
+          },
+          "after": {
+            "start_seconds": 40,
+            "end_seconds": 55,
+            "intervals": 15,
+            "receiver_mbps": 9.996666666666666,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 12756
+          }
+        },
+        "ping_sent": 121,
+        "ping_received": 120,
+        "ping_loss_percent": 0.826446
+      },
+      "provenance": {
+        "todo05/run-B-20261016-144402-YuFNPf/results.json": "acf5b60ab30cac2daf8d54ed8911280727e113d853df0ba67731d61db4467973",
+        "todo05/run-B-20261016-144402-YuFNPf/sender.log": "7f3b6822cf4ba1eec9f3b9d1031b078752819e3e0e018cd15c736e59cf7cdae8",
+        "todo05/run-B-20261016-144402-YuFNPf/receiver.log": "e67c97772d5ad4f6c3148866773043ab867d3361b8eb0a8dfb4c6c94f2969660",
+        "todo05/run-B-20261016-144402-YuFNPf/continuous-ping.log": "458a6b032e3846a4a24c29aba880fbacd7b3af060d3a198d38857fff3cb0e504",
+        "todo05/run-B-20261016-144402-YuFNPf/dataplane-samples.jsonl": "d54060d9eb1cc93938b6f46eb352498467877c797e7819cedf10d03650698a0e",
+        "todo05/run-B-20261016-144402-YuFNPf/link-costs.jsonl": "da25339acd288118e931276068494bb3c683b65430490fc68f76de735368477c",
+        "todo05/run-B-20261016-144402-YuFNPf/evidence/events-at-offline-review.jsonl": "8cec018e96dd040359158cca1265b57662cd93482243a4fbdf4193add50dba00",
+        "todo05/run-B-20261016-144402-YuFNPf/evidence/student-B-reviewed-results.json": "1c3b54d20031ace1aaad29d8301a66f6ad19a8a348104eccfaa4477f783575dd"
+      }
+    },
+    {
+      "index": 2,
+      "run": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo05/run-B-20261017-105957-DfB6RZ",
+      "frozen_run": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo06/B-repeats-20261017-three-trials-final/inputs/todo05/run-B-20261017-105957-DfB6RZ",
+      "clock_quality": "sender-launch timestamp",
+      "metrics": {
+        "receiver_mbps_reported": 9.99,
+        "lost": 78,
+        "total": 51024,
+        "whole_loss_percent": 0.1528692380056444,
+        "printed_whole_loss_percent": 0.15,
+        "interval_total": 51022,
+        "interval_loss_percent": 0.15287523029281486,
+        "min_one_second_mbps": 9.4,
+        "max_one_second_loss_percent": 6.0,
+        "receiver_mean_one_second_mbps": 9.984,
+        "min_normalized_cost": 1.0,
+        "max_normalized_cost": 5.560236505221807,
+        "block_seconds": 13.632803201675415,
+        "penalty_restored_seconds": 32.13780927658081,
+        "initial_path": [
+          1,
+          2,
+          6
+        ],
+        "during_path": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "recovered_path": [
+          1,
+          2,
+          6
+        ],
+        "source_drop_packets": 825016,
+        "windows": {
+          "before": {
+            "start_seconds": 4,
+            "end_seconds": 10,
+            "intervals": 6,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 5102
+          },
+          "during": {
+            "start_seconds": 15,
+            "end_seconds": 24,
+            "intervals": 9,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 7653
+          },
+          "after": {
+            "start_seconds": 40,
+            "end_seconds": 55,
+            "intervals": 15,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 12755
+          }
+        },
+        "ping_sent": 121,
+        "ping_received": 120,
+        "ping_loss_percent": 0.826446
+      },
+      "provenance": {
+        "todo05/run-B-20261017-105957-DfB6RZ/results.json": "0bb861b3f6750254ce649af030826f0ad0aa7965eed3b20e382dfde6fd6c0e88",
+        "todo05/run-B-20261017-105957-DfB6RZ/sender.log": "bfea0b6cd0f8d7e3687f39d2bd51e353414999eab1e5c431704003820f4b132b",
+        "todo05/run-B-20261017-105957-DfB6RZ/receiver.log": "c0eabdb9e5f8e27e774bfc570f74798b12de9b41c4beaf60c094150413645994",
+        "todo05/run-B-20261017-105957-DfB6RZ/continuous-ping.log": "017447edbf62ac797de318674d44cf484afac3fe8a036c1153e912f72fa4094b",
+        "todo05/run-B-20261017-105957-DfB6RZ/dataplane-samples.jsonl": "1816d006eebf114d0cf989805d98f601d45c37a877deb6c6f6962385110219cd",
+        "todo05/run-B-20261017-105957-DfB6RZ/link-costs.jsonl": "de4d805c11061e9440405d049fb1289fc983dd753067d9c8a77d488187e0e0c1",
+        "todo05/run-B-20261017-105957-DfB6RZ/evidence/events-at-offline-review.jsonl": "5330e4ba85064e45c11640c84f226e69c211c4ecfa06ec17c74ad8f25fa67ee8",
+        "todo05/run-B-20261017-105957-DfB6RZ/evidence/student-B-reviewed-results.json": "d815e91c92e38c1b29f6289cd0b3c0938d72b368118464a5bf5ccce507944a69"
+      }
+    },
+    {
+      "index": 3,
+      "run": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo05/run-B-20261017-111734-b9lfbt",
+      "frozen_run": "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/todo06/B-repeats-20261017-three-trials-final/inputs/todo05/run-B-20261017-111734-b9lfbt",
+      "clock_quality": "sender-launch timestamp",
+      "metrics": {
+        "receiver_mbps_reported": 10.0,
+        "lost": 22,
+        "total": 51024,
+        "whole_loss_percent": 0.043116964565694575,
+        "printed_whole_loss_percent": 0.043,
+        "interval_total": 51022,
+        "interval_loss_percent": 0.04311865469797342,
+        "min_one_second_mbps": 9.71,
+        "max_one_second_loss_percent": 2.5943396226415096,
+        "receiver_mean_one_second_mbps": 9.995166666666666,
+        "min_normalized_cost": 1.0,
+        "max_normalized_cost": 5.461732142588318,
+        "block_seconds": 12.57223129272461,
+        "penalty_restored_seconds": 31.825141429901123,
+        "initial_path": [
+          1,
+          2,
+          6
+        ],
+        "during_path": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "recovered_path": [
+          1,
+          2,
+          6
+        ],
+        "source_drop_packets": 901466,
+        "windows": {
+          "before": {
+            "start_seconds": 4,
+            "end_seconds": 10,
+            "intervals": 6,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 5103
+          },
+          "during": {
+            "start_seconds": 15,
+            "end_seconds": 24,
+            "intervals": 9,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 7653
+          },
+          "after": {
+            "start_seconds": 40,
+            "end_seconds": 55,
+            "intervals": 15,
+            "receiver_mbps": 10.0,
+            "loss_percent": 0.0,
+            "lost": 0,
+            "total": 12755
+          }
+        },
+        "ping_sent": 121,
+        "ping_received": 120,
+        "ping_loss_percent": 0.826446
+      },
+      "provenance": {
+        "todo05/run-B-20261017-111734-b9lfbt/results.json": "c6c56c7bb7a9bd9f946e979073c0c0919a5a3596e3d35ec00142c7f8612bc540",
+        "todo05/run-B-20261017-111734-b9lfbt/sender.log": "5d908e7eae92d82985378f2d47543042841279cb897b3187858ccdc8717c3825",
+        "todo05/run-B-20261017-111734-b9lfbt/receiver.log": "505ef4f06c182c01debfe184857f5a68825ce1e7d57aa8db2e36c48e511b2714",
+        "todo05/run-B-20261017-111734-b9lfbt/continuous-ping.log": "8590a79227ee5581e7febbe42695fe6383331945e3c1802088c0a1f549937769",
+        "todo05/run-B-20261017-111734-b9lfbt/dataplane-samples.jsonl": "e2179cf288bffb762a515bef95405e1f231f8aefbf21a1b7de1cb2c440ebc563",
+        "todo05/run-B-20261017-111734-b9lfbt/link-costs.jsonl": "15fc4dd80d8f8df7548f66b8d5e0bd13c72084dfc0b4bc52a4ca51b7c48d9eb2",
+        "todo05/run-B-20261017-111734-b9lfbt/evidence/events-at-offline-review.jsonl": "7c344c9fbd10c7f9a3c56b6845b9bb464a890d670fade359654c129c28f5f620",
+        "todo05/run-B-20261017-111734-b9lfbt/evidence/student-B-reviewed-results.json": "e424d90d07628046e84a39ba988d8b54f847b249f57889b5200ff8cecc66131c"
+      }
+    }
+  ],
+  "code_sha256": {
+    "compare_task5_b.py": "c36bfb5a01fb605ed884d29907f8f555dd8a119c15b796a78f4a6572fda954bd",
+    "analyze_task5.py": "7c7604b57428e88a093edd955212f0e6b3022c62efb7afc537d519a654422362"
+  }
+}

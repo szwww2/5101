@@ -1,0 +1,157 @@
+{
+  "time": 1792135585.1789038,
+  "ready": true,
+  "blocked": [
+    "10.0.0.2"
+  ],
+  "sources": {
+    "10.0.0.1": {
+      "ema_pps": 3.5537222635102375e-223,
+      "samples": 1633,
+      "blocked": false,
+      "pps": 0.0
+    },
+    "10.0.0.2": {
+      "ema_pps": 0.009752300084201979,
+      "samples": 1632,
+      "blocked": true,
+      "pps": 0.0
+    },
+    "10.0.0.3": {
+      "ema_pps": 2.2333745940629565e-235,
+      "samples": 1633,
+      "blocked": false,
+      "pps": 0.0
+    },
+    "10.0.0.4": {
+      "ema_pps": 2.3352707991983228e-235,
+      "samples": 1633,
+      "blocked": false,
+      "pps": 0.0
+    },
+    "10.0.0.5": {
+      "ema_pps": 2.7996155457930533e-235,
+      "samples": 1633,
+      "blocked": false,
+      "pps": 0.0
+    },
+    "10.0.0.6": {
+      "ema_pps": 1.500591669898616e-225,
+      "samples": 1633,
+      "blocked": false,
+      "pps": 0.0
+    }
+  },
+  "rates": {
+    "10.0.0.6": {
+      "source": "10.0.0.6",
+      "pps": 0.0,
+      "old_ema_pps": 2.1437023855694517e-225,
+      "new_ema_pps": 1.500591669898616e-225,
+      "threshold_pps": 2000,
+      "samples": 1633,
+      "warmed": true,
+      "blocked": false,
+      "newly_blocked": false,
+      "dpid": 6,
+      "destination": null,
+      "forward_pps": 0.0,
+      "drop_pps": 0.0,
+      "forward_bps": 0.0,
+      "drop_bps": 0.0
+    },
+    "10.0.0.5": {
+      "source": "10.0.0.5",
+      "pps": 0.0,
+      "old_ema_pps": 3.999450779704362e-235,
+      "new_ema_pps": 2.7996155457930533e-235,
+      "threshold_pps": 2000,
+      "samples": 1633,
+      "warmed": true,
+      "blocked": false,
+      "newly_blocked": false,
+      "dpid": 5,
+      "destination": null,
+      "forward_pps": 0.0,
+      "drop_pps": 0.0,
+      "forward_bps": 0.0,
+      "drop_bps": 0.0
+    },
+    "10.0.0.3": {
+      "source": "10.0.0.3",
+      "pps": 0.0,
+      "old_ema_pps": 3.190535134375652e-235,
+      "new_ema_pps": 2.2333745940629565e-235,
+      "threshold_pps": 2000,
+      "samples": 1633,
+      "warmed": true,
+      "blocked": false,
+      "newly_blocked": false,
+      "dpid": 3,
+      "destination": null,
+      "forward_pps": 0.0,
+      "drop_pps": 0.0,
+      "forward_bps": 0.0,
+      "drop_bps": 0.0
+    },
+    "10.0.0.2": {
+      "source": "10.0.0.2",
+      "pps": 0.0,
+      "old_ema_pps": 0.009752300084201979,
+      "new_ema_pps": 0.009752300084201979,
+      "threshold_pps": 2000,
+      "samples": 1632,
+      "warmed": true,
+      "blocked": true,
+      "newly_blocked": false,
+      "dpid": 2,
+      "destination": null,
+      "forward_pps": 0.0,
+      "drop_pps": 0.0,
+      "forward_bps": 0.0,
+      "drop_bps": 0.0
+    },
+    "10.0.0.4": {
+      "source": "10.0.0.4",
+      "pps": 0.0,
+      "old_ema_pps": 3.33610114171189e-235,
+      "new_ema_pps": 2.3352707991983228e-235,
+      "threshold_pps": 2000,
+      "samples": 1633,
+      "warmed": true,
+      "blocked": false,
+      "newly_blocked": false,
+      "dpid": 4,
+      "destination": null,
+      "forward_pps": 0.0,
+      "drop_pps": 0.0,
+      "forward_bps": 0.0,
+      "drop_bps": 0.0
+    },
+    "10.0.0.1": {
+      "source": "10.0.0.1",
+      "pps": 0.0,
+      "old_ema_pps": 5.0767460907289105e-223,
+      "new_ema_pps": 3.5537222635102375e-223,
+      "threshold_pps": 2000,
+      "samples": 1633,
+      "warmed": true,
+      "blocked": false,
+      "newly_blocked": false,
+      "dpid": 1,
+      "destination": null,
+      "forward_pps": 0.0,
+      "drop_pps": 0.0,
+      "forward_bps": 0.0,
+      "drop_bps": 0.0
+    }
+  },
+  "parameters": {
+    "theta": 0.3,
+    "multiplier": 3,
+    "floor_pps": 2000,
+    "warmup_samples": 5,
+    "sample_seconds": 1
+  },
+  "dynamic_link_costs": false
+}

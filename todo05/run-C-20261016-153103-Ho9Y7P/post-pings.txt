@@ -1,0 +1,14 @@
+PING 10.0.0.6 (10.0.0.6) 56(84) bytes of data.
+64 bytes from 10.0.0.6: icmp_seq=1 ttl=64 time=98.6 ms
+64 bytes from 10.0.0.6: icmp_seq=2 ttl=64 time=99.6 ms
+64 bytes from 10.0.0.6: icmp_seq=3 ttl=64 time=98.7 ms
+
+--- 10.0.0.6 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 98.577/98.951/99.574/0.443 ms
+
+PING 10.0.0.6 (10.0.0.6) 56(84) bytes of data.
+
+--- 10.0.0.6 ping statistics ---
+2 packets transmitted, 0 received, 100% packet loss, time 1025ms
+

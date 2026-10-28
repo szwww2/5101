@@ -1,0 +1,157 @@
+{
+  "time": 1792120188.61262,
+  "ready": true,
+  "blocked": [
+    "10.0.0.2"
+  ],
+  "sources": {
+    "10.0.0.1": {
+      "ema_pps": 1.9502452024072947,
+      "samples": 499,
+      "blocked": false,
+      "pps": 1.9231661487393727
+    },
+    "10.0.0.2": {
+      "ema_pps": 1.3836557838635406e-53,
+      "samples": 498,
+      "blocked": true,
+      "pps": 0.0
+    },
+    "10.0.0.3": {
+      "ema_pps": 0.0,
+      "samples": 499,
+      "blocked": false,
+      "pps": 0.0
+    },
+    "10.0.0.4": {
+      "ema_pps": 0.0,
+      "samples": 499,
+      "blocked": false,
+      "pps": 0.0
+    },
+    "10.0.0.5": {
+      "ema_pps": 0.0,
+      "samples": 499,
+      "blocked": false,
+      "pps": 0.0
+    },
+    "10.0.0.6": {
+      "ema_pps": 0.0,
+      "samples": 499,
+      "blocked": false,
+      "pps": 0.0
+    }
+  },
+  "rates": {
+    "10.0.0.2": {
+      "source": "10.0.0.2",
+      "pps": 0.0,
+      "old_ema_pps": 1.3836557838635406e-53,
+      "new_ema_pps": 1.3836557838635406e-53,
+      "threshold_pps": 2000,
+      "samples": 498,
+      "warmed": true,
+      "blocked": true,
+      "newly_blocked": false,
+      "dpid": 2,
+      "destination": null,
+      "forward_pps": 0.0,
+      "drop_pps": 0.0,
+      "forward_bps": 0.0,
+      "drop_bps": 0.0
+    },
+    "10.0.0.1": {
+      "source": "10.0.0.1",
+      "pps": 1.9231661487393727,
+      "old_ema_pps": 1.9618505111221185,
+      "new_ema_pps": 1.9502452024072947,
+      "threshold_pps": 2000,
+      "samples": 499,
+      "warmed": true,
+      "blocked": false,
+      "newly_blocked": false,
+      "dpid": 1,
+      "destination": "10.0.0.6",
+      "forward_pps": 1.9231661487393727,
+      "drop_pps": 0.0,
+      "forward_bps": 1507.7622606116681,
+      "drop_bps": 0.0
+    },
+    "10.0.0.3": {
+      "source": "10.0.0.3",
+      "pps": 0.0,
+      "old_ema_pps": 0.0,
+      "new_ema_pps": 0.0,
+      "threshold_pps": 2000,
+      "samples": 499,
+      "warmed": true,
+      "blocked": false,
+      "newly_blocked": false,
+      "dpid": 3,
+      "destination": null,
+      "forward_pps": 0.0,
+      "drop_pps": 0.0,
+      "forward_bps": 0.0,
+      "drop_bps": 0.0
+    },
+    "10.0.0.4": {
+      "source": "10.0.0.4",
+      "pps": 0.0,
+      "old_ema_pps": 0.0,
+      "new_ema_pps": 0.0,
+      "threshold_pps": 2000,
+      "samples": 499,
+      "warmed": true,
+      "blocked": false,
+      "newly_blocked": false,
+      "dpid": 4,
+      "destination": null,
+      "forward_pps": 0.0,
+      "drop_pps": 0.0,
+      "forward_bps": 0.0,
+      "drop_bps": 0.0
+    },
+    "10.0.0.6": {
+      "source": "10.0.0.6",
+      "pps": 0.0,
+      "old_ema_pps": 0.0,
+      "new_ema_pps": 0.0,
+      "threshold_pps": 2000,
+      "samples": 499,
+      "warmed": true,
+      "blocked": false,
+      "newly_blocked": false,
+      "dpid": 6,
+      "destination": null,
+      "forward_pps": 0.0,
+      "drop_pps": 0.0,
+      "forward_bps": 0.0,
+      "drop_bps": 0.0
+    },
+    "10.0.0.5": {
+      "source": "10.0.0.5",
+      "pps": 0.0,
+      "old_ema_pps": 0.0,
+      "new_ema_pps": 0.0,
+      "threshold_pps": 2000,
+      "samples": 499,
+      "warmed": true,
+      "blocked": false,
+      "newly_blocked": false,
+      "dpid": 5,
+      "destination": null,
+      "forward_pps": 0.0,
+      "drop_pps": 0.0,
+      "forward_bps": 0.0,
+      "drop_bps": 0.0
+    }
+  },
+  "parameters": {
+    "theta": 0.3,
+    "multiplier": 3,
+    "floor_pps": 2000,
+    "warmup_samples": 5,
+    "sample_seconds": 1
+  },
+  "dynamic_link_costs": false
+}

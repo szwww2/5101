@@ -1,0 +1,21 @@
+{
+  "scope": "Student-operated TODO2 baseline; two complete UDP tests, not the final anomaly study",
+  "path": ["h1", "s1", "s2", "s6", "h6"],
+  "switch_link_cost": 19,
+  "pingall": {"received": 30, "total": 30, "loss_percent": 0},
+  "ping_h1_h6": {"received": 5, "total": 5, "loss_percent": 0, "rtt_average_ms": 101.139},
+  "offered_udp_bits_per_second": 10000000,
+  "requested_duration_seconds_per_run": 15,
+  "udp_runs_from_client_server_reports": [
+    {"run": 1, "receiver_duration_seconds": 15.0015, "receiver_mbps": 10.0, "transfer_display_MBytes": 17.9, "jitter_ms": 0.080, "lost": 0, "total": 12759, "loss_percent": 0},
+    {"run": 2, "receiver_duration_seconds": 15.0016, "receiver_mbps": 10.0, "transfer_display_MBytes": 17.9, "jitter_ms": 0.055, "lost": 0, "total": 12759, "loss_percent": 0}
+  ],
+  "forward_flow_packet_counts": {"before_udp_each_switch": 7, "after_udp_each_switch": 25557, "increase_each_switch": 25550, "switches": ["s1", "s2", "s6"]},
+  "receiver_log": "baseline-udp-h6-receiver-20261016.log",
+  "receiver_log_sha256": "284d9562c12d4d8a3c76e9d4a379086af13b9098c99092fafdc001eb0f0fd9db",
+  "receiver_log_notes": [
+    "The direct receiver's two complete 15-second summaries independently confirm 10.0Mbps and 0/12759 loss in each run. Jitter displays are 0.081ms and 0.056ms, slightly different from client-relayed reports.",
+    "Raw receiver log also contains ack-of-last-datagram warnings and a 0.0102-second tail session using the second test's client port. Preserve this evidence; do not count the short tail as a third complete 15-second test. Its cause has not been confirmed by packet capture."
+  ],
+  "receiver_process_at_archive": {"pid": 5286, "command": "iperf -s -u -p 5001 -i 1", "status": "left running for subsequent tests"}
+}
