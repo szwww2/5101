@@ -3,11 +3,11 @@
   "reports": {
     "English": {
       "pages": 18,
-      "sha256": "55503df876e33c577205eb6db06bc2021f8134c1a6d31db292df2f0a4e32756a"
+      "sha256": "51dc5aa55333b2338a2b2b74ed10900c985e5eb77426ba0730e673e1adf332c6"
     },
     "Chinese": {
       "pages": 18,
-      "sha256": "d2e3f443cd4ae047748726b7824acba6deb39cfe5e7629dbf77d38babbbc307b"
+      "sha256": "7ee480e036873f505af8104e9cd2bff52cd2ea096f0d906b490ef6664a2ccc12"
     }
   },
   "figures_verified": 12,
@@ -24,5 +24,8 @@
     "footer_review": "New revision footer inspected; all 36 pages rendered at 110 DPI."
   },
   "network_experiments_started": false,
-  "pending": "Case C test-pair constraint still requires instructional clarification; identity/contribution fields omitted at user request."
+  "pending": "Case C test-pair constraint still requires instructional clarification; identity/contribution fields omitted at user request.",
+  "revision": "Task 2 page 5 now traces TCP/OpenFlow delivery and the h2 packet through rule matching at s2.",
+  "current_revision_check": "Only page 5 content changed relative to the preceding 18-page edition; 17 other page structures per language are identical. Page 5 visually reviewed in both languages after rendering.",
+  "protocol_check": "Ryu send_msg serializes the OpenFlow message; _send_loop uses socket.sendall. Listener and version confirmed from run_anomaly.sh and baseline_controller.py."
 }

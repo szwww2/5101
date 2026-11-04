@@ -319,28 +319,38 @@
       },
       {
         "kind": "h",
-        "en": "Where the decision and rule are implemented",
-        "zh": "判断与规则具体写在哪里"
+        "en": "How the controller delivers a rule",
+        "zh": "控制器通过什么连接下规则"
       },
       {
         "kind": "p",
-        "en": "traffic_stats.py: FlowRates.sample() computes rates; SourceEMA.observe() applies the threshold and sets newly_blocked. In anomaly_controller.py, flow_stats() handles that decision and calls drop(dp, ip) for every connected switch. The drop() method constructs the following OpenFlow rule:",
-        "zh": "traffic_stats.py 的 FlowRates.sample() 计算速率，SourceEMA.observe() 按阈值判断并设置 newly_blocked。anomaly_controller.py 的 flow_stats() 处理该结果，对每台已连接交换机调用 drop(dp, ip)。drop() 构造下面的 OpenFlow 规则："
+        "en": "Each Open vSwitch connects to Ryu at TCP 127.0.0.1:6653, configured as c0, and communicates using OpenFlow 1.3. A Ryu Datapath object (dp) represents that switch connection. FlowStats requests and replies carry counters; ordinary h2→h6 packets are forwarded by the switches. traffic_stats.py / SourceEMA.observe() detects the source; anomaly_controller.py / flow_stats() calls drop(dp, ip) for every connected switch.",
+        "zh": "各 Open vSwitch 根据 c0 配置连接 Ryu 的 TCP 地址 127.0.0.1:6653，使用 OpenFlow 1.3。Ryu 的 Datapath 对象（dp）关联该交换机的控制连接。FlowStats 请求/回复传递计数；普通 h2→h6 包由交换机转发。traffic_stats.py 的 SourceEMA.observe() 判断异常后，anomaly_controller.py 的 flow_stats() 对每台交换机调用 drop(dp, ip)。"
+      },
+      {
+        "kind": "p",
+        "en": "drop() creates OFPFlowMod: priority 5000, match eth_type=0x0800 (IPv4) and ipv4_src=10.0.0.2, with an empty action list and no next-table instruction. dp.send_msg() serializes it; Ryu sends the bytes over the TCP control connection. The switch receives the message and installs the drop entry in its own flow table. Python defines the rule; the switch executes it.",
+        "zh": "drop() 构造 OFPFlowMod：优先级 5000，匹配 eth_type=0x0800（IPv4）和 ipv4_src=10.0.0.2，动作列表为空且无下一表指令。dp.send_msg() 序列化消息，Ryu 经 TCP 控制连接发送；交换机接收并安装 drop 条目。Python 定义规则，交换机在自己的流表中执行。"
+      },
+      {
+        "kind": "h",
+        "en": "Why h2→h6 fails while h1→h6 still works",
+        "zh": "为什么 h2→h6 被阻断，h1→h6 仍通"
       },
       {
         "kind": "code",
-        "en": "OFPFlowMod(datapath=dp, cookie=DROP_COOKIE, priority=5000,\n  match=OFPMatch(eth_type=0x0800, ipv4_src=ip),\n  instructions=[OFPInstructionActions(OFPIT_APPLY_ACTIONS, [])])",
-        "zh": "OFPFlowMod(datapath=dp, cookie=DROP_COOKIE, priority=5000,\n  match=OFPMatch(eth_type=0x0800, ipv4_src=ip),\n  instructions=[OFPInstructionActions(OFPIT_APPLY_ACTIONS, [])])"
+        "en": "Before: h2-eth0 -> s2-eth1 [s2] s2-eth6 -> s6 -> h6\nAfter:  h2-eth0 -> s2-eth1 [s2: match source 10.0.0.2, DROP]",
+        "zh": "Before: h2-eth0 -> s2-eth1 [s2] s2-eth6 -> s6 -> h6\nAfter:  h2-eth0 -> s2-eth1 [s2: match source 10.0.0.2, DROP]"
       },
       {
         "kind": "p",
-        "en": "dp.send_msg() sends the rule to the switch. Match 0x0800 selects IPv4; ipv4_src selects the anomalous source. An empty action list, with no output or next-table instruction, drops matching packets. Priority 5000 overrides ordinary forwarding. The installed rule lives in the Open vSwitch flow table; the Python file defines how to create it, and the log only records events.",
-        "zh": "dp.send_msg() 将规则发送给交换机。0x0800 匹配 IPv4，ipv4_src 匹配异常源。空动作列表且没有输出或跳转下一表指令，意味着丢弃匹配包。优先级 5000 高于普通转发。生效规则位于 Open vSwitch 流表中；Python 文件定义生成逻辑，日志仅记录事件。"
+        "en": "A request from h2 has source 10.0.0.2 and destination 10.0.0.6. At s2 it matches both the old priority-110 ICMP forwarding rule (output s2-eth6) and the new priority-5000 source drop. The higher priority wins: s2 discards it, h6 never receives that request, and no corresponding echo reply returns. A request from h1 has source 10.0.0.1, so it misses the drop and follows its forwarding rule. The source IP is blocked for all IPv4 destinations; neither the s2–s6 link nor h6 is disabled.",
+        "zh": "h2 请求的源 IP 为 10.0.0.2、目的为 10.0.0.6。在 s2，它同时满足原 priority 110 的 ICMP 转发规则（从 s2-eth6 发出）和新 priority 5000 的源地址 drop。5000 优先，s2 丢弃该包，h6 收不到请求，因而没有对应回复。h1 的源 IP 是 10.0.0.1，不匹配 drop，继续正常转发。封锁针对 h2 发出的 IPv4 包，目的不限；s2–s6 链路及 h6 并未关闭。"
       },
       {
         "kind": "p",
-        "en": "For h2, dump-flows shows priority=5000, ip, nw_src=10.0.0.2, actions=drop. Evidence is the ingress s2 drop counter and h2 0/3 versus h1 3/3 probes. timeout ending the sender does not prove blocking; Task 2 keeps the source blocked until the experiment is restarted. This clarification adds no new experimental measurements.",
-        "zh": "对 h2，dump-flows 显示 priority=5000、ip、nw_src=10.0.0.2、actions=drop。证据是入口 s2 的丢弃计数，以及 h2 0/3、h1 3/3 的探测结果。timeout 结束发包不等于验证封锁；Task 2 保留源封锁直到重启实验。本页只补实现说明，没有新增测量。"
+        "en": "Observed evidence: s2 drop counter 478,615; subsequent h2 ping 0/3 and h1 ping 3/3. Some packets passed before detection/installation, and old counters remain. BLOCK text or the sender exiting after eight seconds alone is not enforcement proof. Task 2 retains blocking until the round is restarted.",
+        "zh": "实测证据：s2 drop 计数 478,615；随后 h2 ping 为 0/3、h1 为 3/3。检测及安装前已有部分包通过，旧计数仍保留。仅有 BLOCK 日志或 8 秒后发包退出不足以证明封锁。Task 2 保留封锁直到重启本轮。"
       }
     ]
   },

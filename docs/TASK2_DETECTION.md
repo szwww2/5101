@@ -12,6 +12,14 @@ anomaly_controller.py 继承正常转发控制器；traffic_stats.py 处理累�
 
 具体代码入口：[`SourceEMA.observe()`](../traffic_stats.py#L38) 判断是否异常；[`AnomalyController.flow_stats()`](../anomaly_controller.py#L117) 在 `newly_blocked` 时遍历交换机；[`AnomalyController.drop()`](../anomaly_controller.py#L33) 用 `OFPFlowMod` 设置源 IPv4 匹配、优先级 5000 和空动作列表，并通过 `dp.send_msg()` 下发。规则最终保存在交换机的 Open vSwitch 流表中，`dump-flows` 查看这个实际规则；Python 源文件定义生成逻辑，日志只记录过程。原发包命令中每个参数、`>`、`2>&1` 的含义详见[本人操作记录的 Task 2](MY_EXPERIMENT_REPLAY.md)。
 
+### 控制器怎样下规则，h2→h6 为什么被阻断
+
+交换机根据 c0 配置连接 Ryu 的 TCP 地址 `127.0.0.1:6653`，通过这条控制连接使用 OpenFlow 1.3。Ryu 的 `Datapath` 对象关联一台已连接交换机；`dp.send_msg(OFPFlowMod(...))` 将消息序列化，经 TCP 发送给该交换机，交换机解析并安装流表条目。正常业务数据在交换机之间转发；控制器通过 FlowStats 请求/回复取得计数，进行检测。
+
+正常 h2→h6 请求的源/目的 IP 是 `10.0.0.2` / `10.0.0.6`，从 `s2-eth1` 进入 s2，原 priority 110 ICMP 规则让它从 `s2-eth6` 发往 s6。新增 priority 5000 规则匹配所有源为 `10.0.0.2` 的 IPv4 包。这一请求同时满足两条规则，5000 优先，因此在 s2 被丢弃，到不了 h6，也就没有对应的 ping 回复。原转发规则可以仍在流表中，但不会覆盖更高优先级的封锁规则。
+
+h1 的源 IP 为 `10.0.0.1`，不匹配该 drop，仍可正常到达 h6。封锁对象是 h2 的 IPv4 源地址，目的地址不限；s2–s6 链路和 h6 本身并未关闭。规则安装前转发计数可已增加，因此应使用安装后的 drop 命中与探测结果验证封锁。
+
 交换机给的是累计包数 P，不是实时 pps，所以先计算：
 
 $$r_t=\frac{P_t-P_{t-1}}{t_t-t_{t-1}}.$$
