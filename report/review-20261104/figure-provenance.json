@@ -1,0 +1,62 @@
+[
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo01\\evidence\\ca2-miniedit-full-topology-20261011.png",
+    "asset": "assets/ca2-miniedit-full-topology-20261011.png",
+    "sha256": "4d67ab5cce1ce3747453e43ba5f74334165766243b5f255212ebc0f2dd03b10a"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo02\\evidence\\baseline-h1-h6-flow-path-20261016.png",
+    "asset": "assets/baseline-h1-h6-flow-path-20261016.png",
+    "sha256": "77f81a30ee0ba900f1bbf04387b71e3266775d163c028ae6bed563582a2289cf"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo03\\evidence\\normal-h2-stats-and-ema-20261016.png",
+    "asset": "assets/normal-h2-stats-and-ema-20261016.png",
+    "sha256": "1b67a0f5566d8f6c5599659ae505522b9261166a7689b5edd08e186c12ce79d8"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo04\\evidence\\anomaly-penalty-s2-s6-cost-20261016.png",
+    "asset": "assets/anomaly-penalty-s2-s6-cost-20261016.png",
+    "sha256": "4f064f3c8da96cd2c48a41249904553d70122aa824e7a5ccfa531900f764a36c"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\task5-final-20261017\\case-A-timeseries.png",
+    "asset": "assets/case-A-timeseries.png",
+    "sha256": "6e15a1c296b045f3971e164b62cba2f3a3db1c25ec443ddf8a276ffd50198a2a"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\task5-final-20261017\\case-B-timeseries.png",
+    "asset": "assets/case-B-timeseries.png",
+    "sha256": "ef5201928d4b15a348686e377e15baf33e48553016c743cc4e97c95e5117b404"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\task5-final-20261017\\case-C-timeseries.png",
+    "asset": "assets/case-C-timeseries.png",
+    "sha256": "9fcbaa97ddb3f7a726926638347f6427aee14482eb1b19d371d16e7c02e6620f"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\task5-final-20261017\\case-B-routing-and-loss.png",
+    "asset": "assets/case-B-routing-and-loss.png",
+    "sha256": "ec1684d6397318136994a685550f817aecbe7470f82ab206f5a754736036856f"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\task5-final-20261017\\case-B-repeat-comparison.png",
+    "asset": "assets/case-B-repeat-comparison.png",
+    "sha256": "5d29de5e9a470fa95ed44de56c0900603564294a55e4e75c551a02cd2474120f"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo05\\run-A-20261016-145805-CPT5A8\\evidence\\student-A-pass-final-summary-20261016.png",
+    "asset": "assets/student-A-pass-final-summary-20261016.png",
+    "sha256": "2baa6e0ac2185d75e6f4330725334ff8d94993c15d958516337ec9d0984e4f2c"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo05\\run-C-20261016-153103-Ho9Y7P\\evidence\\student-C-pass-final-summary-20261016.png",
+    "asset": "assets/student-C-pass-final-summary-20261016.png",
+    "sha256": "f139353b33667dd729245c30dbc0d9ed5065a0a8b7c1dfc00ffd79302f6a9485"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo05\\run-B-20261017-111734-b9lfbt\\evidence\\student-B-repeat3-pass-summary-20261017.png",
+    "asset": "assets/student-B-repeat3-pass-summary-20261017.png",
+    "sha256": "c30e113b961bb6a71d2e9f783eed8501ef5410a805dbd180690dc256e38f11c8"
+  }
+]

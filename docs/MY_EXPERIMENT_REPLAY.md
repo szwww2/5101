@@ -170,6 +170,36 @@ h2 timeout 8s hping3 -1 --flood 10.0.0.6 > /tmp/ceg5101-todo03-h2-flood-20261016
 
 其中 `-1` 与 `--icmp` 都表示 ICMP 模式，`--flood` 表示高速发包，`timeout 8s` 限定本轮发送 8 秒。控制器检测到异常时会自动封锁；8 秒后发包程序退出本身不能证明封锁成功，需要下面的规则和通信检查。
 
+**原发包命令逐项解释：**
+
+| 命令部分 | 做什么 |
+|---|---|
+| `h2` | Mininet 在虚拟主机 h2 的网络环境里执行后面的命令，流量从 h2 发出 |
+| `timeout 8s` | 运行后面的程序，8 秒后终止本轮发包 |
+| `hping3` | 构造并发送测试数据包的程序 |
+| `-1` | 选择 ICMP 模式，与 `--icmp` 等价；这里发送回显请求 |
+| `--flood` | 尽可能快地发包，使源速率大幅上升；没有指定固定 Mbps |
+| `10.0.0.6` | 目标 IP，即 h6 |
+| `> /tmp/ceg5101-todo03-h2-flood-20261016.log` | 将标准输出写入 Ubuntu 的这个日志文件；已有同名文件会被覆盖 |
+| `2>&1` | 把标准错误（编号 2）也送到标准输出（编号 1）当前指向的日志文件 |
+
+`2>&1` 中的 `&1` 表示引用输出通道 1，不是让程序后台运行。这条 flood 命令末尾没有单独的 `&`，所以终端 B 等待约 8 秒后返回提示符。相邻的 h1 ping 命令末尾有单独的 `&`，因此 h1 的合法流量在后台继续。
+
+**控制器规则写在哪里：代码、下发消息、交换机流表是三个不同位置。**
+
+| 文件和函数（原项目目录内） | 职责 |
+|---|---|
+| `run_anomaly.sh` | 启动 Ryu，加载 `anomaly_controller.py`；不产生异常流量 |
+| `traffic_stats.py` → `FlowRates.sample()` | 用计数增量和实际时间间隔计算 pps/bps |
+| `traffic_stats.py` → `SourceEMA.observe()` | 使用旧 EMA 和阈值判断，返回 `newly_blocked` |
+| `anomaly_controller.py` → `AnomalyController.flow_stats()` | 收到交换机统计；发现 `newly_blocked` 后，对所有已连接交换机调用 `self.drop(dp, ip)` |
+| `anomaly_controller.py` → `AnomalyController.drop()` | 构造 `OFPFlowMod`，再用 `dp.send_msg()` 发给交换机 |
+| 各 Open vSwitch 交换机的流表 | 保存并执行收到的规则；日志文件不是规则生效的位置 |
+
+`drop()` 在当前代码第 33 行开始：`priority=5000` 指定优先级，`eth_type=0x0800` 匹配 IPv4，`ipv4_src=ip` 匹配异常源。`OFPInstructionActions(..., [])` 使用空动作列表，同时没有输出或跳转下一表指令，因此匹配的包被丢弃。对 h2，交换机中显示为 `priority=5000,ip,nw_src=10.0.0.2 actions=drop`。
+
+控制器中的 Python 文件规定“如何检测、生成规则”；控制器通过 OpenFlow 下发；交换机在流表中执行。h2 的包先在 s2 被丢弃，h1 源 IP 不同，不匹配该封锁规则。下一步 `dump-flows` 就是检查这个实际生效位置。
+
 发包结束后，查看封锁规则并分别测试 h2、h1：
 
 ```text
@@ -292,10 +322,10 @@ D:\desktop\nus\CEG5101 Modern Computer Networking\sdn_assignment\todo06\task5-fi
 完整中英文报告在：
 
 ```text
-D:\desktop\nus\CEG5101 Modern Computer Networking\sdn_assignment\report\review-20261017
+D:\desktop\nus\CEG5101 Modern Computer Networking\sdn_assignment\report\review-20261104
 ```
 
-现场讲已有结果可以直接打开这些文件。**新跑出的实验不会自动改写旧图表**；如果要用新数据更新图，需按新输出目录另做分析。
+这里的 2026-11-04 报告在原实验数据上补充了 Task 2 命令与规则代码说明，两版第 5 页专门解释从发包到封锁；2026-10-17 原报告仍保留。现场讲已有结果可以直接打开这些文件。**新跑出的实验不会自动改写旧图表**；如果要用新数据更新图，需按新输出目录另做分析。
 
 ## 这些命令从哪里来
 

@@ -10,6 +10,8 @@
 
 anomaly_controller.py 继承正常转发控制器；traffic_stats.py 处理累计计数、速率和 EMA。本阶段**只增加检测和封锁，路径仍然是静态最短路**。
 
+具体代码入口：[`SourceEMA.observe()`](../traffic_stats.py#L38) 判断是否异常；[`AnomalyController.flow_stats()`](../anomaly_controller.py#L117) 在 `newly_blocked` 时遍历交换机；[`AnomalyController.drop()`](../anomaly_controller.py#L33) 用 `OFPFlowMod` 设置源 IPv4 匹配、优先级 5000 和空动作列表，并通过 `dp.send_msg()` 下发。规则最终保存在交换机的 Open vSwitch 流表中，`dump-flows` 查看这个实际规则；Python 源文件定义生成逻辑，日志只记录过程。原发包命令中每个参数、`>`、`2>&1` 的含义详见[本人操作记录的 Task 2](MY_EXPERIMENT_REPLAY.md)。
+
 交换机给的是累计包数 P，不是实时 pps，所以先计算：
 
 $$r_t=\frac{P_t-P_{t-1}}{t_t-t_{t-1}}.$$

@@ -1,0 +1,44 @@
+{
+  "body_unchanged": [
+    "English-01",
+    "English-02",
+    "English-03",
+    "English-06",
+    "English-07",
+    "English-08",
+    "English-09",
+    "English-10",
+    "English-11",
+    "English-12",
+    "English-13",
+    "English-14",
+    "English-15",
+    "English-16",
+    "English-17",
+    "English-18",
+    "Chinese-01",
+    "Chinese-02",
+    "Chinese-03",
+    "Chinese-06",
+    "Chinese-07",
+    "Chinese-08",
+    "Chinese-09",
+    "Chinese-10",
+    "Chinese-11",
+    "Chinese-12",
+    "Chinese-13",
+    "Chinese-14",
+    "Chinese-15",
+    "Chinese-16",
+    "Chinese-17",
+    "Chinese-18"
+  ],
+  "body_changed": [
+    "English-04",
+    "Chinese-04"
+  ],
+  "new_pages": [
+    "English-05",
+    "Chinese-05"
+  ]
+}
