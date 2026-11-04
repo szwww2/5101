@@ -1,5 +1,7 @@
 # Task 1：MiniEdit 拓扑与正常通信基线
 
+**本人在原电脑操作：使用 [我自己的实验重做记录](MY_EXPERIMENT_REPLAY.md)**，从原来的 MiniEdit 文件和启动命令开始。
+
 [返回完整指南](REPRODUCE.md) · [下一步：Task 2](TASK2_DETECTION.md)
 
 ## 1. 老师要求什么
