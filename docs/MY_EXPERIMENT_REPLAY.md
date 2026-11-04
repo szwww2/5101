@@ -136,13 +136,24 @@ h1 iperf -c 10.0.0.6 -u -b 10000000 -t 15 -i 1 -p 5001
 
 这一轮看控制器能否区分正常低速通信与突发高率流量，并让合法 h1 继续通信。
 
+**Task 2 仍然需要终端 A 和终端 B。** A 运行检测控制器，自动采集统计、维护 EMA、发现异常并下发封锁规则；B 运行 MiniEdit/Mininet，用来启动网络、产生流量和验证封锁。只启动 A 而不启动网络、发送流量，不能完成这个任务。
+
+| 老师的要求 | 本轮由谁执行、看什么 |
+|---|---|
+| 用 ping 模拟正常流量、形成 EMA 基线 | B 执行 h2 的正常 ping；A 观察 pps、old_ema、new_ema、threshold |
+| 用 hping3 产生异常流量 | B 执行下面原来的限时 ICMP flood；A 自动判断异常 |
+| 检测后安装源 IP 防火墙规则 | A 的控制器通过 OpenFlow 自动向交换机下发源 IP drop 规则 |
+| 验证异常流不再转发 | B 查看 s2 的 drop 规则及命中计数，再检查 h2 ping 被阻断、h1 ping 仍成功 |
+
+这里“安装防火墙规则”指向交换机流表下发过滤规则。例如源为 h2 时，匹配 `ip,nw_src=10.0.0.2`，使用 `priority=5000` 和 `actions=drop`。现有代码向所有已连接交换机下发，h2 的流量首先在接入交换机 s2 被丢弃。这个动作由控制器自动完成；下面的 `dump-flows` 只是查看规则，不是安装规则。
+
 结束旧轮次。终端 A：
 
 ```bash
 bash "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/run_anomaly.sh"
 ```
 
-MiniEdit 点 **Run**。等 **BASELINE READY**、**DETECTION STARTED** 出现，再等至少 **8 秒**预热。终端 B 的 `mininet>`：
+终端 B 沿用前面已打开的 MiniEdit；若已关闭，按本文开头的 MiniEdit 步骤重新打开原拓扑。点 **Run**，等终端 A 出现 **BASELINE READY**、**DETECTION STARTED**，再等至少 **8 秒**预热。随后在终端 B 的 `mininet>` 输入正常流量命令：
 
 ```text
 h2 ping -c 20 -i 0.5 -W 1 10.0.0.6
@@ -156,6 +167,8 @@ h2 ping -c 20 -i 0.5 -W 1 10.0.0.6
 h1 ping -D -i 0.5 -W 1 10.0.0.6 > /tmp/ceg5101-todo03-h1-ping-20261016.log 2>&1 &
 h2 timeout 8s hping3 -1 --flood 10.0.0.6 > /tmp/ceg5101-todo03-h2-flood-20261016.log 2>&1
 ```
+
+其中 `-1` 与 `--icmp` 都表示 ICMP 模式，`--flood` 表示高速发包，`timeout 8s` 限定本轮发送 8 秒。控制器检测到异常时会自动封锁；8 秒后发包程序退出本身不能证明封锁成功，需要下面的规则和通信检查。
 
 发包结束后，查看封锁规则并分别测试 h2、h1：
 
