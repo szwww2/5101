@@ -40,7 +40,15 @@
 
 ## 最短启动示例
 
-在 Linux/WSL Ubuntu 22.04 内，按安装指南安装依赖后：
+**原作者现有演示电脑：项目已经存在，不需要重新 clone。** 在每个 Ubuntu 终端进入下面的目录，具体双终端启动命令见 [本机演示操作](docs/DEMO_PLAN.md)：
+
+~~~bash
+cd "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/publish/5101"
+~~~
+
+本机后续指南中的所有 `cd "$HOME/5101"` 都换成上面这一条。MiniEdit 打开这个仓库中的 `todo01/ca2-mesh-my.mn`。本机路径与旧实验目录的区别见 [路径说明](docs/REPRODUCE.md)。
+
+**搭档的新电脑：**在 Linux/WSL Ubuntu 22.04 内，按安装指南安装依赖后：
 
 ```bash
 git clone https://github.com/szwww2/5101.git

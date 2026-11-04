@@ -44,6 +44,14 @@ B1 原始 results.json 的 FAIL 来自当时检查器错误地要求外部控制
 
 ## 4. 复现“已有结果”：无需重跑网络
 
+**原作者本机演示的路径说明：**下面各命令块中的 `cd "$HOME/5101"` 是搭档新 clone 的默认路径。本机已经有项目，请将本页所有这类 cd 命令替换为：
+
+~~~bash
+cd "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/publish/5101"
+~~~
+
+每个 Ubuntu 终端都要进入这个目录。MiniEdit 使用该目录下的 `todo01/ca2-mesh-my.mn`；Task 5 也从这里读取数据。无需重新 clone。搭档若按安装指南克隆到自己的 "$HOME/5101"，继续使用下面的默认命令即可。目录区别见 [总指南第 0 节](REPRODUCE.md)。
+
 以下在 **Ubuntu shell**，不在 mininet>，不需要 sudo，也不用启动 OVS：
 
 ~~~bash

@@ -11,6 +11,69 @@
 | 16–20 分钟 | 报告曲线与性能 | B 启动附近丢包、三轮波动、稳定阶段与整轮指标区别 |
 | 20–25 分钟 | 提问与补充检查 | 路径证据、drop 计数、恢复条件、已知限制 |
 
+## 原作者本机：可直接复制的演示命令
+
+本节用于已经配置好的原作者 WSL Ubuntu-22.04。完整项目已在 D 盘，**不用重新 clone，也不用重装 Mininet/Ryu**。下列命令已经写好本机路径；搭档在其他电脑演示时使用自己的克隆目录。目录对照见 [复现指南第 0 节](REPRODUCE.md)。
+
+开始前先结束上一轮实验：Mininet CLI 输入 exit → MiniEdit Stop 并关闭 → 旧控制器 Ctrl+C。下面以最容易展示真实改道的 B 场景为例。
+
+### 终端 C：控制器
+
+~~~bash
+cd "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/publish/5101"
+source "$HOME/miniforge3/etc/profile.d/conda.sh"
+conda activate ceg5101-ryu38
+export CEG_RYU_MANAGER="$(command -v ryu-manager)"
+mkdir -p local-validation
+CEG_CONSOLE="$(mktemp "$PWD/local-validation/demo-B-controller-XXXXXX.log")"
+bash run_rerouting.sh B 2>&1 | tee "$CEG_CONSOLE"
+~~~
+
+记下启动时打印的 todo05/run-B-* 输出目录。此时控制器等待交换机连接，继续打开第二个 Ubuntu 终端。
+
+### 终端 M：MiniEdit
+
+~~~bash
+cd "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/publish/5101"
+sudo service openvswitch-switch start
+sudo bash run_miniedit.sh
+~~~
+
+File → Open 选择这个文件，然后点 Run：
+
+~~~text
+/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/publish/5101/todo01/ca2-mesh-my.mn
+~~~
+
+每个终端都要单独 cd。此次使用 publish/5101 里的代码和拓扑；/home/robot/CEG5101/todo01 是早期操作文件存放处。打开拓扑文件不会自动切换 Python 的当前工作目录，所以启动 MiniEdit 前的 cd 仍然必需。
+
+### mininet>：开始 B 的一分钟测量
+
+等终端 C 出现 REROUTING READY: scenario=B 和初始 [1,2,6]，再等至少 8 秒预热。先保存拓扑和 READY 截图，然后在终端 M 的 mininet> 逐条输入：
+
+~~~text
+py __import__('os').getcwd()
+py __import__('sys').path.insert(0, __import__('os').getcwd())
+py __import__('student_task4_experiment').run(net)
+~~~
+
+第一条应显示上述 publish/5101 目录；第三条开始时的 Output 应与终端 C 本轮目录一致。实验自动完成 0–12 秒正常、约 12–26 秒异常、后续恢复，预期路径 [1,2,6] → [1,2,3,6] → [1,2,6]。
+
+截图保存 BLOCK、两次 ROUTE 和最终汇总。如果要为这一轮生成新图，结束网络前在终端 O 按 [Task 5 第 5 节](TASK5_EVALUATION.md) 冻结分析；该页的 cd 同样替换成本机完整路径。测量和取证细节见 [Task 4](TASK4_REROUTING.md)。
+
+### 若单独展示其他任务
+
+终端 C 选择对应入口；终端 M 的目录与拓扑不变，每轮仍需结束旧网络/控制器再重开：
+
+| 展示内容 | 控制器入口 | 后续操作 |
+|---|---|---|
+| Task 1 正常基线 | bash run_baseline.sh | 按 Task 1 执行 net、pingall、流表与 UDP 测量 |
+| Task 2 检测封锁 | bash run_anomaly.sh | 按 Task 2 做正常 ping、限时异常和封锁检查 |
+| Task 3 动态代价 | bash run_costs.sh | 按 Task 3 观察空闲、正常、惩罚及恢复 |
+| Task 4 A | bash run_rerouting.sh A | 预热后使用同一 run(net) 入口 |
+| Task 4 C | bash run_rerouting.sh C | 预热后使用同一入口，说明固定测试对条件 |
+| Task 5 图表解释 | 不需要新控制器 | 打开现有图表，或按 Task 5 离线重画 |
+
 ## 上场前
 
 1. 在演示设备上完整跑通至少一轮 B；提前确认电源、终端、显示缩放和 Linux 图形显示。

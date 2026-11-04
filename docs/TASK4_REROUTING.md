@@ -53,6 +53,14 @@ VLAN 在这里是区分转发版本的内部标签，不需要给 h1/h6 配 VLAN
 
 ## 4. 场景 A：完整启动和运行
 
+**原作者本机演示的路径说明：**下面各命令块中的 `cd "$HOME/5101"` 是搭档新 clone 的默认路径。本机已经有项目，请将本页所有这类 cd 命令替换为：
+
+~~~bash
+cd "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/publish/5101"
+~~~
+
+每个 Ubuntu 终端都要进入这个目录。MiniEdit 使用该目录下的 `todo01/ca2-mesh-my.mn`；Task 5 也从这里读取数据。无需重新 clone。搭档若按安装指南克隆到自己的 "$HOME/5101"，继续使用下面的默认命令即可。目录区别见 [总指南第 0 节](REPRODUCE.md)。
+
 先完成环境安装，并结束 Task 3；不要遗留 h6 的 5001 接收端。
 
 **终端 C：**
@@ -99,6 +107,8 @@ py __import__('student_task4_experiment').run(net)
 第二条把仓库目录放到 Python 模块搜索列表前面。第三条导入 student_task4_experiment.py 并调用 **run(net)**；net 就是当前 MiniEdit 创建的网络，不会再建第二张可见网络。文件由 Python 搜索路径找到，因此写模块名时不加 .py。
 
 默认选择本仓库最新的 todo05/run-* 目录，所以只保留一个当前控制器。开始后它会打印 Output，**必须和本轮控制器输出一致**。如果你保留多个输出需要明确指定，用下面一条替代第三条，填本轮实际绝对路径：
+
+原作者本机的 output 应以 `/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/publish/5101/todo05/` 开头，再接控制器打印的 run-* 目录名；不要照抄下面示例里的 /home/你的Linux用户名。
 
 ~~~text
 py __import__('student_task4_experiment').run(net, output="/home/你的Linux用户名/5101/todo05/本轮run目录名")

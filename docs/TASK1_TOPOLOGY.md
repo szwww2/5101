@@ -49,6 +49,14 @@ baseline_controller.py 使用 LLDP 发现交换机链路，结合固定主机接
 
 ## 4. 完整启动命令
 
+**原作者本机演示的路径说明：**下面各命令块中的 `cd "$HOME/5101"` 是搭档新 clone 的默认路径。本机已经有项目，请将本页所有这类 cd 命令替换为：
+
+~~~bash
+cd "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/publish/5101"
+~~~
+
+每个 Ubuntu 终端都要进入这个目录。MiniEdit 使用该目录下的 `todo01/ca2-mesh-my.mn`；Task 5 也从这里读取数据。无需重新 clone。搭档若按安装指南克隆到自己的 "$HOME/5101"，继续使用下面的默认命令即可。目录区别见 [总指南第 0 节](REPRODUCE.md)。
+
 先完成 [环境安装](REPRODUCE.md)，并按该页的结束顺序关闭上一轮网络。
 
 **终端 C：启动基线控制器并保存控制台日志。**

@@ -30,6 +30,14 @@ C_{ij}(t)=C^0_{ij}+5U_{ij}(t)+60A_{ij}(t).$$
 
 ## 3. 完整启动
 
+**原作者本机演示的路径说明：**下面各命令块中的 `cd "$HOME/5101"` 是搭档新 clone 的默认路径。本机已经有项目，请将本页所有这类 cd 命令替换为：
+
+~~~bash
+cd "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/publish/5101"
+~~~
+
+每个 Ubuntu 终端都要进入这个目录。MiniEdit 使用该目录下的 `todo01/ca2-mesh-my.mn`；Task 5 也从这里读取数据。无需重新 clone。搭档若按安装指南克隆到自己的 "$HOME/5101"，继续使用下面的默认命令即可。目录区别见 [总指南第 0 节](REPRODUCE.md)。
+
 结束旧网络及控制器后，**终端 C：**
 
 ~~~bash

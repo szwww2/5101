@@ -31,6 +31,14 @@ EMA 系数 0.3、倍数 3 与教师参考思想一致；最低阈值、预热和
 
 ## 3. 完整启动
 
+**原作者本机演示的路径说明：**下面各命令块中的 `cd "$HOME/5101"` 是搭档新 clone 的默认路径。本机已经有项目，请将本页所有这类 cd 命令替换为：
+
+~~~bash
+cd "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/publish/5101"
+~~~
+
+每个 Ubuntu 终端都要进入这个目录。MiniEdit 使用该目录下的 `todo01/ca2-mesh-my.mn`；Task 5 也从这里读取数据。无需重新 clone。搭档若按安装指南克隆到自己的 "$HOME/5101"，继续使用下面的默认命令即可。目录区别见 [总指南第 0 节](REPRODUCE.md)。
+
 先按 [共同结束顺序](REPRODUCE.md) 关闭 Task 1，特别是旧 iperf 接收端。使用同一份 .mn 拓扑。
 
 **终端 C：**

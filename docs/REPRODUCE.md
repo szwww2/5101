@@ -4,6 +4,38 @@
 
 任务要求按课程四页 Lab Assignment 的 Task 1–5 及 Reference A–C 核对后概述；教师原文件不在仓库转载，请用课程平台上的原件核对。文中给出的参数、实验时长、验收阈值和操作顺序是本项目的选择，不全部是老师规定。
 
+## 0. 先选对项目目录：本机演示与搭档新安装
+
+**原作者现有电脑已经有项目，不需要为了运行指南重新 clone 或重装环境。** 2026-11-04 核对的目录如下：
+
+| Ubuntu 中的路径 | 内容与用途 |
+|---|---|
+| /home/robot/CEG5101/todo01 | 以前的 MiniEdit 拓扑和早期实验文件，并非完整 Git 仓库 |
+| /mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment | 完整原实验工作区、代码及历史数据 |
+| 上一行目录下的 publish/5101 | 已上传 GitHub 的协作副本，本次按新版指南演示使用这里 |
+| /home/robot/5101 | 搭档安装步骤使用的默认 clone 位置；原作者电脑在上述核对时没有此目录 |
+
+/mnt/d 是 WSL 中访问 Windows D 盘的入口；两边对应位置看到的是同一批文件。原工作区和 publish/5101 是两个不同目录，后续修改不会自动同步；本次指南统一运行 publish/5101 中的代码。
+
+**本机操作：每个 Ubuntu 终端都用这条命令进入项目。**
+
+~~~bash
+cd "/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/publish/5101"
+pwd
+~~~
+
+本机阅读后续 Task 1–5 时，把所有 `cd "$HOME/5101"` 替换成上面的完整 cd 命令。终端 C、M、O 各自有自己的当前目录，在一个终端 cd 不会改变另一个终端。
+
+MiniEdit 的 File → Open 也使用本仓库的拓扑：
+
+~~~text
+/mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/publish/5101/todo01/ca2-mesh-my.mn
+~~~
+
+**搭档新安装：**按第 2 节 clone 到自己 Ubuntu 的 "$HOME/5101"，之后可以原样使用各任务中的默认 cd 命令。搭档不应照抄原作者的 D 盘路径。
+
+如果报 No such file or directory：`$HOME` 是大写的用户主目录变量，`$home` 和不带 $ 的 HOME 不是同一个含义。即使 `cd "$HOME/5101"` 语法正确，目标目录没有建立时仍然会失败；应先选已有目录或按安装步骤 clone。
+
 ## 1. 先看全流程和编号
 
 | 老师任务 | 要回答的问题 | 主要实现/入口 | 原工作区编号 |
@@ -29,6 +61,8 @@
 以下命令全部在 **Ubuntu 的 Bash 终端**执行，不在 Windows PowerShell 中执行。若使用 Windows，先进入已安装的 Ubuntu 22.04。可见 MiniEdit 需要 WSLg、Linux 桌面或配置好的 X11。
 
 ### 2.1 系统依赖与仓库
+
+以下安装/clone 块面向新机器。原作者现有电脑先按第 0 节进入项目，可直接激活已有环境并做第 2.4 节检查；不要为了创建默认路径再次安装整套依赖。
 
 ~~~bash
 sudo apt-get update
@@ -157,6 +191,7 @@ CEG_USE_XVFB=1 bash run_headless.sh all
 
 | 现象 | 检查和处理 |
 |---|---|
+| cd "$HOME/5101" 报 No such file or directory | 按第 0 节选择实际项目位置；本机已有项目在 D 盘的 publish/5101，搭档新机先 clone |
 | No module named mininet | MiniEdit 必须用 run_miniedit.sh 中的 /usr/bin/python3 |
 | 找不到 ryu-manager | 在终端 C 激活环境并 export CEG_RYU_MANAGER；这个变量不会自动传播到其他终端 |
 | couldn't connect to display | 检查 WSLg/X11；自动验证可用 xvfb，可见 MiniEdit 仍需真实显示 |
