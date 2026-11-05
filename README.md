@@ -30,7 +30,10 @@
 - [完整英文报告 PDF](report/review-20261105/CEG5101_CA2_Report_English.pdf)
 - [完整中文报告 PDF](report/review-20261105/CEG5101_CA2_Report_Chinese.pdf)
 
-2026-11-05 两版报告各 24 页，第 6、8、13、16、17、19 页分别解释选择性封锁、独立代价阶段、B 原/备用路径、全网 22 方向、A/C 和全部 B 重复。Task 2 第 6 页已按要求重新实验、连续采集后补图，其他图仍用原日志；第 5 页保留原命令与规则解释。旧测量和历史报告保留。
+2026-11-05 两版报告现各 30 页、24 幅图。Task 2 全链路与主机接入图在第 7–8 页，Task 3 全链路图在第 11 页；Task 4 A/B/C 各自的全链路图在第 14/16/18 页，紧跟各场景原代价、丢包和吞吐结果。Task 5 继续以 B 为主要改道分析对象。Task 2 新端口补测与原仅 ping 补测分别标注，其余新图沿用完整原日志。旧测量和历史报告保留。
+
+- [全链路图、CSV、来源及离线重画](todo06/all-link-evidence-20261105/README.md)：`plot_all_link_evidence.py`。
+- [Task 2 新端口补测及完整命令](todo03/task2-link-capture-20261105/README.md)：UDP 10 Mbps，35/27,214 丢失，ping 64/65；保留实际损失。
 - [Task 2 连续补测：流程、计数方法和运行命令](todo03/task2-recapture-20261105/README.md)，h1 为 64/64 回复，与十月原观测分开记录。
 - [多链路证据、图表、CSV 与测量口径](todo06/policy-evidence-20261105/README.md)。离线入口 `analyze_policy_evidence.py`，无需启动网络。
 - 同目录 HTML 可编辑；移动时一起保留 `assets/`。主要实验来自 2026 年 10 月，Task 2 连续补测为 11 月 5 日；未补成员和分工。

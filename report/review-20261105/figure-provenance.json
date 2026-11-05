@@ -20,6 +20,16 @@
     "sha256": "52a754f96aa6e8a4e5f372f1954fab5d850fe9f03aae4143f9a5372f5bf0ded7"
   },
   {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\all-link-evidence-20261105\\task2-all-links.png",
+    "asset": "assets/task2-all-links.png",
+    "sha256": "b3f50499dcaedaef7b725f46c866a36fb6aecce514facfb548942493eb691af9"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\all-link-evidence-20261105\\task2-host-attachments.png",
+    "asset": "assets/task2-host-attachments.png",
+    "sha256": "aa9e71564e317d3a2843e5256dd479ad72c6d162ee990e7b2371bc068ba1544d"
+  },
+  {
     "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo04\\evidence\\anomaly-penalty-s2-s6-cost-20261016.png",
     "asset": "assets/anomaly-penalty-s2-s6-cost-20261016.png",
     "sha256": "4f064f3c8da96cd2c48a41249904553d70122aa824e7a5ccfa531900f764a36c"
@@ -30,9 +40,19 @@
     "sha256": "670224f4a7d300f9599b1d05492bc6ff2c2f8f047d762903cbf8383a48d9ea7e"
   },
   {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\all-link-evidence-20261105\\task3-all-links.png",
+    "asset": "assets/task3-all-links.png",
+    "sha256": "88a44a2dc12d3235c2e77334817fd0d419959418a88f733ed073264e57545f5d"
+  },
+  {
     "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\task5-final-20261017\\case-A-timeseries.png",
     "asset": "assets/case-A-timeseries.png",
     "sha256": "6e15a1c296b045f3971e164b62cba2f3a3db1c25ec443ddf8a276ffd50198a2a"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\all-link-evidence-20261105\\task4-A-all-links.png",
+    "asset": "assets/task4-A-all-links.png",
+    "sha256": "5af8b79f83b8828b768a05dc4a698bcbecdf0f33775e68d71e1de56a6669b3b2"
   },
   {
     "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\task5-final-20261017\\case-B-timeseries.png",
@@ -40,9 +60,19 @@
     "sha256": "ef5201928d4b15a348686e377e15baf33e48553016c743cc4e97c95e5117b404"
   },
   {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\all-link-evidence-20261105\\task4-B-all-links.png",
+    "asset": "assets/task4-B-all-links.png",
+    "sha256": "4747a39d6493d8cb7c7181c0fe56e42d0e8a8cdd10e9e29cc9ad61f634f2078c"
+  },
+  {
     "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\task5-final-20261017\\case-C-timeseries.png",
     "asset": "assets/case-C-timeseries.png",
     "sha256": "9fcbaa97ddb3f7a726926638347f6427aee14482eb1b19d371d16e7c02e6620f"
+  },
+  {
+    "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\all-link-evidence-20261105\\task4-C-all-links.png",
+    "asset": "assets/task4-C-all-links.png",
+    "sha256": "e1f27121daef17770062ac71de53ecb866a813f73968cd0ffae48027138bdf12"
   },
   {
     "source": "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\todo06\\policy-evidence-20261105\\B1-branch-transfer-and-cost.png",

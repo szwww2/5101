@@ -1,30 +1,32 @@
-CEG5101 CA2 reports - revised 5 November 2026
+CEG5101 CA2 bilingual reports - revised 5 November 2026
 
-English and Chinese PDFs: 24 pages each, 18 figures each.
+English and Chinese PDFs: 30 pages and 24 figures each.
 Matching editable HTML files require the assets directory beside them.
-Page 6 uses the requested, assistant-run Task 2 repeat of 5 November 2026.
-Other experiment results remain the original October student measurements.
-The Task 2 controller is unchanged; no old/new samples are spliced.
+Task 2 all-switch links and host attachments: pages 7–8.
+Standalone Task 3 all-switch links: page 11.
+Task 4 A/B/C all-switch links: pages 14/16/18, immediately after each case's
+original cost, loss and throughput results. Task 5 focuses mainly on B.
 
-Six added pages: 6, 8, 13, 16, 17, 19.
-They show selective source blocking, the static Task 3 stage, original and
-alternative B branches, all 22 B1 link directions, unaffected A/C paths,
-and branch transfers in all three B repeats.
+All 11 switch links are shown in both directions, including idle links.
+Only Task 2 needed a new port-capture experiment. Its unchanged controller
+was tested with h1 10 Mbps UDP + ping and an h2 8-second ICMP flood.
+66 port snapshots, maximum interval 0.617 s; receiver 10.0 Mbps,
+35/27,214 UDP datagrams lost (0.1286%), h1 ping 64/65.
+The preceding ping-only repeat remains separate on page 6 (64/64 replies).
+Task 3 and all Task 4 cases use original October student measurements.
+Historical measurements, transient samples and losses remain unchanged.
+The cover and AI disclosure explicitly identify assistant-run supplements.
 
-The original 18 pages retain their results; cover/appendix scope is updated.
-Previous report folders and raw experiment evidence remain unchanged.
+Port Mbps includes overhead/control traffic; do not sum consecutive hops.
+Restored costs do not remove source blocks. Case C's pinned h5→h6 test pair
+still needs instructional confirmation. No controlled comparison isolates
+the independent performance gain of rerouting over source blocking alone.
 
-Task 2 now has 66 continuous full-table snapshots from six switches,
-maximum interval 0.514 s, plus 64/64 h1 replies. The old 292/293 observation
-remains separate. These are source flow counters, not port Mbps.
-Task 3 and the integrated trials do have
-all directed links. Port RX includes overhead and is not UDP payload throughput.
-Do not sum consecutive hops as delivered throughput. B2's 15.60 s transition
-sample and all earlier loss results are retained.
+CSV/SVG/PNG and methods: ../../todo06/all-link-evidence-20261105/README.md
+Earlier policy figures: ../../todo06/policy-evidence-20261105/README.md
+Capture procedure: ../../todo03/task2-link-capture-20261105/README.md
+Audits: REPORT_VALIDATION.json, source-provenance.json,
+figure-provenance.json, policy-evidence-provenance.json,
+all-link-evidence-provenance.json. All 60 PDF pages rendered for review.
 
-Source audit: source-provenance.json, figure-provenance.json,
-policy-evidence-provenance.json, REPORT_VALIDATION.json.
-CSV, SVG and interpretation: ../../todo06/policy-evidence-20261105/.
-
-成员、学号与分工按用户要求暂不加入。C 固定 h5→h6 测试对条件仍需教学确认。
-Task 2/3 是策略实现与验证，Task 4 还包含选路/规则更新实现及集成实验，Task 5 分析效果。
+成员、学号与分工按用户要求暂不加入。

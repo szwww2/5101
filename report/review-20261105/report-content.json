@@ -5,7 +5,7 @@
     "items": [
       {
         "kind": "p",
-        "en": "CA2 Anomaly Aware Routing and Blocking Controller<br/>AY 2026 27 Semester 1 | Original experiments: 11, 16 and 17 October 2026<br/>Supplementary Task 2 capture: 5 November 2026 (assistant-run, requested by student)",
+        "en": "CA2 Anomaly Aware Routing and Blocking Controller<br/>AY 2026 27 Semester 1 | Original experiments: 11, 16 and 17 October 2026<br/>Supplementary Task 2 captures: 5 November 2026 (assistant-run, requested by student)",
         "zh": "CA2 异常感知路由与源地址封锁控制器<br/>2026—2027 学年第一学期｜原实验：2026 年 10 月 11、16、17 日<br/>Task 2 补测：2026 年 11 月 5 日（学生要求，助手执行）"
       },
       {
@@ -384,6 +384,64 @@
     ]
   },
   {
+    "en": "2 Task 2 Traffic on every switch link",
+    "zh": "2 Task 2 各交换机链路的流量",
+    "items": [
+      {
+        "kind": "p",
+        "en": "A separate 5 November port-capture run uses the unchanged Task 2 controller. h1 sends 10 Mbps UDP plus ping to h6; h2 sends normal ping and an 8-second ICMP flood around 12–20 s. The 66 complete port snapshots cover all 11 switch links in both directions; the maximum sampling interval is 0.617 s.",
+        "zh": "11 月 5 日另做端口补测，Task 2 控制器不变。h1 向 h6 发送 10 Mbps UDP 并 ping；h2 先正常 ping，再于约 12–20 秒运行 8 秒 ICMP flood。66 份完整端口快照覆盖全部 11 条交换机链路双向流量，最大采样间隔为 0.617 秒。"
+      },
+      {
+        "kind": "image",
+        "source": "todo06/all-link-evidence-20261105/task2-all-links.png",
+        "en": "Figure 5 Task 2 all switch links and source ingress. Blue: lower-ID to higher-ID; orange: reverse. Switch panels share one Mbps scale. Shading is the observed flood process window; red marks blocking.",
+        "zh": "图 5 Task 2 全部交换机链路与源入口。蓝色为小编号到大编号，橙色为反向；交换机面板使用相同 Mbps 刻度。阴影为观测的 flood 进程窗口，红线为封锁。",
+        "width": 6.8,
+        "asset": "assets/task2-all-links.png"
+      },
+      {
+        "kind": "p",
+        "en": "h2 keeps sending to s2, but the excess s2→s6 load subsides after blocking. s1→s2 and s2→s6 retain approximately 10.3 Mbps of legitimate load; unused links stay near idle. This is filtering with the original route retained. The h6 UDP report is 10.0 Mbps with 35/27,214 lost datagrams (0.1286%); h1 ping receives 64/65. Later probes are h1 3/3 and h2 0/3.",
+        "zh": "h2 仍向 s2 发包，但封锁后 s2→s6 的额外负载消退。s1→s2 和 s2→s6 持续承载约 10.3 Mbps 合法负载，其余链路接近空闲。这是保留原路的过滤。h6 的 UDP 接收报告为 10.0 Mbps，丢包 35/27,214（0.1286%）；h1 ping 收到 64/65。之后测试 h1 为 3/3、h2 为 0/3。"
+      },
+      {
+        "kind": "p",
+        "en": "This is a distinct experiment from the preceding ping-only capture. No old/new samples are spliced. Evidence: todo03/task2-link-capture-20261105. Port byte rates include headers and control traffic, so they differ from application payload throughput.",
+        "zh": "本轮与前页仅 ping 的补测分开，未拼接新旧样本。记录位于 todo03/task2-link-capture-20261105。端口字节速率包含报头与控制流量，因此不同于应用有效载荷吞吐。"
+      }
+    ]
+  },
+  {
+    "en": "2 Task 2 Host attachments and the filtering boundary",
+    "zh": "2 Task 2 主机接入链路与封锁位置",
+    "items": [
+      {
+        "kind": "p",
+        "en": "These six host attachments complement the 11 switch links, covering all 17 physical links. Host→switch uses switch ingress RX; switch→host uses switch egress TX. TX is an output-side observation, not proof that every packet reached the host.",
+        "zh": "六条主机接入链路与前页十一条交换机链路一起覆盖全部十七条物理链路。主机→交换机取交换机入口 RX；交换机→主机取出口 TX。TX 是出口侧观测，不等于每个包都到达主机。"
+      },
+      {
+        "kind": "image",
+        "source": "todo06/all-link-evidence-20261105/task2-host-attachments.png",
+        "en": "Figure 6 All six host attachments in the same port-capture run. h2 ingress remains active while h1 ingress and h6 egress keep carrying legitimate traffic.",
+        "zh": "图 6 同一轮端口补测的全部主机接入流量。h2 入口仍有流量，h1 入口和 h6 出口持续承载合法流。",
+        "width": 6.8,
+        "asset": "assets/task2-host-attachments.png"
+      },
+      {
+        "kind": "p",
+        "en": "Filtering acts after packets arrive at s2. A high h2→s2 line after BLOCK therefore does not mean filtering failed. Flow-table counters show that h2 forwarding at s2 and s6 stops, while h1 counters keep increasing. The ingress and downstream evidence together locate the filtering action.",
+        "zh": "过滤发生在包到达 s2 之后。因此 BLOCK 后 h2→s2 仍为高流量，不代表封锁失败。流表计数显示 h2 在 s2、s6 的转发停止，而 h1 计数继续增加。入口与下游证据结合，才能定位过滤动作。"
+      },
+      {
+        "kind": "p",
+        "en": "The controller and route remain unchanged. Pre-block bursts and reverse traffic are retained. The new result supplements the original October experiment; it is not a controlled comparison of blocking versus rerouting.",
+        "zh": "控制器与路线保持不变，封锁前突发与反向流量全部保留。补测补充十月原实验，但不是“仅封锁”与“封锁加改道”的受控对照。"
+      }
+    ]
+  },
+  {
     "en": "3 Task 3 Dynamic link cost update",
     "zh": "3 Task 3 动态链路代价更新",
     "items": [
@@ -462,8 +520,8 @@
       {
         "kind": "image",
         "source": "todo04/evidence/anomaly-penalty-s2-s6-cost-20261016.png",
-        "en": "Figure 5 Dynamic-cost stage shows source blocking and the additional 60-unit penalty on s2→s6.",
-        "zh": "图 5 动态代价阶段：异常源被封锁，s2→s6 增加 60 单位惩罚。",
+        "en": "Figure 7 Dynamic-cost stage shows source blocking and the additional 60-unit penalty on s2→s6.",
+        "zh": "图 7 动态代价阶段：异常源被封锁，s2→s6 增加 60 单位惩罚。",
         "width": 5.6,
         "asset": "assets/anomaly-penalty-s2-s6-cost-20261016.png"
       },
@@ -486,8 +544,8 @@
       {
         "kind": "image",
         "source": "todo06/policy-evidence-20261105/task3-cost-without-rerouting.png",
-        "en": "Figure 6 Standalone Task 3: common and original links, unused alternative links, and the decomposition of s2→s6 cost. Time zero is the block event; the green line marks penalty removal.",
-        "zh": "图 6 独立 Task 3：共用及原路径链路、未使用的替代链路，以及 s2→s6 的代价组成。零点为封锁事件，绿色竖线为撤销惩罚。",
+        "en": "Figure 8 Standalone Task 3: common and original links, unused alternative links, and the decomposition of s2→s6 cost. Time zero is the block event; the green line marks penalty removal.",
+        "zh": "图 8 独立 Task 3：共用及原路径链路、未使用的替代链路，以及 s2→s6 的代价组成。零点为封锁事件，绿色竖线为撤销惩罚。",
         "width": 6.8,
         "asset": "assets/task3-cost-without-rerouting.png"
       },
@@ -500,6 +558,35 @@
         "kind": "p",
         "en": "The two protections have different outputs: Task 2 drops packets from an identified source; Task 3 assigns routing weights. Neither cost inflation nor cost recovery changes the physical 40 Mbps capacity, and cost recovery does not remove the source firewall.",
         "zh": "两项策略输出不同：Task 2 丢弃已识别异常源的数据包；Task 3 为选路提供权重。代价升降不会改变物理配置的 40 Mbps 容量；代价恢复也不解除源防火墙。"
+      }
+    ]
+  },
+  {
+    "en": "3 Task 3 Traffic on every switch link",
+    "zh": "3 Task 3 各交换机链路的流量",
+    "items": [
+      {
+        "kind": "p",
+        "en": "The original standalone Task 3 log already contains all 22 directed switch-link rates. These panels use that complete record. The last panel shows the affected s2→s6 cost; time zero is the recorded h2 BLOCK event.",
+        "zh": "独立 Task 3 的原日志已包含全部 22 个有向交换机链路速率，下图使用这份完整记录。末面板显示受影响的 s2→s6 代价；时间零点为记录的 h2 BLOCK 事件。"
+      },
+      {
+        "kind": "image",
+        "source": "todo06/all-link-evidence-20261105/task3-all-links.png",
+        "en": "Figure 9 Task 3 all-link traffic and target cost. Each switch panel shows both directions on a common Mbps scale; the last panel uses routing-cost units.",
+        "zh": "图 9 Task 3 全链路流量及目标代价。交换机面板在共同 Mbps 刻度显示双向流量；末面板单位为选路代价。",
+        "width": 6.8,
+        "asset": "assets/task3-all-links.png"
+      },
+      {
+        "kind": "p",
+        "en": "After filtering, the s2→s6 burst subsides to the legitimate load while cost remains elevated during the penalty period. s1→s2 and s2→s6 remain near 10.3 Mbps; s2→s3 and s3→s6 stay near idle. Task 3 computes costs but retains installed routes. Task 4 adds route selection and forwarding-rule updates.",
+        "zh": "过滤后 s2→s6 的突发回落到合法负载，而代价在惩罚期间仍保持高位。s1→s2、s2→s6 仍约为 10.3 Mbps；s2→s3、s3→s6 保持接近空闲。Task 3 计算代价，但保留已安装路线；Task 4 才加入选路与转发规则更新。"
+      },
+      {
+        "kind": "p",
+        "en": "All reverse and unused directions are retained. Lines near zero may contain low-rate control packets; the CSV preserves these values. Routing cost is not a direct bandwidth limit or a traffic-moving action.",
+        "zh": "反向和未使用的方向也全部保留。接近零的线仍可能包含低速控制报文，CSV 保留实际值。选路代价不是直接限速或搬移流量的动作。"
       }
     ]
   },
@@ -604,8 +691,8 @@
       {
         "kind": "image",
         "source": "todo06/task5-final-20261017/case-A-timeseries.png",
-        "en": "Figure 7 Case A normalized target-link cost, receiver UDP loss and throughput. B shows trial 1. Shading denotes the planned 12–26 s flood period; event markers use controller records.",
-        "zh": "图 7 场景 A 的目标链路归一化代价、接收端 UDP 丢包率和吞吐。B 图使用第 1 轮。阴影表示计划 12–26 秒 flood 时段，事件标记来自控制器记录。",
+        "en": "Figure 10 Case A normalized target-link cost, receiver UDP loss and throughput. B shows trial 1. Shading denotes the planned 12–26 s flood period; event markers use controller records.",
+        "zh": "图 10 场景 A 的目标链路归一化代价、接收端 UDP 丢包率和吞吐。B 图使用第 1 轮。阴影表示计划 12–26 秒 flood 时段，事件标记来自控制器记录。",
         "width": 6.7,
         "asset": "assets/case-A-timeseries.png"
       },
@@ -618,6 +705,35 @@
         "kind": "p",
         "en": "The 60-second receiver report is 10 Mbps, with 0/51,024 lost UDP datagrams (0.0000%). The source-ingress drop count at recovery review is 905,435. Post-measurement checks received 3/3 legitimate ping replies and 0/2 replies from the blocked source. Source drops were retained across all sampled switches [9].",
         "zh": "60 秒接收报告为 10 Mbps，UDP 丢失 0/51,024（0.0000%）。恢复核验时源入口 drop 计数为 905,435。测量后合法 ping 收到 3/3，异常源收到 0/2；所有采样交换机的源封锁规则均保留。"
+      }
+    ]
+  },
+  {
+    "en": "4 Case A Traffic on every switch link",
+    "zh": "4 场景 A 各交换机链路的流量",
+    "items": [
+      {
+        "kind": "p",
+        "en": "Case A is shown here with all 11 physical switch links, each in both directions. The original run provides 59 complete 22-direction snapshots. The last panel shows the affected-edge cost; the physical bandwidth remains 40 Mbps.",
+        "zh": "此处单独展示场景 A 的全部 11 条交换机物理链路，每条均含双向流量。原实验提供 59 份完整的 22 方向快照；末面板为受影响边的代价，物理带宽仍为 40 Mbps。"
+      },
+      {
+        "kind": "image",
+        "source": "todo06/all-link-evidence-20261105/task4-A-all-links.png",
+        "en": "Figure 11 Case A complete link traffic, with source blocking and penalty recovery marked. Common linear Mbps scales prevent idle directions from appearing artificially large.",
+        "zh": "图 11 场景 A 完整链路流量，标注源封锁与惩罚恢复。共同线性 Mbps 刻度避免把空闲方向微小流量放大成显著负载。",
+        "width": 6.8,
+        "asset": "assets/task4-A-all-links.png"
+      },
+      {
+        "kind": "p",
+        "en": "The brief s2→s3 spike subsides after h2 is blocked. The simultaneous reverse-direction spike is retained. s1→s2 and s2→s6 keep carrying approximately 10.3 Mbps; s3→s6 does not acquire a sustained legitimate load. The recorded h1 path remains [1,2,6] before, during and after. Raising the cost of an off-path edge does not require h1 to move.",
+        "zh": "h2 被封锁后，s2→s3 的短暂尖峰消退；同时发生的反向尖峰也保留。s1→s2 和 s2→s6 持续承载约 10.3 Mbps，s3→s6 没有持续的合法负载。h1 的记录路径在前、中、后均为 [1,2,6]。提高一条不在原路上的边的代价，并不要求 h1 改道。"
+      },
+      {
+        "kind": "p",
+        "en": "This figure is paired with the preceding cost/loss/throughput results and the saved forwarding-rule path. The two consecutive alternative hops carry the same stream and must not be summed as application throughput.",
+        "zh": "本图与前页代价、丢包、吞吐结果及已保存的转发规则路径共同构成证据。备用路线连续两跳承载同一条流，不能相加作为业务吞吐。"
       }
     ]
   },
@@ -638,8 +754,8 @@
       {
         "kind": "image",
         "source": "todo06/task5-final-20261017/case-B-timeseries.png",
-        "en": "Figure 8 Case B normalized target-link cost, receiver UDP loss and throughput. B shows trial 1. Shading denotes the planned 12–26 s flood period; event markers use controller records.",
-        "zh": "图 8 场景 B 的目标链路归一化代价、接收端 UDP 丢包率和吞吐。B 图使用第 1 轮。阴影表示计划 12–26 秒 flood 时段，事件标记来自控制器记录。",
+        "en": "Figure 12 Case B normalized target-link cost, receiver UDP loss and throughput. B shows trial 1. Shading denotes the planned 12–26 s flood period; event markers use controller records.",
+        "zh": "图 12 场景 B 的目标链路归一化代价、接收端 UDP 丢包率和吞吐。B 图使用第 1 轮。阴影表示计划 12–26 秒 flood 时段，事件标记来自控制器记录。",
         "width": 6.7,
         "asset": "assets/case-B-timeseries.png"
       },
@@ -652,6 +768,35 @@
         "kind": "p",
         "en": "The 60-second receiver report is 9.99 Mbps, with 43/51,024 lost UDP datagrams (0.0843%). The source-ingress drop count at recovery review is 888,103. Post-measurement checks received 3/3 legitimate ping replies and 0/2 replies from the blocked source. Source drops were retained across all sampled switches [9]. For B, the lowest one-second throughput was 9.47 Mbps and peak one-second loss was 5.0708%.",
         "zh": "60 秒接收报告为 9.99 Mbps，UDP 丢失 43/51,024（0.0843%）。恢复核验时源入口 drop 计数为 888,103。测量后合法 ping 收到 3/3，异常源收到 0/2；所有采样交换机的源封锁规则均保留。B 的最低一秒吞吐为 9.47 Mbps，最高一秒丢包率为 5.0708%。"
+      }
+    ]
+  },
+  {
+    "en": "4 Case B Traffic on every switch link",
+    "zh": "4 场景 B 各交换机链路的流量",
+    "items": [
+      {
+        "kind": "p",
+        "en": "Case B is shown here with all 11 physical switch links, each in both directions. The original run provides 59 complete 22-direction snapshots. The last panel shows the affected-edge cost; the physical bandwidth remains 40 Mbps.",
+        "zh": "此处单独展示场景 B 的全部 11 条交换机物理链路，每条均含双向流量。原实验提供 59 份完整的 22 方向快照；末面板为受影响边的代价，物理带宽仍为 40 Mbps。"
+      },
+      {
+        "kind": "image",
+        "source": "todo06/all-link-evidence-20261105/task4-B-all-links.png",
+        "en": "Figure 13 Case B complete link traffic, with source blocking and penalty recovery marked. Common linear Mbps scales prevent idle directions from appearing artificially large.",
+        "zh": "图 13 场景 B 完整链路流量，标注源封锁与惩罚恢复。共同线性 Mbps 刻度避免把空闲方向微小流量放大成显著负载。",
+        "width": 6.8,
+        "asset": "assets/task4-B-all-links.png"
+      },
+      {
+        "kind": "p",
+        "en": "Before the anomaly, s1→s2 and s2→s6 carry the legitimate load. During the settled anomaly interval, s2→s6 becomes nearly idle while s2→s3 and s3→s6 carry approximately 10.3 Mbps each; s1→s2 stays active. Recovery reverses this transfer. The recorded paths are [1,2,6] → [1,2,3,6] → [1,2,6].",
+        "zh": "异常前 s1→s2、s2→s6 承载合法负载。异常稳定阶段，s2→s6 接近空闲，而 s2→s3、s3→s6 各承载约 10.3 Mbps，共用的 s1→s2 持续工作；恢复后流量迁回原路。路径记录为 [1,2,6] → [1,2,3,6] → [1,2,6]。"
+      },
+      {
+        "kind": "p",
+        "en": "This figure is paired with the preceding cost/loss/throughput results and the saved forwarding-rule path. The two consecutive alternative hops carry the same stream and must not be summed as application throughput.",
+        "zh": "本图与前页代价、丢包、吞吐结果及已保存的转发规则路径共同构成证据。备用路线连续两跳承载同一条流，不能相加作为业务吞吐。"
       }
     ]
   },
@@ -672,8 +817,8 @@
       {
         "kind": "image",
         "source": "todo06/task5-final-20261017/case-C-timeseries.png",
-        "en": "Figure 9 Case C normalized target-link cost, receiver UDP loss and throughput. B shows trial 1. Shading denotes the planned 12–26 s flood period; event markers use controller records.",
-        "zh": "图 9 场景 C 的目标链路归一化代价、接收端 UDP 丢包率和吞吐。B 图使用第 1 轮。阴影表示计划 12–26 秒 flood 时段，事件标记来自控制器记录。",
+        "en": "Figure 14 Case C normalized target-link cost, receiver UDP loss and throughput. B shows trial 1. Shading denotes the planned 12–26 s flood period; event markers use controller records.",
+        "zh": "图 14 场景 C 的目标链路归一化代价、接收端 UDP 丢包率和吞吐。B 图使用第 1 轮。阴影表示计划 12–26 秒 flood 时段，事件标记来自控制器记录。",
         "width": 6.7,
         "asset": "assets/case-C-timeseries.png"
       },
@@ -690,6 +835,35 @@
     ]
   },
   {
+    "en": "4 Case C Traffic on every switch link",
+    "zh": "4 场景 C 各交换机链路的流量",
+    "items": [
+      {
+        "kind": "p",
+        "en": "Case C is shown here with all 11 physical switch links, each in both directions. The original run provides 59 complete 22-direction snapshots. The last panel shows the affected-edge cost; the physical bandwidth remains 40 Mbps.",
+        "zh": "此处单独展示场景 C 的全部 11 条交换机物理链路，每条均含双向流量。原实验提供 59 份完整的 22 方向快照；末面板为受影响边的代价，物理带宽仍为 40 Mbps。"
+      },
+      {
+        "kind": "image",
+        "source": "todo06/all-link-evidence-20261105/task4-C-all-links.png",
+        "en": "Figure 15 Case C complete link traffic, with source blocking and penalty recovery marked. Common linear Mbps scales prevent idle directions from appearing artificially large.",
+        "zh": "图 15 场景 C 完整链路流量，标注源封锁与惩罚恢复。共同线性 Mbps 刻度避免把空闲方向微小流量放大成显著负载。",
+        "width": 6.8,
+        "asset": "assets/task4-C-all-links.png"
+      },
+      {
+        "kind": "p",
+        "en": "The s5→s6 burst subsides after h5 is blocked, while s1→s2 and s2→s6 retain approximately 10.3 Mbps. Transient s6→s3 and s3→s5 traffic is also visible, consistent with the installed h6→h5 return route [6,3,5]. Port totals alone do not identify every packet. The recorded h1 path remains [1,2,6] throughout.",
+        "zh": "h5 被封锁后 s5→s6 突发消退，s1→s2、s2→s6 仍约为 10.3 Mbps。图中还可见短暂的 s6→s3、s3→s5 流量，与已安装的 h6→h5 回程 [6,3,5] 一致；端口总量本身不能逐包识别来源。h1 的路径记录始终为 [1,2,6]。"
+      },
+      {
+        "kind": "p",
+        "en": "This figure is paired with the preceding cost/loss/throughput results and the saved forwarding-rule path. The two consecutive alternative hops carry the same stream and must not be summed as application throughput. Only the h5→h6 test pair is pinned directly to s5→s6; teaching approval of this condition remains pending.",
+        "zh": "本图与前页代价、丢包、吞吐结果及已保存的转发规则路径共同构成证据。备用路线连续两跳承载同一条流，不能相加作为业务吞吐。仅 h5→h6 测试对固定直接走 s5→s6，该条件仍待教学确认。"
+      }
+    ]
+  },
+  {
     "en": "4 Measured traffic moves to the alternative path",
     "zh": "4 实测流量转移到备用路径",
     "items": [
@@ -701,8 +875,8 @@
       {
         "kind": "image",
         "source": "todo06/policy-evidence-20261105/B1-branch-transfer-and-cost.png",
-        "en": "Figure 10 B1: shared approach, original branch, both alternative hops, and both candidate path costs. Receiver throughput is specifically the legitimate h1→h6 UDP stream.",
-        "zh": "图 10 B1：共用路段、原路径分支、备用路径两跳，以及两条候选路线总代价。接收吞吐专指合法 h1→h6 UDP 流。",
+        "en": "Figure 16 B1: shared approach, original branch, both alternative hops, and both candidate path costs. Receiver throughput is specifically the legitimate h1→h6 UDP stream.",
+        "zh": "图 16 B1：共用路段、原路径分支、备用路径两跳，以及两条候选路线总代价。接收吞吐专指合法 h1→h6 UDP 流。",
         "width": 6.75,
         "asset": "assets/B1-branch-transfer-and-cost.png"
       },
@@ -857,8 +1031,8 @@
       {
         "kind": "image",
         "source": "todo06/task5-final-20261017/case-B-routing-and-loss.png",
-        "en": "Figure 11 Case B trial 1 candidate route costs, observed installed path and receiver performance.",
-        "zh": "图 11 B 场景第 1 轮：候选路线代价、实测安装路线与接收性能。",
+        "en": "Figure 17 Case B trial 1 candidate route costs, observed installed path and receiver performance.",
+        "zh": "图 17 B 场景第 1 轮：候选路线代价、实测安装路线与接收性能。",
         "width": 6.7,
         "asset": "assets/case-B-routing-and-loss.png"
       },
@@ -881,8 +1055,8 @@
       {
         "kind": "image",
         "source": "todo06/policy-evidence-20261105/B1-all-links-heatmap.png",
-        "en": "Figure 12 B1 port RX rates on all 22 directed switch edges. Purple markers denote route commits. A light cell means a low measured rate, not a missing link.",
-        "zh": "图 12 B1 全部 22 个有向交换机边的端口接收速率。紫色线表示路径提交；浅色表示实测低速率，不表示链路不存在。",
+        "en": "Figure 18 B1 port RX rates on all 22 directed switch edges. Purple markers denote route commits. A light cell means a low measured rate, not a missing link.",
+        "zh": "图 18 B1 全部 22 个有向交换机边的端口接收速率。紫色线表示路径提交；浅色表示实测低速率，不表示链路不存在。",
         "width": 6.8,
         "asset": "assets/B1-all-links-heatmap.png"
       },
@@ -952,8 +1126,8 @@
       {
         "kind": "image",
         "source": "todo06/policy-evidence-20261105/AC-unaffected-legitimate-path.png",
-        "en": "Figure 13 A and C: original legitimate-path rates and h6 UDP reception above; affected and alternative-link rates below. All values come from the original trials.",
-        "zh": "图 13 A 与 C：上排为合法原路径速率及 h6 UDP 接收吞吐，下排为受影响与备用链路速率。全部来自原有实验。",
+        "en": "Figure 19 A and C: original legitimate-path rates and h6 UDP reception above; affected and alternative-link rates below. All values come from the original trials.",
+        "zh": "图 19 A 与 C：上排为合法原路径速率及 h6 UDP 接收吞吐，下排为受影响与备用链路速率。全部来自原有实验。",
         "width": 6.8,
         "asset": "assets/AC-unaffected-legitimate-path.png"
       },
@@ -986,8 +1160,8 @@
       {
         "kind": "image",
         "source": "todo06/task5-final-20261017/case-B-repeat-comparison.png",
-        "en": "Figure 14 All three B trials with normalized s2→s6 cost, UDP receiver loss and receiver throughput. Curves are individual observations, not a pooled average.",
-        "zh": "图 14 三轮 B 实验的 s2→s6 归一化代价、UDP 接收丢包率和吞吐。曲线分别代表各轮观测，不是合并平均曲线。",
+        "en": "Figure 20 All three B trials with normalized s2→s6 cost, UDP receiver loss and receiver throughput. Curves are individual observations, not a pooled average.",
+        "zh": "图 20 三轮 B 实验的 s2→s6 归一化代价、UDP 接收丢包率和吞吐。曲线分别代表各轮观测，不是合并平均曲线。",
         "width": 6.7,
         "asset": "assets/case-B-repeat-comparison.png"
       },
@@ -1046,8 +1220,8 @@
       {
         "kind": "image",
         "source": "todo06/policy-evidence-20261105/B-all-repeats-branch-transfer.png",
-        "en": "Figure 15 All three B trials: original branch on the left; alternative hops on the right. Transitions and differing spikes are retained. Event markers follow the previous figures.",
-        "zh": "图 15 三轮 B：左列为原分支，右列为备用两跳。保留过渡过程及不同尖峰；事件标记含义与前图一致。",
+        "en": "Figure 21 All three B trials: original branch on the left; alternative hops on the right. Transitions and differing spikes are retained. Event markers follow the previous figures.",
+        "zh": "图 21 三轮 B：左列为原分支，右列为备用两跳。保留过渡过程及不同尖峰；事件标记含义与前图一致。",
         "width": 6.8,
         "asset": "assets/B-all-repeats-branch-transfer.png"
       },
@@ -1116,16 +1290,16 @@
       {
         "kind": "image",
         "source": "todo05/run-A-20261016-145805-CPT5A8/evidence/student-A-pass-final-summary-20261016.png",
-        "en": "Figure 16 Case A final student terminal summary. The unchanged legitimate route and before during after receiver metrics are shown.",
-        "zh": "图 16 A 场景学生终端最终汇总：合法路线保持不变，并列出异常前中后接收指标。",
+        "en": "Figure 22 Case A final student terminal summary. The unchanged legitimate route and before during after receiver metrics are shown.",
+        "zh": "图 22 A 场景学生终端最终汇总：合法路线保持不变，并列出异常前中后接收指标。",
         "width": 6.5,
         "asset": "assets/student-A-pass-final-summary-20261016.png"
       },
       {
         "kind": "image",
         "source": "todo05/run-C-20261016-153103-Ho9Y7P/evidence/student-C-pass-final-summary-20261016.png",
-        "en": "Figure 17 Case C final student terminal summary under the declared direct-link test condition.",
-        "zh": "图 17 C 场景学生终端最终汇总，实验采用已披露的直接链路测试条件。",
+        "en": "Figure 23 Case C final student terminal summary under the declared direct-link test condition.",
+        "zh": "图 23 C 场景学生终端最终汇总，实验采用已披露的直接链路测试条件。",
         "width": 6.5,
         "asset": "assets/student-C-pass-final-summary-20261016.png"
       },
@@ -1143,8 +1317,8 @@
       {
         "kind": "image",
         "source": "todo05/run-B-20261017-111734-b9lfbt/evidence/student-B-repeat3-pass-summary-20261017.png",
-        "en": "Figure 18 Case B trial 3 terminal summary confirms rerouting, recovery and continued reception.",
-        "zh": "图 18 B 场景第 3 轮终端汇总，确认改道、恢复及持续接收。",
+        "en": "Figure 24 Case B trial 3 terminal summary confirms rerouting, recovery and continued reception.",
+        "zh": "图 24 B 场景第 3 轮终端汇总，确认改道、恢复及持续接收。",
         "width": 6.5,
         "asset": "assets/student-B-repeat3-pass-summary-20261017.png"
       },
@@ -1191,8 +1365,8 @@
       },
       {
         "kind": "p",
-        "en": "OpenAI ChatGPT and Codex were used to explain SDN concepts, assist environment configuration and troubleshooting, develop and revise controller and experiment scripts, perform automated checks, process saved experimental data, generate plots, and draft and format this report. The reported measurements and screenshots come from student-operated experiments; separate assistant validation runs are not counted as student repetitions. The submitting author or authors are responsible for understanding, checking and accepting the content and quality of the submitted work. This disclosure follows the supplied academic integrity guidance [8].",
-        "zh": "使用 OpenAI ChatGPT 和 Codex 辅助解释 SDN 概念、配置与排查环境、编写和修改控制器及实验脚本、进行自动核验、处理已保存实验数据、生成图表，以及起草和排版本报告。报告中的测量与截图来自学生操作实验，助手独立验证不计入学生重复实验。提交者负责理解、核对并承担最终提交内容及质量的责任。该声明依据已提供的学术规范说明 [8]。"
+        "en": "OpenAI ChatGPT and Codex were used to explain SDN concepts, assist environment configuration and troubleshooting, develop and revise controller and experiment scripts, perform automated checks, process saved experimental data, generate plots, and draft and format this report. October measurements and screenshots come from student-operated experiments. The separately labeled November Task 2 repeats were assistant-run at the student’s request and are not counted as student repetitions. The submitting author or authors are responsible for understanding, checking and accepting the content and quality of the submitted work. This disclosure follows the supplied academic integrity guidance [8].",
+        "zh": "使用 OpenAI ChatGPT 和 Codex 辅助解释 SDN 概念、配置与排查环境、编写和修改控制器及实验脚本、进行自动核验、处理已保存实验数据、生成图表，以及起草和排版本报告。十月测量与截图来自学生操作实验。单独标注的十一月 Task 2 补测由助手按学生要求执行，不计入学生重复实验。提交者负责理解、核对并承担最终提交内容及质量的责任。该声明依据已提供的学术规范说明 [8]。"
       },
       {
         "kind": "h",
@@ -1269,8 +1443,8 @@
       },
       {
         "kind": "p",
-        "en": "Requirement coverage: topology and configuration → Section 1; source rate, EMA and blocking → Section 2; load and anomaly costs → Section 3; all three prescribed links, path choice and recovery → Section 4; normalized cost, loss and throughput curves plus phase interpretation → Section 5. Page 6 contains the requested 5 November Task 2 repeat; the other experiment results retain the original measurements.",
-        "zh": "要求覆盖：拓扑与配置见第 1 节；源速率、EMA 和封锁见第 2 节；负载与异常代价见第 3 节；三个指定异常链路、选路与恢复见第 4 节；归一化代价、丢包、吞吐曲线与前中后解释见第 5 节。第 6 页为按要求完成的 11 月 5 日 Task 2 补测，其他实验结果沿用原测量。"
+        "en": "Requirement coverage: topology and configuration → Section 1; source rate, EMA and blocking → Section 2; load and anomaly costs → Section 3; all three prescribed links, path choice and recovery → Section 4; normalized cost, loss and throughput curves plus phase interpretation → Section 5. Task 2 includes the requested November ping-only and port-capture repeats. Task 3 and each Task 4 case use the original measurements, now shown for all switch links.",
+        "zh": "要求覆盖：拓扑与配置见第 1 节；源速率、EMA 和封锁见第 2 节；负载与异常代价见第 3 节；三个指定异常链路、选路与恢复见第 4 节；归一化代价、丢包、吞吐曲线与前中后解释见第 5 节。Task 2 包含十一月按要求完成的仅 ping 补测及端口补测；Task 3 与 Task 4 各场景沿用原测量，现已展示全部交换机链路。"
       }
     ]
   }

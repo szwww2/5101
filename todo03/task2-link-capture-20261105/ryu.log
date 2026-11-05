@@ -1,0 +1,99 @@
+loading app /mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/anomaly_controller.py
+loading app ryu.controller.ofp_handler
+loading app ryu.topology.switches
+loading app ryu.controller.ofp_handler
+instantiating app /mnt/d/desktop/nus/CEG5101 Modern Computer Networking/sdn_assignment/anomaly_controller.py of AnomalyController
+instantiating app ryu.controller.ofp_handler of OFPHandler
+instantiating app ryu.topology.switches of Switches
+BASELINE READY: 6 switches, 22 directed links, 30 routes; h1->h6 [1, 2, 6] cost=19.0
+DETECTION STARTED: poll=1s theta=0.3 multiplier=3 floor=2000pps warmup=5 samples; ICMP replies excluded
+STATS source=10.0.0.3 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=1/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=1.9 old_ema=0.0 new_ema=0.6 threshold=2000.0 warmup=1/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.5 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=1/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.4 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=1/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=785.3 old_ema=0.0 new_ema=235.6 threshold=2000.0 warmup=1/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.6 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=1/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.3 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=2/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.5 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=2/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.0 old_ema=0.6 new_ema=1.0 threshold=2000.0 warmup=2/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.4 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=2/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=862.0 old_ema=235.6 new_ema=423.5 threshold=2000.0 warmup=2/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.6 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=2/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.3 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=3/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=880.5 old_ema=423.5 new_ema=560.6 threshold=2000.0 warmup=3/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.0 old_ema=1.0 new_ema=1.3 threshold=2000.0 warmup=3/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.5 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=3/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.6 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=3/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.4 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=3/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.3 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=4/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.0 old_ema=1.3 new_ema=1.5 threshold=2000.0 warmup=4/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.4 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=4/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.5 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=4/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.6 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=4/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=786.0 old_ema=560.6 new_ema=628.2 threshold=2000.0 warmup=4/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=920.2 old_ema=628.2 new_ema=715.8 threshold=2000.0 warmup=5/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.0 old_ema=1.5 new_ema=1.7 threshold=2000.0 warmup=5/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.5 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=5/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.3 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=5/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.4 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=5/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.6 pps=0.0 old_ema=0.0 new_ema=0.0 threshold=2000.0 warmup=5/5 blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=1.9 old_ema=1.7 new_ema=1.7 threshold=2000.0 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=810.9 old_ema=715.8 new_ema=744.4 threshold=2147.5 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.0 old_ema=1.7 new_ema=1.8 threshold=2000.0 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=823.7 old_ema=744.4 new_ema=768.2 threshold=2233.1 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=880.1 old_ema=768.2 new_ema=801.8 threshold=2304.5 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.0 old_ema=1.8 new_ema=1.8 threshold=2000.0 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.0 old_ema=1.8 new_ema=1.9 threshold=2000.0 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=797.3 old_ema=801.8 new_ema=800.4 threshold=2405.3 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=884.1 old_ema=800.4 new_ema=825.5 threshold=2401.3 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=1.9 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=871.8 old_ema=825.5 new_ema=839.4 threshold=2476.5 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.0 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=827.8 old_ema=839.4 new_ema=835.9 threshold=2518.2 warmup=done blocked=False drop_pps=0.0
+BLOCK source=10.0.0.2 pps=12831.7 old_ema=1.9 threshold=2000.0 path=[2, 6]
+STATS source=10.0.0.2 pps=12831.7 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=0.0
+STATS source=10.0.0.1 pps=831.2 old_ema=835.9 new_ema=834.5 threshold=2507.7 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=846.7 old_ema=834.5 new_ema=838.2 threshold=2503.5 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=66302.7 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=66302.7
+STATS source=10.0.0.2 pps=67373.3 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=67373.3
+STATS source=10.0.0.1 pps=814.2 old_ema=838.2 new_ema=831.0 threshold=2514.5 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=882.9 old_ema=831.0 new_ema=846.5 threshold=2492.9 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=64816.8 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=64816.8
+STATS source=10.0.0.1 pps=832.5 old_ema=846.5 new_ema=842.3 threshold=2539.6 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=63024.6 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=63024.6
+STATS source=10.0.0.2 pps=65661.8 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=65661.8
+STATS source=10.0.0.1 pps=795.6 old_ema=842.3 new_ema=828.3 threshold=2527.0 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=68009.2 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=68009.2
+STATS source=10.0.0.1 pps=875.7 old_ema=828.3 new_ema=842.5 threshold=2484.9 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=51721.9 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=51721.9
+STATS source=10.0.0.1 pps=833.5 old_ema=842.5 new_ema=839.8 threshold=2527.6 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=899.0 old_ema=839.8 new_ema=857.6 threshold=2519.5 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=1.9 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=1.9
+STATS source=10.0.0.1 pps=839.3 old_ema=857.6 new_ema=852.1 threshold=2572.7 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.0 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=2.0
+STATS source=10.0.0.1 pps=1248.1 old_ema=852.1 new_ema=970.9 threshold=2556.3 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.8 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=2.8
+STATS source=10.0.0.2 pps=2.1 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=2.1
+STATS source=10.0.0.1 pps=845.8 old_ema=970.9 new_ema=933.4 threshold=2912.7 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=862.9 old_ema=933.4 new_ema=912.2 threshold=2800.1 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=0.9 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=0.9
+STATS source=10.0.0.1 pps=842.8 old_ema=912.2 new_ema=891.4 threshold=2736.6 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.0 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=2.0
+STATS source=10.0.0.1 pps=822.2 old_ema=891.4 new_ema=870.6 threshold=2674.2 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=1.9 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=1.9
+STATS source=10.0.0.1 pps=836.1 old_ema=870.6 new_ema=860.3 threshold=2611.9 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.0 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=2.0
+STATS source=10.0.0.2 pps=2.1 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=2.1
+STATS source=10.0.0.1 pps=825.0 old_ema=860.3 new_ema=849.7 threshold=2580.8 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=900.2 old_ema=849.7 new_ema=864.9 threshold=2549.1 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=2.0 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=2.0
+STATS source=10.0.0.1 pps=814.3 old_ema=864.9 new_ema=849.7 threshold=2594.6 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=1.9 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=1.9
+STATS source=10.0.0.1 pps=234.1 old_ema=849.7 new_ema=665.0 threshold=2549.1 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=1.0 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=1.0
+STATS source=10.0.0.6 pps=7.9 old_ema=0.0 new_ema=2.4 threshold=2000.0 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=1.0 old_ema=665.0 new_ema=465.8 threshold=2000.0 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.1 pps=1.0 old_ema=465.8 new_ema=326.4 threshold=2000.0 warmup=done blocked=False drop_pps=0.0
+STATS source=10.0.0.2 pps=1.0 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=1.0
+STATS source=10.0.0.2 pps=1.0 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=1.0
+STATS source=10.0.0.2 pps=1.0 old_ema=1.9 new_ema=1.9 threshold=2000.0 warmup=done blocked=True drop_pps=1.0

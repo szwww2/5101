@@ -1,0 +1,9 @@
+{"time": 1793850594.3145714, "event": "detection_parameters", "sample_interval_seconds": 1, "theta": 0.3, "multiplier": 3, "floor_pps": 2000, "warmup_samples": 5, "excluded_traffic": "ICMP echo replies", "block_scope": "IPv4 source; all switches", "recovery": "Restart isolated experiment; no automatic unblock in TODO3"}
+{"time": 1793850602.5195243, "event": "switch_connected", "dpid": 1}
+{"time": 1793850603.5507758, "event": "switch_connected", "dpid": 2}
+{"time": 1793850604.9790857, "event": "switch_connected", "dpid": 3}
+{"time": 1793850606.0796373, "event": "switch_connected", "dpid": 4}
+{"time": 1793850606.8432398, "event": "switch_connected", "dpid": 5}
+{"time": 1793850608.2018232, "event": "switch_connected", "dpid": 6}
+{"time": 1793850609.3495185, "event": "ready", "path": [1, 2, 6], "outputs": [{"dpid": 1, "output_port": 2}, {"dpid": 2, "output_port": 6}, {"dpid": 6, "output_port": 1}], "cost": 19.0}
+{"time": 1793850622.55729, "event": "block", "source": "10.0.0.2", "pps": 12831.699686990094, "old_ema_pps": 1.9342015600610187, "new_ema_pps": 1.9342015600610187, "threshold_pps": 2000, "samples": 12, "warmed": true, "blocked": true, "newly_blocked": true, "dpid": 2, "destination": "10.0.0.6", "forward_pps": 12831.699686990094, "drop_pps": 0.0, "forward_bps": 4312348.052460092, "drop_bps": 0.0, "attack_path": [2, 6]}

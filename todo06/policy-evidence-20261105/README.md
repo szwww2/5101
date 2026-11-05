@@ -1,17 +1,17 @@
 # 多链路流量与策略证据 / Multi-link policy evidence
 
-Task 2 图使用用户要求于 2026 年 11 月 5 日重新采集的一轮实验；其他五张图仍来自 2026 年 10 月原实验。没有修改控制器或原始计数，也没有拼接新旧测量。完整中英文报告在 `report/review-20261105`，各 24 页；六张图已嵌入相应任务正文。
+Task 2 图使用用户要求于 2026 年 11 月 5 日重新采集的一轮实验；其他五张图仍来自 2026 年 10 月原实验。没有修改控制器或原始计数，也没有拼接新旧测量。完整中英文报告在 `report/review-20261105`，现各 30 页；本目录六张图保留，并另增加六张 [全链路图](../all-link-evidence-20261105/README.md)。
 
 ## 六张图分别回答什么
 
 | 图文件 | 报告页 | 要回答的问题 |
 |---|---:|---|
 | `task2-selective-blocking.png` | 6 | 正常 h2 如何建立 EMA？何时超过阈值并从转发变为入口丢弃？h1 是否仍正常转发并收到回复？ |
-| `task3-cost-without-rerouting.png` | 8 | 独立代价阶段为何代价提高、原路径流量却没有迁走？ |
-| `B1-branch-transfer-and-cost.png` | 13 | 代价比较如何对应原分支降载、备用两跳增载、共用路段持续承载？ |
-| `B1-all-links-heatmap.png` | 16 | 全部 22 个方向是否显示同一转移现象，其他方向又是什么状态？ |
-| `AC-unaffected-legitimate-path.png` | 17 | A/C 封锁异常源时，未受影响的合法路径是否继续承载？ |
-| `B-all-repeats-branch-transfer.png` | 19 | 三轮 B 是否都发生实际流量转移与恢复，过渡过程有何差别？ |
+| `task3-cost-without-rerouting.png` | 10 | 独立代价阶段为何代价提高、原路径流量却没有迁走？ |
+| `B1-branch-transfer-and-cost.png` | 19 | 代价比较如何对应原分支降载、备用两跳增载、共用路段持续承载？ |
+| `B1-all-links-heatmap.png` | 22 | 全部 22 个方向是否显示同一转移现象，其他方向又是什么状态？ |
+| `AC-unaffected-legitimate-path.png` | 23 | A/C 封锁异常源时，未受影响的合法路径是否继续承载？ |
+| `B-all-repeats-branch-transfer.png` | 25 | 三轮 B 是否都发生实际流量转移与恢复，过渡过程有何差别？ |
 
 每图另有 SVG；CSV 导出五轮实验（A、B1、B2、B3、C）的全部 22 个有向链路，以及每条链路的实测速率、利用率、负载项、惩罚项、总成本和归一化成本。`all-trials-phase-means.csv` 使用原比较窗口 [4,10)、[15,24)、[40,55) 秒，按记录样本算术平均，不冒充精确按时间加权平均。
 
@@ -30,7 +30,7 @@ Task 2 图使用一轮连续 32 秒补测：前 12 秒正常 ping，随后 h2 �
 
 补测没有修改控制器；独立程序每 0.5 秒保存六台交换机的完整流表，共 66 份快照、780 行逐交换机逐源差分，最大采样间隔 0.514 秒。未出现的 drop 规则总计数为零；规则出现后对相邻完整快照的总计数做差。因此跨规则创建也有可核验的观测，不需要插值填旧缺口。C 为每个采样区间的平均速率，不能按阶梯边界推断毫秒级安装时刻。新记录及复现命令见 `../../todo03/task2-recapture-20261105/README.md`；校验见 `TASK2_RECAPTURE_VALIDATION.json`，新 CSV 以 `task2-recapture-` 开头。
 
-Task 2 没有保存端口统计：只能根据源转发/drop 及 ping 解释该阶段，不能还原当时每条链路的字节吞吐。Task 3 和集成 Task 4 则已保存全部方向。
+本目录对应的 Task 2 旧轮和仅 ping 补测没有端口统计。现已另外完成 UDP + ping 端口补测，在报告第 7–8 页展示全链路字节速率；与本目录仅 ping 数据分开，见 [全链路补图](../all-link-evidence-20261105/README.md)。Task 3 和集成 Task 4 的原日志已有全部交换机方向。
 
 B1 使用原分析的估计零点，其他集成轮次使用发送启动时间。集成实验接收端、端口统计和规则检查约按一秒对齐，事件标记不证明亚秒级因果顺序。Task 3 图以 block 事件为零点；新版 Task 2 使用补测开始时间。
 
@@ -56,4 +56,4 @@ The new Task 2 figure separates baseline learning (A), threshold crossing (B), h
 
 The B curves show an approximately 10.3 Mbps port load moving from s2→s6 to both consecutive hops s2→s3 and s3→s6, while s1→s2 remains active and h6 receives approximately 10 Mbps of legitimate UDP payload. A/C retain the unaffected legitimate route. The standalone Task 3 curves demonstrate that cost computation alone does not modify forwarding.
 
-All three B trials and their transients are retained. B2's original-link mean in [15,24) s is 0.525 Mbps because a 4.726 Mbps sample remains at 15.60 s. Port polling, interval averaging and independent receiver timing limit precise causal timing claims. Task 2 lacks port statistics, so only source counters and received ping replies are plotted for that stage. No controlled comparison isolates the independent benefit of rerouting.
+All three B trials and their transients are retained. B2's original-link mean in [15,24) s is 0.525 Mbps because a 4.726 Mbps sample remains at 15.60 s. Port polling, interval averaging and independent receiver timing limit precise causal timing claims. The Task 2 captures used in this directory lack port statistics. A separate UDP-plus-ping port-capture repeat now supplies all-link figures on report pages 7–8; its measurements are not mixed with the ping-only capture. No controlled comparison isolates the independent benefit of rerouting.

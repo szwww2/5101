@@ -2,22 +2,38 @@
   "status": "PASS",
   "date": "2026-11-05",
   "pdf_page_counts": {
-    "Chinese": 24,
-    "English": 24
+    "Chinese": 30,
+    "English": 30
   },
-  "original_pages_preserved_except_figure_renumbering": 16,
-  "new_pages": [
+  "original_pages_preserved_except_figure_renumbering": 15,
+  "new_pages_since_18_page_version": [
     6,
+    7,
     8,
-    13,
+    10,
+    11,
+    14,
     16,
-    17,
-    19
+    18,
+    19,
+    22,
+    23,
+    25
   ],
+  "new_pages_since_24_page_version": [
+    7,
+    8,
+    11,
+    14,
+    16,
+    18
+  ],
+  "previous_figures_preserved": 18,
+  "disclosure_change": "Explicitly attributes November Task2 repeats to the assistant; October student results unchanged",
   "appendix_change": "Final scope sentence identifies the new Task2 repeat",
   "cover_change": "Date/scope line identifies the requested November Task2 repeat; abstract preserved",
-  "total_figures": 18,
-  "new_figures": 6,
+  "total_figures": 24,
+  "new_figures_this_revision": 6,
   "historical_source_hashes_unchanged": 20,
   "intentionally_changed_authoring_files": [
     "D:\\desktop\\nus\\CEG5101 Modern Computer Networking\\sdn_assignment\\report\\build_report.py"
@@ -25,8 +41,8 @@
   "policy_source_hashes_verified": 66,
   "phase_rows_verified": 330,
   "phase_table_matches_csv": true,
-  "all_48_pages_rendered": true,
-  "visual_review": "Re-rendered all 48 pages; inspected updated cover, Task2 and appendix in both languages. Other 21 page bodies and 17 other figure bytes unchanged.",
+  "all_60_pages_rendered": true,
+  "visual_review": "All six new pages, cover, disclosure and appendix inspected in both languages; existing figure bytes and report content compared with the previous revision.",
   "analysis_checks": {
     "all_22_directions_present": true,
     "cost_formula_matches_logged_values": true,
@@ -64,18 +80,40 @@
     "original_bridges_preserved": true,
     "rate_method": "Aggregate monotonic counter deltas per complete OVS table; zero when no matching drop rule exists; no interpolation"
   },
-  "pdf_sha256": {
-    "CEG5101_CA2_Report_Chinese.pdf": "0374d9a3e128b14f12735d4af4052e7432a41985c85931995930e1bae1856640",
-    "CEG5101_CA2_Report_English.pdf": "4de043de4bd2a5af4d617a1b4a2a8c88dca22246f18d70318925264344511730"
-  },
-  "published_analysis_redraw": {
-    "status": "PASS",
-    "csv_png_byte_matches": 29,
-    "changed_pages_from_previous_24_page_revision": [
-      1,
-      6,
-      24
+  "task2_port_capture": {
+    "run": "todo03/task2-link-capture-20261105",
+    "origin": 1793850609.7818491,
+    "block_seconds": 12.77544093132019,
+    "flood": [
+      12.06877875328064,
+      20.564472198486328
     ],
-    "other_page_bodies_unchanged": 21
+    "snapshots": 66,
+    "max_interval_seconds": 0.6167144775390625,
+    "directed_switch_links": 22,
+    "host_attachment_directions": 12,
+    "detected_pps": 12831.699686990094,
+    "udp_receiver_mbps": 10.0,
+    "udp_lost": 35,
+    "udp_total": 27214,
+    "udp_loss_percent": 0.12861027412361284,
+    "ping_sent": 65,
+    "ping_received": 64,
+    "h1_post_ping": {
+      "sent": 3,
+      "received": 3
+    },
+    "h2_post_ping": {
+      "sent": 3,
+      "received": 0
+    },
+    "all_switch_source_blocks": true,
+    "h1_not_blocked": true,
+    "original_bridges_preserved": true
+  },
+  "all_link_source_hashes_verified": 83,
+  "pdf_sha256": {
+    "CEG5101_CA2_Report_Chinese.pdf": "a4bfdcfbf81684ae9eac2ef737da79f358ec0a9460015b1a96574efa5122dbe5",
+    "CEG5101_CA2_Report_English.pdf": "d45678a5751ebdff42bc765ee3318dedf8e8a1f6cfdedde26f37b51ca682e5ed"
   }
 }
