@@ -5,8 +5,8 @@
     "items": [
       {
         "kind": "p",
-        "en": "CA2 Anomaly Aware Routing and Blocking Controller<br/>AY 2026 27 Semester 1 | Experiments on 11, 16 and 17 October 2026",
-        "zh": "CA2 异常感知路由与源地址封锁控制器<br/>2026—2027 学年第一学期｜实验日期：2026 年 10 月 11、16、17 日"
+        "en": "CA2 Anomaly Aware Routing and Blocking Controller<br/>AY 2026 27 Semester 1 | Original experiments: 11, 16 and 17 October 2026<br/>Supplementary Task 2 capture: 5 November 2026 (assistant-run, requested by student)",
+        "zh": "CA2 异常感知路由与源地址封锁控制器<br/>2026—2027 学年第一学期｜原实验：2026 年 10 月 11、16、17 日<br/>Task 2 补测：2026 年 11 月 5 日（学生要求，助手执行）"
       },
       {
         "kind": "h",
@@ -360,26 +360,26 @@
     "items": [
       {
         "kind": "p",
-        "en": "Tasks 2 and 3 implement and verify detection/blocking and cost policies. Task 4 also implements route selection and rule updates, then tests the integrated system. Task 5 analyses the recorded behaviour. These are connected implementation and evaluation stages.",
-        "zh": "Task 2、3 实现并验证检测/封锁策略与代价策略；Task 4 还要实现选路及转发规则更新，再实验验证集成系统；Task 5 分析记录的效果。因此 Task 4 不只是做实验。"
+        "en": "At the student’s request, Task 2 was repeated on 5 November to capture the missing transition. The assistant used the same topology and unchanged controller, with an independent full-table sampler every 0.5 s on all six switches. This is a separate experiment; the October results on pages 4–5 remain unchanged.",
+        "zh": "为补齐封锁过渡段，按学生要求于 11 月 5 日重新运行 Task 2。助手使用同一拓扑和未修改的控制器，另每 0.5 秒采集六台交换机的完整流表。这是独立补测；第 4–5 页的十月原结果保持不变。"
       },
       {
         "kind": "image",
         "source": "todo06/policy-evidence-20261105/task2-selective-blocking.png",
-        "en": "Figure 4 Standalone Task 2: h2 forwarding/drop counters, h1 forwarding/drop counters, and actual h1 ping replies. Zero is the recorded block event, not the start of the flood.",
-        "zh": "图 4 独立 Task 2：h2 的转发/丢弃计数速率、h1 的转发/丢弃计数速率和 h1 实际 ping 回复。零点为记录的封锁事件，不是 flood 启动时刻。",
+        "en": "Figure 4 Task 2 repeat: A, normal EMA; B, detection samples; C, interval-average h2 forwarding/drop rates; D, h1 counters on its three switches; E, received replies. All panels share the capture-start time origin.",
+        "zh": "图 4 Task 2 补测：A 正常 EMA；B 检测样本；C h2 转发/丢弃的区间平均速率；D h1 沿途三台交换机计数；E 实际回复。各面板均以采集开始为零点。",
         "width": 6.8,
         "asset": "assets/task2-selective-blocking.png"
       },
       {
         "kind": "p",
-        "en": "At detection, h2 forwarded traffic reaches 13,339.8 pps. Subsequent valid samples show zero h2 forwarding while the ingress drop rule continues counting high-rate arrivals. At the same time, h1 remains near 2 forwarded pps, its drop rate stays zero, and replies continue. This distinguishes selective source blocking from disabling s2 or cutting the shared path.",
-        "zh": "检测时 h2 转发速率达到 13,339.8 pps。此后有效样本中 h2 转发速率为零，而入口 drop 仍持续计入大量到达包。同时 h1 仍约每秒转发 2 包，drop 速率为零，并继续收到回复。这说明执行的是按源地址封锁，而非关闭 s2 或切断共享路径。"
+        "en": "Normal h2 traffic is about 2 pps; the EMA reaches 1.96 pps. Flood starts near 12 s; detection records 5,863.1 pps > 2,000 pps. After blocking, h2 forwarding at s2/s6 stops, while h1 counters at s1/s2/s6 keep increasing and h1 receives 64/64 replies. Post-test ping: h2 0/3, h1 3/3. Stopping the flood does not unblock h2.",
+        "zh": "正常 h2 约 2 pps，EMA 达到 1.96 pps；约 12 秒启动 flood，检测样本为 5,863.1 pps，高于 2,000 pps。封锁后 s2/s6 的 h2 转发停止，h1 在 s1/s2/s6 的计数持续增加，收到 64/64 回复。之后 h2 ping 为 0/3、h1 为 3/3；flood 停止不解除 h2 封锁。"
       },
       {
         "kind": "p",
-        "en": "The new drop entry initially lacks a previous counter sample; the gap is retained. Task 2 did not collect per-port statistics, so no Task-2-only link throughput is fabricated. The full ping observation remains 292/293 received, including one missing reply.",
-        "zh": "新 drop 规则最初缺少上一次计数，图中保留采样缺口。Task 2 当时没有采集逐端口统计，因此不能补造该阶段的链路吞吐曲线。完整 ping 观测仍为 292/293，包含一次未收到回复。"
+        "en": "The 66 complete snapshots have no counter reset and a maximum interval of 0.514 s. An absent drop rule has zero cumulative count, so aggregate differencing spans rule creation without interpolation. These are interval means, not instantaneous latency measurements. Raw evidence: todo03/task2-recapture-20261105; no old/new samples are spliced.",
+        "zh": "共 66 份完整快照，无计数器重置，最大间隔 0.514 秒。尚不存在的 drop 规则累计数为零，因此可跨规则创建做总计数差分，无需插值。这是区间均值，不用于测量瞬时延迟。原始记录在 todo03/task2-recapture-20261105，未拼接新旧样本。"
       }
     ]
   },
@@ -1269,8 +1269,8 @@
       },
       {
         "kind": "p",
-        "en": "Requirement coverage: topology and configuration → Section 1; source rate, EMA and blocking → Section 2; load and anomaly costs → Section 3; all three prescribed links, path choice and recovery → Section 4; normalized cost, loss and throughput curves plus phase interpretation → Section 5. No new traffic experiment was run while assembling this report.",
-        "zh": "要求覆盖：拓扑与配置见第 1 节；源速率、EMA 和封锁见第 2 节；负载与异常代价见第 3 节；三个指定异常链路、选路与恢复见第 4 节；归一化代价、丢包、吞吐曲线与前中后解释见第 5 节。整理报告期间未新增流量实验。"
+        "en": "Requirement coverage: topology and configuration → Section 1; source rate, EMA and blocking → Section 2; load and anomaly costs → Section 3; all three prescribed links, path choice and recovery → Section 4; normalized cost, loss and throughput curves plus phase interpretation → Section 5. Page 6 contains the requested 5 November Task 2 repeat; the other experiment results retain the original measurements.",
+        "zh": "要求覆盖：拓扑与配置见第 1 节；源速率、EMA 和封锁见第 2 节；负载与异常代价见第 3 节；三个指定异常链路、选路与恢复见第 4 节；归一化代价、丢包、吞吐曲线与前中后解释见第 5 节。第 6 页为按要求完成的 11 月 5 日 Task 2 补测，其他实验结果沿用原测量。"
       }
     ]
   }

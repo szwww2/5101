@@ -1,7 +1,7 @@
-"""Reconstruct policy evidence from historical logs; never runs a network.
+"""Reconstruct policy evidence from saved logs; never runs a network.
 
 All port rates are peer-ingress RX rates, not application payload rates.
-Task 2/3 standalone traces use the recorded block event as time zero.
+Task 2 uses the explicitly requested 5 November capture; Task 3 is historical.
 Integrated trials retain analyze_task5's documented time origins.
 """
 from pathlib import Path
@@ -127,13 +127,14 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     plt.rcParams.update({'font.size': 11, 'axes.spines.top': False, 'axes.spines.right': False,
                          'axes.titlesize': 12, 'savefig.facecolor': 'white'})
-    summary = {'scope': 'Historical logs only; no newly generated network traffic', 'standalone': {}}
+    summary = {'scope': 'Offline analysis: Task 2 uses the requested 2026-11-05 repeat; other trials remain historical', 'standalone': {}}
 
     # Task 2: separate forwarding and dropping for h2, and independently inspect h1.
     ev = records('todo03/evidence/controller-events-after-block-20261016.jsonl')
     block = next(e for e in ev if e['event'] == 'block')
     origin = block['time']
-    src = [r for r in records('todo03/evidence/source-rates-after-block-20261016.jsonl')
+    source_history = records('todo03/evidence/source-rates-after-block-20261016.jsonl')
+    src = [r for r in source_history
            if -6 <= r['time']-origin <= 18 and r['source'] in ('10.0.0.1','10.0.0.2')]
     write_csv(out, 'task2-sources.csv', [dict(seconds=r['time']-origin, **r) for r in src])
     ping = read_bytes('todo03/evidence/legitimate-h1-ping-during-anomaly-20261016.log').decode()
@@ -145,27 +146,77 @@ def main():
     h1 = [r for r in src if r['source'] == '10.0.0.1']
     assert all(r['drop_pps'] == 0 and not r['blocked'] for r in h1)
     assert all(r['forward_pps'] == 0 for r in h2 if 2 <= r['time']-origin <= 8)
-    fig, ax = plt.subplots(3, 1, figsize=(10, 7.2), sharex=True)
-    for field, label, color in [('forward_pps','h2 forwarded',RED),('drop_pps','h2 dropped at ingress',BLUE),
-                                ('threshold_pps','h2 anomaly threshold',GOLD)]:
-        gap_plot(ax[0], h2, field, origin, label=label, color=color)
-    ax[0].set_ylabel('h2 packets/s')
-    ax[0].legend(loc='upper right', fontsize=9)
-    ax[0].set_title('Task 2 alone | selective source blocking, with h1 still active')
+    normal_active = [r for r in source_history if r['source']=='10.0.0.2'
+                     and not r['blocked'] and .1<r['pps']<20]
+    normal_origin = normal_active[0]['time']
+    normal_end = normal_active[-1]['time']
+    normal = [r for r in source_history if r['source']=='10.0.0.2'
+              and normal_origin-2<=r['time']<=normal_end]
+    assert len(normal_active)==10 and all(not r['blocked'] for r in normal)
+    for r in normal:
+        assert abs(r['new_ema_pps']-(.3*r['pps']+.7*r['old_ema_pps']))<1e-8
+    write_csv(out,'task2-normal-baseline.csv',[dict(seconds=r['time']-normal_origin,**r) for r in normal])
+    fig = plt.figure(figsize=(11,8.5))
+    grid = fig.add_gridspec(3,2,height_ratios=[1,1.05,1])
+    a=fig.add_subplot(grid[0,0]);b=fig.add_subplot(grid[0,1])
+    c=fig.add_subplot(grid[1,:]);d=fig.add_subplot(grid[2,0]);e=fig.add_subplot(grid[2,1])
+    fig.suptitle('Task 2 | learn the baseline, detect h2, block h2, preserve h1',fontsize=14,y=.994)
+    gap_plot(a,normal,'pps',normal_origin,label='h2 normal ping rate',color=BLUE)
+    gap_plot(a,normal,'new_ema_pps',normal_origin,label='Updated EMA',color=GREEN)
+    a.set_title('A  Normal baseline (earlier window)',loc='left')
+    a.set_ylabel('Packets/s');a.set_xlabel('Seconds from first active normal sample')
+    a.set_ylim(-.1,2.8);a.set_xlim(-2,10.5);a.legend(loc='upper left',fontsize=9,ncol=2)
+    gap_plot(b,h2,'forward_pps',origin,label='h2 forwarded',color=RED)
+    gap_plot(b,h2,'threshold_pps',origin,label='Threshold: 2,000 pps',color=GOLD,ls='--')
+    b.set_title('B  Detection detail',loc='left');b.set_ylabel('Packets/s')
+    b.set_xlim(-2,3.5);b.set_ylim(-500,17500)
+    b.set_xlabel('Seconds relative to block event')
+    b.legend(loc='upper right',fontsize=9)
+    b.text(-1.85,14000,'13,339.8 pps\n> 2,000 pps',fontsize=9,color=RED)
+    # Peak label is text only; do not imply an unrecorded packet timestamp.
+    for field,label,color in [('forward_pps','h2 forwarded by s2',RED),
+                              ('drop_pps','h2 discarded by s2',BLUE)]:
+        gap_plot(c,h2,field,origin,label=label,color=color)
+    c.set_title('C  Enforcement: forwarding stops; ingress drops continue',loc='left')
+    c.set_ylabel('Packets/s');c.set_xlim(-6,18);c.set_ylim(-3000,112000)
+    c.set_xlabel('Seconds relative to block event');c.legend(loc='upper right',fontsize=9,ncol=2)
+    first_drop=next(r['time']-origin for r in h2 if r['drop_pps']>0)
+    c.text(8.6,53000,'After counter sampling resumes:\nh2 forwarding = 0',fontsize=10,color=RED)
+    for axis in [b,c]:
+        axis.axvspan(0,first_drop,color='#777777',alpha=.10)
+    c.text(.2,106000,'New drop-counter\nsampling gap',fontsize=9,color='#555555',ha='left',va='top')
     for field, label, color in [('forward_pps','h1 forwarded',GREEN),('drop_pps','h1 dropped',RED)]:
-        gap_plot(ax[1], h1, field, origin, label=label, color=color)
-    ax[1].set_ylabel('h1 packets/s'); ax[1].set_ylim(-.15, max(r['forward_pps'] for r in h1)*1.25)
-    ax[1].legend(loc='upper right', fontsize=9)
-    ax[2].scatter([r['seconds'] for r in replies], [r['rtt_ms'] for r in replies], s=14, color=GREEN)
-    ax[2].set_ylabel('h1 ping RTT (ms)'); ax[2].set_ylim(0, max(r['rtt_ms'] for r in replies)*1.15)
-    ax[2].set_xlabel('Seconds relative to the recorded h2 block event')
-    for a in ax: a.axvline(0,color=RED,ls=':',lw=1)
-    style_axes(ax,(-6,18))
-    save_figure(fig,out,'task2-selective-blocking',
-        'Dots are logged samples/replies; the new drop counter has an initial sampling gap.\n'
-        'Displayed interval only; the complete h1 ping observation received 292/293 replies.')
+        gap_plot(d,h1,field,origin,label=label,color=color)
+    d.set_title('D  Legitimate h1 remains unblocked',loc='left')
+    d.set_ylabel('Packets/s');d.set_xlim(-6,18);d.set_ylim(-.15,3.9)
+    d.legend(loc='upper right',fontsize=9,ncol=2);d.set_xlabel('Seconds relative to block event')
+    e.scatter([r['seconds'] for r in replies],[r['rtt_ms'] for r in replies],s=14,color=GREEN)
+    e.set_title('E  h1 still receives replies from h6',loc='left')
+    e.set_ylabel('Received ping RTT (ms)');e.set_xlim(-6,18);e.set_ylim(0,200)
+    e.set_xlabel('Seconds relative to block event')
+    for axis in [b,c,d,e]:axis.axvline(0,color=RED,ls=':',lw=1)
+    for axis in [a,b,c,d,e]:axis.grid(alpha=.18);axis.set_axisbelow(True)
+    fig.text(.5,.013,
+        'A is a separate earlier window (~6 min before block); B is a close-up. B-E: red dotted line = recorded block event.\n'
+        'Gray band: no valid h2 rate after the new counter is installed; not a measured blocking delay. Full h1 ping log: 292/293 replies.',
+        ha='center',va='bottom',fontsize=8.5)
+    fig.tight_layout(rect=(0,.065,1,.975),h_pad=1.55,w_pad=2)
+    fig.savefig(out/'task2-selective-blocking.png',dpi=220)
+    fig.savefig(out/'task2-selective-blocking.svg')
+    plt.close(fig)
     summary['standalone']['task2'] = dict(origin=origin, origin_kind='recorded block event',
-        displayed_seconds=[-6,18], h2_detected_pps=block['pps'], h1_drop_pps_max=max(r['drop_pps'] for r in h1))
+        displayed_seconds=[-6,18], h2_detected_pps=block['pps'], h1_drop_pps_max=max(r['drop_pps'] for r in h1),
+        normal_window_origin=normal_origin,normal_window_end=normal_end,
+        normal_window_offset_from_block=normal_origin-origin,
+        baseline_end_ema=normal_active[-1]['new_ema_pps'],first_valid_drop_rate_seconds=first_drop,
+        figure_revision='Five panels: earlier normal EMA, detection detail, source filtering, h1 forwarding and replies')
+
+    # Keep the old export for audit, but replace the report figure with a complete
+    # independently sampled repeat. Never splice old and new measurements.
+    from plot_task2_recapture import plot as plot_task2
+    read_bytes('plot_task2_recapture.py')
+    summary['standalone']['task2_historical']=summary['standalone']['task2']
+    summary['standalone']['task2']=plot_task2(ROOT,out,read_bytes)
 
     # Task 3: no rerouting in this standalone controller; establish that explicitly.
     ev3 = records('todo04/evidence/controller-events-after-anomaly-20261016.jsonl')
@@ -322,7 +373,7 @@ def main():
         'B2 still records 4.726 Mbps on s2 -> s6 at 15.60 s; this sample is retained.')
 
     summary['limitations']=[
-        'Task2 did not record per-port statistics; its graph uses source forwarding/drop counters and actual h1 replies.',
+        'Historical Task2 lacks port statistics. Its replacement figure uses a separate 5 November repeat with complete source flow counters at every switch, not per-port Mbps.',
         'Port RX contains multiple sources/protocols and Ethernet/VLAN overhead; do not call it UDP payload throughput.',
         'Step/event times reflect about one-second sampling; B1 origin is estimated. No sub-second causality claim.',
         'B2 retains 4.726 Mbps on the original branch at 15.60 s; its 15-24 s original-branch mean is 0.525 Mbps, not zero.',

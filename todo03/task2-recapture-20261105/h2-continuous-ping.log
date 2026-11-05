@@ -1,0 +1,35 @@
+PING 10.0.0.6 (10.0.0.6) 56(84) bytes of data.
+[1793849008.310897] 64 bytes from 10.0.0.6: icmp_seq=1 ttl=64 time=154 ms
+[1793849008.746444] 64 bytes from 10.0.0.6: icmp_seq=2 ttl=64 time=88.5 ms
+[1793849009.247550] 64 bytes from 10.0.0.6: icmp_seq=3 ttl=64 time=88.3 ms
+[1793849009.748462] 64 bytes from 10.0.0.6: icmp_seq=4 ttl=64 time=88.4 ms
+[1793849010.249593] 64 bytes from 10.0.0.6: icmp_seq=5 ttl=64 time=88.3 ms
+[1793849010.750858] 64 bytes from 10.0.0.6: icmp_seq=6 ttl=64 time=88.3 ms
+[1793849011.252157] 64 bytes from 10.0.0.6: icmp_seq=7 ttl=64 time=88.4 ms
+[1793849011.753618] 64 bytes from 10.0.0.6: icmp_seq=8 ttl=64 time=88.7 ms
+[1793849012.254005] 64 bytes from 10.0.0.6: icmp_seq=9 ttl=64 time=88.4 ms
+[1793849012.755342] 64 bytes from 10.0.0.6: icmp_seq=10 ttl=64 time=88.4 ms
+[1793849013.256438] 64 bytes from 10.0.0.6: icmp_seq=11 ttl=64 time=88.4 ms
+[1793849013.757831] 64 bytes from 10.0.0.6: icmp_seq=12 ttl=64 time=88.5 ms
+[1793849014.259336] 64 bytes from 10.0.0.6: icmp_seq=13 ttl=64 time=88.5 ms
+[1793849014.760704] 64 bytes from 10.0.0.6: icmp_seq=14 ttl=64 time=88.6 ms
+[1793849015.261201] 64 bytes from 10.0.0.6: icmp_seq=15 ttl=64 time=88.6 ms
+[1793849015.761748] 64 bytes from 10.0.0.6: icmp_seq=16 ttl=64 time=88.5 ms
+[1793849016.262227] 64 bytes from 10.0.0.6: icmp_seq=17 ttl=64 time=88.4 ms
+[1793849016.763494] 64 bytes from 10.0.0.6: icmp_seq=18 ttl=64 time=88.5 ms
+[1793849017.264521] 64 bytes from 10.0.0.6: icmp_seq=19 ttl=64 time=88.4 ms
+[1793849017.765986] 64 bytes from 10.0.0.6: icmp_seq=20 ttl=64 time=88.6 ms
+[1793849018.266647] 64 bytes from 10.0.0.6: icmp_seq=21 ttl=64 time=88.5 ms
+[1793849018.767198] 64 bytes from 10.0.0.6: icmp_seq=22 ttl=64 time=88.5 ms
+[1793849019.267644] 64 bytes from 10.0.0.6: icmp_seq=23 ttl=64 time=88.5 ms
+[1793849019.768645] 64 bytes from 10.0.0.6: icmp_seq=24 ttl=64 time=88.6 ms
+[1793849020.269863] 64 bytes from 10.0.0.6: icmp_seq=25 ttl=64 time=88.3 ms
+ping: sendmsg: No buffer space available
+ping: sendmsg: No buffer space available
+ping: sendmsg: No buffer space available
+ping: sendmsg: No buffer space available
+ping: sendmsg: No buffer space available
+
+--- 10.0.0.6 ping statistics ---
+56 packets transmitted, 25 received, 55.3571% packet loss, time 31900ms
+rtt min/avg/max/mdev = 88.265/91.079/154.212/12.887 ms

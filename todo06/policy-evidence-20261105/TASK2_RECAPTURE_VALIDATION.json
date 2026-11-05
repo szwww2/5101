@@ -1,0 +1,29 @@
+{
+  "scope": "New assistant-run experiment requested by user, 2026-11-05",
+  "run": "todo03/task2-recapture-20261105",
+  "origin": 1793849008.1189559,
+  "block_seconds": 12.401728630065918,
+  "flood_start_seconds": 12.037461519241333,
+  "flood_observed_stop_seconds": 20.534279584884644,
+  "detected_pps": 5863.147293154192,
+  "threshold_pps": 2000,
+  "snapshots": 66,
+  "max_sample_interval_seconds": 0.514319896697998,
+  "all_switch_rate_rows": 780,
+  "h1_ping_sent": 64,
+  "h1_ping_received": 64,
+  "h1_drop_packets": 0,
+  "h1_post_ping": {
+    "sent": 3,
+    "received": 3
+  },
+  "h2_post_ping": {
+    "sent": 3,
+    "received": 0
+  },
+  "normal_end_ema": 1.9591029264851465,
+  "h2_forwarding_zero_after_block_plus_one_second": true,
+  "all_switch_drop_rules": true,
+  "original_bridges_preserved": true,
+  "rate_method": "Aggregate monotonic counter deltas per complete OVS table; zero when no matching drop rule exists; no interpolation"
+}

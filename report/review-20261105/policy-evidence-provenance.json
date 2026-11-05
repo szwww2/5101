@@ -1,7 +1,36 @@
 {
-  "scope": "Historical logs only; no newly generated network traffic",
+  "scope": "Offline analysis: Task 2 uses the requested 2026-11-05 repeat; other trials remain historical",
   "standalone": {
     "task2": {
+      "scope": "New assistant-run experiment requested by user, 2026-11-05",
+      "run": "todo03/task2-recapture-20261105",
+      "origin": 1793849008.1189559,
+      "block_seconds": 12.401728630065918,
+      "flood_start_seconds": 12.037461519241333,
+      "flood_observed_stop_seconds": 20.534279584884644,
+      "detected_pps": 5863.147293154192,
+      "threshold_pps": 2000,
+      "snapshots": 66,
+      "max_sample_interval_seconds": 0.514319896697998,
+      "all_switch_rate_rows": 780,
+      "h1_ping_sent": 64,
+      "h1_ping_received": 64,
+      "h1_drop_packets": 0,
+      "h1_post_ping": {
+        "sent": 3,
+        "received": 3
+      },
+      "h2_post_ping": {
+        "sent": 3,
+        "received": 0
+      },
+      "normal_end_ema": 1.9591029264851465,
+      "h2_forwarding_zero_after_block_plus_one_second": true,
+      "all_switch_drop_rules": true,
+      "original_bridges_preserved": true,
+      "rate_method": "Aggregate monotonic counter deltas per complete OVS table; zero when no matching drop rule exists; no interpolation"
+    },
+    "task2_historical": {
       "origin": 1792120047.4133537,
       "origin_kind": "recorded block event",
       "displayed_seconds": [
@@ -9,7 +38,13 @@
         18
       ],
       "h2_detected_pps": 13339.815061862535,
-      "h1_drop_pps_max": 0.0
+      "h1_drop_pps_max": 0.0,
+      "normal_window_origin": 1792119683.8569496,
+      "normal_window_end": 1792119693.162551,
+      "normal_window_offset_from_block": -363.55640411376953,
+      "baseline_end_ema": 1.8724073529994882,
+      "first_valid_drop_rate_seconds": 2.018540620803833,
+      "figure_revision": "Five panels: earlier normal EMA, detection detail, source filtering, h1 forwarding and replies"
     },
     "task3": {
       "origin": 1792127244.695838,
@@ -479,7 +514,7 @@
     }
   },
   "limitations": [
-    "Task2 did not record per-port statistics; its graph uses source forwarding/drop counters and actual h1 replies.",
+    "Historical Task2 lacks port statistics. Its replacement figure uses a separate 5 November repeat with complete source flow counters at every switch, not per-port Mbps.",
     "Port RX contains multiple sources/protocols and Ethernet/VLAN overhead; do not call it UDP payload throughput.",
     "Step/event times reflect about one-second sampling; B1 origin is estimated. No sub-second causality claim.",
     "B2 retains 4.726 Mbps on the original branch at 15.60 s; its 15-24 s original-branch mean is 0.525 Mbps, not zero.",
@@ -499,6 +534,70 @@
     "todo03/evidence/legitimate-h1-ping-during-anomaly-20261016.log": {
       "file_sha256": "70b3fffa622a791a78d64ffcedb543de071c618d5538efb4636de5b06035090c",
       "uncompressed_sha256": "70b3fffa622a791a78d64ffcedb543de071c618d5538efb4636de5b06035090c"
+    },
+    "plot_task2_recapture.py": {
+      "file_sha256": "e3d778e40f9ed63bb32c9822ce1987f3d165a7df37b3d4a82ee9ed57550d5960",
+      "uncompressed_sha256": "e3d778e40f9ed63bb32c9822ce1987f3d165a7df37b3d4a82ee9ed57550d5960"
+    },
+    "todo03/task2-recapture-20261105/capture-results.json": {
+      "file_sha256": "098d56ec8955acd2a657b7480a591164a640fa2a07f688fc26f0a5745c8d359b",
+      "uncompressed_sha256": "098d56ec8955acd2a657b7480a591164a640fa2a07f688fc26f0a5745c8d359b"
+    },
+    "todo03/task2-recapture-20261105/flow-snapshots.jsonl": {
+      "file_sha256": "33e1608fd76e3aa3f27038637a630cc67a77bb215456b5e1b86933751c854ac3",
+      "uncompressed_sha256": "33e1608fd76e3aa3f27038637a630cc67a77bb215456b5e1b86933751c854ac3"
+    },
+    "todo03/task2-recapture-20261105/source-rates.jsonl": {
+      "file_sha256": "6fde9cffbf110cba2e1186cd16ec8c55e9fb89a32494ab11ffbaa7764f90c0c2",
+      "uncompressed_sha256": "6fde9cffbf110cba2e1186cd16ec8c55e9fb89a32494ab11ffbaa7764f90c0c2"
+    },
+    "todo03/task2-recapture-20261105/events.jsonl": {
+      "file_sha256": "328a2abe0869c422a111c953476eda8762ae6f3a4190980d8a4b1835d825bcae",
+      "uncompressed_sha256": "328a2abe0869c422a111c953476eda8762ae6f3a4190980d8a4b1835d825bcae"
+    },
+    "anomaly_controller.py": {
+      "file_sha256": "b05203b1585c95379952044a158f4a4a78b4c01e1145cbfd0d63da3e473e525f",
+      "uncompressed_sha256": "b05203b1585c95379952044a158f4a4a78b4c01e1145cbfd0d63da3e473e525f"
+    },
+    "traffic_stats.py": {
+      "file_sha256": "e5e4a951a8d9f08db0b8838768b0e92b9144f3ffce89a7d68f2aba7f561a4d33",
+      "uncompressed_sha256": "e5e4a951a8d9f08db0b8838768b0e92b9144f3ffce89a7d68f2aba7f561a4d33"
+    },
+    "baseline_controller.py": {
+      "file_sha256": "2a30d1adc7066f5718db8503347c7b52aa1a460898be8d91c180f536ce72e0d1",
+      "uncompressed_sha256": "2a30d1adc7066f5718db8503347c7b52aa1a460898be8d91c180f536ce72e0d1"
+    },
+    "capture_task2.py": {
+      "file_sha256": "ec88379d93ac202d183ee09a0fe6058bf18b42022e7f9eff12d49f17d8f3c10d",
+      "uncompressed_sha256": "ec88379d93ac202d183ee09a0fe6058bf18b42022e7f9eff12d49f17d8f3c10d"
+    },
+    "todo01/ca2-mesh-my.mn": {
+      "file_sha256": "d304e074e96852d38e6ec011ca98c74de6b248bf55c59d0c54fefbb34fe6a77c",
+      "uncompressed_sha256": "d304e074e96852d38e6ec011ca98c74de6b248bf55c59d0c54fefbb34fe6a77c"
+    },
+    "todo03/task2-recapture-20261105/h1-continuous-ping.log": {
+      "file_sha256": "bb87421ce80eca219f0de294591968cc4c6e87a0812782b7e4c0eea51022e80a",
+      "uncompressed_sha256": "bb87421ce80eca219f0de294591968cc4c6e87a0812782b7e4c0eea51022e80a"
+    },
+    "todo03/task2-recapture-20261105/h1-post-ping.log": {
+      "file_sha256": "477073ea1d2796ea2f8a08cf08d834abc3bd80b5067864974451f69bc5868995",
+      "uncompressed_sha256": "477073ea1d2796ea2f8a08cf08d834abc3bd80b5067864974451f69bc5868995"
+    },
+    "todo03/task2-recapture-20261105/h2-post-ping.log": {
+      "file_sha256": "f294c0db85da9beffdb5f1e0970e01bb58922d8fb6b0bbf5e86f6a091ca4cda1",
+      "uncompressed_sha256": "f294c0db85da9beffdb5f1e0970e01bb58922d8fb6b0bbf5e86f6a091ca4cda1"
+    },
+    "todo03/task2-recapture-20261105/h2-continuous-ping.log": {
+      "file_sha256": "dbc7452d1d09ad55f5b180c2a6f369e9617631212280f0184b2b9c107c73ab06",
+      "uncompressed_sha256": "dbc7452d1d09ad55f5b180c2a6f369e9617631212280f0184b2b9c107c73ab06"
+    },
+    "todo03/task2-recapture-20261105/h2-flood.log": {
+      "file_sha256": "8cee29d63badbf8645006d89e3b69cf06ed5bdc68f26d00a4dd3d7af9dfa231c",
+      "uncompressed_sha256": "8cee29d63badbf8645006d89e3b69cf06ed5bdc68f26d00a4dd3d7af9dfa231c"
+    },
+    "todo03/task2-recapture-20261105/mesh.mn": {
+      "file_sha256": "8785ea13ed985e077d895d30de022aadbc7ccc2ecdd4e49b1bcbe28062bc3dcc",
+      "uncompressed_sha256": "8785ea13ed985e077d895d30de022aadbc7ccc2ecdd4e49b1bcbe28062bc3dcc"
     },
     "todo04/evidence/controller-events-after-anomaly-20261016.jsonl": {
       "file_sha256": "95c104c20e3faa70fc2b1dfd2e6fcdf5e51ad3039c36c8324b4b7d40f4ae0a38",
@@ -689,7 +788,7 @@
       "uncompressed_sha256": "33620b17a3cdccc741b160599cbe8e308a253ba286acd8e18773a6c98a45cf71"
     }
   },
-  "analysis_script_sha256": "9f5870c930abc9b0b96a7325b3287da58bf36b94818c7e4f2151a689d97873f5",
+  "analysis_script_sha256": "bfed48c8c889bbc9e10e65b1cbe779081bf1d229d49c05a9d254e0aac511376d",
   "checks": {
     "all_22_directions_present": true,
     "cost_formula_matches_logged_values": true,
