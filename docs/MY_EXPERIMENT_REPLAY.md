@@ -348,10 +348,10 @@ D:\desktop\nus\CEG5101 Modern Computer Networking\sdn_assignment\todo06\task5-fi
 完整中英文报告在：
 
 ```text
-D:\desktop\nus\CEG5101 Modern Computer Networking\sdn_assignment\report\review-20261104
+D:\desktop\nus\CEG5101 Modern Computer Networking\sdn_assignment\report\review-20261105
 ```
 
-这里的 2026-11-04 报告在原实验数据上补充了 Task 2 命令与规则代码说明，两版第 5 页专门解释从发包到封锁；2026-10-17 原报告仍保留。现场讲已有结果可以直接打开这些文件。**新跑出的实验不会自动改写旧图表**；如果要用新数据更新图，需按新输出目录另做分析。
+这里的 2026-11-05 报告新增六张多链路策略图，两版各 24 页；第 5 页仍解释从发包到封锁。此前报告与原实验数据保留。现场讲已有结果可以直接打开这些文件。**新跑出的实验不会自动改写旧图表**；如果要用新数据更新图，需按新输出目录另做分析。
 
 ## 这些命令从哪里来
 

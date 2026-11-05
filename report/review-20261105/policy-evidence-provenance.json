@@ -1,0 +1,700 @@
+{
+  "scope": "Historical logs only; no newly generated network traffic",
+  "standalone": {
+    "task2": {
+      "origin": 1792120047.4133537,
+      "origin_kind": "recorded block event",
+      "displayed_seconds": [
+        -6,
+        18
+      ],
+      "h2_detected_pps": 13339.815061862535,
+      "h1_drop_pps_max": 0.0
+    },
+    "task3": {
+      "origin": 1792127244.695838,
+      "origin_kind": "recorded block event",
+      "displayed_seconds": [
+        -12,
+        35
+      ],
+      "restored_seconds": 13.233551502227783,
+      "rerouting": false
+    }
+  },
+  "trials": {
+    "A": {
+      "run": "run-A-20261016-145805-CPT5A8",
+      "origin": 1792134013.1750467,
+      "clock_quality": "sender-launch timestamp",
+      "snapshots": 59,
+      "events": [
+        {
+          "time": 1792134025.6941538,
+          "event": "block",
+          "source": "10.0.0.2",
+          "pps": 16455.58050152628,
+          "old_ema_pps": 0.009752300084201979,
+          "new_ema_pps": 0.009752300084201979,
+          "threshold_pps": 2000,
+          "samples": 131,
+          "warmed": true,
+          "blocked": true,
+          "newly_blocked": true,
+          "dpid": 2,
+          "destination": "10.0.0.3",
+          "forward_pps": 16455.58050152628,
+          "drop_pps": 0.0,
+          "forward_bps": 5529075.0485128295,
+          "drop_bps": 0.0,
+          "attack_path": [
+            2,
+            3
+          ],
+          "seconds": 12.519107103347778
+        },
+        {
+          "time": 1792134025.7108693,
+          "event": "penalty_added",
+          "source": "10.0.0.2",
+          "path": [
+            2,
+            3
+          ],
+          "beta": 60,
+          "seconds": 12.535822629928589
+        },
+        {
+          "time": 1792134044.917436,
+          "event": "penalty_restored",
+          "source": "10.0.0.2",
+          "reason": "Minimum hold passed and ingress drop counter quiet for 5 seconds",
+          "seconds": 31.74238920211792
+        }
+      ],
+      "initial_path": [
+        1,
+        2,
+        6
+      ],
+      "during_path": [
+        1,
+        2,
+        6
+      ],
+      "recovered_path": [
+        1,
+        2,
+        6
+      ]
+    },
+    "B1": {
+      "run": "run-B-20261016-144402-YuFNPf",
+      "origin": 1792133212.6221352,
+      "clock_quality": "estimated from sample timestamps; sub-second bias unknown",
+      "snapshots": 59,
+      "events": [
+        {
+          "time": 1792133225.405774,
+          "event": "block",
+          "source": "10.0.0.2",
+          "pps": 36017.86274391134,
+          "old_ema_pps": 0.00901623620278144,
+          "new_ema_pps": 0.00901623620278144,
+          "threshold_pps": 2000,
+          "samples": 170,
+          "warmed": true,
+          "blocked": true,
+          "newly_blocked": true,
+          "dpid": 2,
+          "destination": "10.0.0.6",
+          "forward_pps": 36017.86274391134,
+          "drop_pps": 0.0,
+          "forward_bps": 12102001.881954212,
+          "drop_bps": 0.0,
+          "attack_path": [
+            2,
+            6
+          ],
+          "seconds": 12.783638954162598
+        },
+        {
+          "time": 1792133225.4214756,
+          "event": "penalty_added",
+          "source": "10.0.0.2",
+          "path": [
+            2,
+            6
+          ],
+          "beta": 60,
+          "seconds": 12.79934048652649
+        },
+        {
+          "time": 1792133225.5816762,
+          "event": "route_committed",
+          "flow": "10.0.0.1>10.0.0.6",
+          "old_path": [
+            1,
+            2,
+            6
+          ],
+          "new_path": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "old_cost": 83.41044534925446,
+          "new_cost": 23.283855239133914,
+          "tag": 31,
+          "generation": 2,
+          "seconds": 12.959541082382202
+        },
+        {
+          "time": 1792133244.7354288,
+          "event": "penalty_restored",
+          "source": "10.0.0.2",
+          "reason": "Minimum hold passed and ingress drop counter quiet for 5 seconds",
+          "seconds": 32.11329364776611
+        },
+        {
+          "time": 1792133244.774115,
+          "event": "route_committed",
+          "flow": "10.0.0.1>10.0.0.6",
+          "old_path": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "new_path": [
+            1,
+            2,
+            6
+          ],
+          "old_cost": 25.868080578334087,
+          "new_cost": 20.285971135394846,
+          "tag": 5,
+          "generation": 3,
+          "seconds": 32.15197992324829
+        }
+      ],
+      "initial_path": [
+        1,
+        2,
+        6
+      ],
+      "during_path": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "recovered_path": [
+        1,
+        2,
+        6
+      ]
+    },
+    "B2": {
+      "run": "run-B-20261017-105957-DfB6RZ",
+      "origin": 1792206329.5863862,
+      "clock_quality": "sender-launch timestamp",
+      "snapshots": 59,
+      "events": [
+        {
+          "time": 1792206343.2191894,
+          "event": "block",
+          "source": "10.0.0.2",
+          "pps": 92627.43117333713,
+          "old_ema_pps": 0.300179525101283,
+          "new_ema_pps": 0.300179525101283,
+          "threshold_pps": 2000,
+          "samples": 123,
+          "warmed": true,
+          "blocked": true,
+          "newly_blocked": true,
+          "dpid": 2,
+          "destination": "10.0.0.6",
+          "forward_pps": 92627.43117333713,
+          "drop_pps": 0.0,
+          "forward_bps": 31122816.874241274,
+          "drop_bps": 0.0,
+          "attack_path": [
+            2,
+            6
+          ],
+          "seconds": 13.632803201675415
+        },
+        {
+          "time": 1792206343.2386525,
+          "event": "penalty_added",
+          "source": "10.0.0.2",
+          "path": [
+            2,
+            6
+          ],
+          "beta": 60,
+          "seconds": 13.652266263961792
+        },
+        {
+          "time": 1792206343.3502922,
+          "event": "route_committed",
+          "flow": "10.0.0.1>10.0.0.6",
+          "old_path": [
+            1,
+            2,
+            6
+          ],
+          "new_path": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "old_cost": 84.1017533899352,
+          "new_cost": 23.258442316829893,
+          "tag": 31,
+          "generation": 2,
+          "seconds": 13.763906002044678
+        },
+        {
+          "time": 1792206361.7241955,
+          "event": "penalty_restored",
+          "source": "10.0.0.2",
+          "reason": "Minimum hold passed and ingress drop counter quiet for 5 seconds",
+          "seconds": 32.13780927658081
+        },
+        {
+          "time": 1792206361.7643545,
+          "event": "route_committed",
+          "flow": "10.0.0.1>10.0.0.6",
+          "old_path": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "new_path": [
+            1,
+            2,
+            6
+          ],
+          "old_cost": 25.92083350137723,
+          "new_cost": 20.30728508615511,
+          "tag": 5,
+          "generation": 3,
+          "seconds": 32.1779682636261
+        }
+      ],
+      "initial_path": [
+        1,
+        2,
+        6
+      ],
+      "during_path": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "recovered_path": [
+        1,
+        2,
+        6
+      ]
+    },
+    "B3": {
+      "run": "run-B-20261017-111734-b9lfbt",
+      "origin": 1792207280.8921602,
+      "clock_quality": "sender-launch timestamp",
+      "snapshots": 59,
+      "events": [
+        {
+          "time": 1792207293.4643915,
+          "event": "block",
+          "source": "10.0.0.2",
+          "pps": 22345.707946981387,
+          "old_ema_pps": 0.009879477478597543,
+          "new_ema_pps": 0.009879477478597543,
+          "threshold_pps": 2000,
+          "samples": 227,
+          "warmed": true,
+          "blocked": true,
+          "newly_blocked": true,
+          "dpid": 2,
+          "destination": "10.0.0.6",
+          "forward_pps": 22345.707946981387,
+          "drop_pps": 0.0,
+          "forward_bps": 7508157.870185746,
+          "drop_bps": 0.0,
+          "attack_path": [
+            2,
+            6
+          ],
+          "seconds": 12.57223129272461
+        },
+        {
+          "time": 1792207293.48178,
+          "event": "penalty_added",
+          "source": "10.0.0.2",
+          "path": [
+            2,
+            6
+          ],
+          "beta": 60,
+          "seconds": 12.589619874954224
+        },
+        {
+          "time": 1792207293.6895363,
+          "event": "route_committed",
+          "flow": "10.0.0.1>10.0.0.6",
+          "old_path": [
+            1,
+            2,
+            6
+          ],
+          "new_path": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "old_cost": 82.78302381977046,
+          "new_cost": 23.31877382353401,
+          "tag": 31,
+          "generation": 2,
+          "seconds": 12.797376155853271
+        },
+        {
+          "time": 1792207312.7173016,
+          "event": "penalty_restored",
+          "source": "10.0.0.2",
+          "reason": "Minimum hold passed and ingress drop counter quiet for 5 seconds",
+          "seconds": 31.825141429901123
+        },
+        {
+          "time": 1792207312.95899,
+          "event": "route_committed",
+          "flow": "10.0.0.1>10.0.0.6",
+          "old_path": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "new_path": [
+            1,
+            2,
+            6
+          ],
+          "old_cost": 25.9421995084579,
+          "new_cost": 20.32882621359293,
+          "tag": 5,
+          "generation": 3,
+          "seconds": 32.06682991981506
+        }
+      ],
+      "initial_path": [
+        1,
+        2,
+        6
+      ],
+      "during_path": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "recovered_path": [
+        1,
+        2,
+        6
+      ]
+    },
+    "C": {
+      "run": "run-C-20261016-153103-Ho9Y7P",
+      "origin": 1792135995.4239888,
+      "clock_quality": "sender-launch timestamp",
+      "snapshots": 59,
+      "events": [
+        {
+          "time": 1792136008.2914703,
+          "event": "block",
+          "source": "10.0.0.5",
+          "pps": 25340.75646603012,
+          "old_ema_pps": 0.01769450836890914,
+          "new_ema_pps": 0.01769450836890914,
+          "threshold_pps": 2000,
+          "samples": 138,
+          "warmed": true,
+          "blocked": true,
+          "newly_blocked": true,
+          "dpid": 5,
+          "destination": "10.0.0.6",
+          "forward_pps": 25340.75646603012,
+          "drop_pps": 0.0,
+          "forward_bps": 8514494.17258612,
+          "drop_bps": 0.0,
+          "attack_path": [
+            5,
+            6
+          ],
+          "seconds": 12.867481470108032
+        },
+        {
+          "time": 1792136008.3084733,
+          "event": "penalty_added",
+          "source": "10.0.0.5",
+          "path": [
+            5,
+            6
+          ],
+          "beta": 60,
+          "seconds": 12.88448452949524
+        },
+        {
+          "time": 1792136027.6525111,
+          "event": "penalty_restored",
+          "source": "10.0.0.5",
+          "reason": "Minimum hold passed and ingress drop counter quiet for 5 seconds",
+          "seconds": 32.228522300720215
+        }
+      ],
+      "initial_path": [
+        1,
+        2,
+        6
+      ],
+      "during_path": [
+        1,
+        2,
+        6
+      ],
+      "recovered_path": [
+        1,
+        2,
+        6
+      ]
+    }
+  },
+  "limitations": [
+    "Task2 did not record per-port statistics; its graph uses source forwarding/drop counters and actual h1 replies.",
+    "Port RX contains multiple sources/protocols and Ethernet/VLAN overhead; do not call it UDP payload throughput.",
+    "Step/event times reflect about one-second sampling; B1 origin is estimated. No sub-second causality claim.",
+    "B2 retains 4.726 Mbps on the original branch at 15.60 s; its 15-24 s original-branch mean is 0.525 Mbps, not zero.",
+    "Low link RX after blocking does not clear the anomaly flag while ingress drops continue.",
+    "Task3 alone retains static routes; only the integrated Task4 controller moves legitimate traffic.",
+    "No controlled comparison estimates the independent throughput gain of rerouting or proves optimal parameters."
+  ],
+  "source_provenance": {
+    "todo03/evidence/controller-events-after-block-20261016.jsonl": {
+      "file_sha256": "b8838c30a3d2ea7e037fb7126f8e504f3320a59a2b9ab848e2485ae4eef4fe41",
+      "uncompressed_sha256": "b8838c30a3d2ea7e037fb7126f8e504f3320a59a2b9ab848e2485ae4eef4fe41"
+    },
+    "todo03/evidence/source-rates-after-block-20261016.jsonl": {
+      "file_sha256": "b7514078dcf7ccc6c879e4b289ad217883c886e731907f41b815043ce6021fb0",
+      "uncompressed_sha256": "b7514078dcf7ccc6c879e4b289ad217883c886e731907f41b815043ce6021fb0"
+    },
+    "todo03/evidence/legitimate-h1-ping-during-anomaly-20261016.log": {
+      "file_sha256": "70b3fffa622a791a78d64ffcedb543de071c618d5538efb4636de5b06035090c",
+      "uncompressed_sha256": "70b3fffa622a791a78d64ffcedb543de071c618d5538efb4636de5b06035090c"
+    },
+    "todo04/evidence/controller-events-after-anomaly-20261016.jsonl": {
+      "file_sha256": "95c104c20e3faa70fc2b1dfd2e6fcdf5e51ad3039c36c8324b4b7d40f4ae0a38",
+      "uncompressed_sha256": "95c104c20e3faa70fc2b1dfd2e6fcdf5e51ad3039c36c8324b4b7d40f4ae0a38"
+    },
+    "todo04/evidence/link-cost-history-after-anomaly-20261016.jsonl": {
+      "file_sha256": "79db1bb3659d4e8a55bdaf499df481eafdbd64ffb7d7cc5fd503cfe5e90897db",
+      "uncompressed_sha256": "79db1bb3659d4e8a55bdaf499df481eafdbd64ffb7d7cc5fd503cfe5e90897db"
+    },
+    "todo05/run-A-20261016-145805-CPT5A8/results.json": {
+      "file_sha256": "8c053af5cd7749be4c3643ebe1259f1cea683df2e70b82e9ee8f942b24b69692",
+      "uncompressed_sha256": "8c053af5cd7749be4c3643ebe1259f1cea683df2e70b82e9ee8f942b24b69692"
+    },
+    "todo05/run-A-20261016-145805-CPT5A8/sender.log": {
+      "file_sha256": "bfb83fa78fcf142e48febf3fe6c8ffd992ae90e4639d3ac3d592a577137ce378",
+      "uncompressed_sha256": "bfb83fa78fcf142e48febf3fe6c8ffd992ae90e4639d3ac3d592a577137ce378"
+    },
+    "todo05/run-A-20261016-145805-CPT5A8/receiver.log": {
+      "file_sha256": "724cb3412cce322ec4f3bffe56b3cea9c1b6ecc192488d0aca0394ea072bfb0d",
+      "uncompressed_sha256": "724cb3412cce322ec4f3bffe56b3cea9c1b6ecc192488d0aca0394ea072bfb0d"
+    },
+    "todo05/run-A-20261016-145805-CPT5A8/continuous-ping.log": {
+      "file_sha256": "eafc251ef736754748ac728709f1949e1635da2f3fc5edf176a8ff6ee517f791",
+      "uncompressed_sha256": "eafc251ef736754748ac728709f1949e1635da2f3fc5edf176a8ff6ee517f791"
+    },
+    "todo05/run-A-20261016-145805-CPT5A8/dataplane-samples.jsonl": {
+      "file_sha256": "b35009b9936e1659b2496f386f57799a84e940250ba36b6ac17dc1c5d37a500a",
+      "uncompressed_sha256": "b35009b9936e1659b2496f386f57799a84e940250ba36b6ac17dc1c5d37a500a"
+    },
+    "todo05/run-A-20261016-145805-CPT5A8/link-costs.jsonl": {
+      "file_sha256": "e41773720e797ced55710900ac77996c380e47caeb92b39a3f83c84cfeecd0e8",
+      "uncompressed_sha256": "e41773720e797ced55710900ac77996c380e47caeb92b39a3f83c84cfeecd0e8"
+    },
+    "todo05/run-A-20261016-145805-CPT5A8/evidence/events-at-final-review.jsonl": {
+      "file_sha256": "b3545efbc771b9032730a13be1045f147875bcc005b6d37065fcc125f63dcdbc",
+      "uncompressed_sha256": "b3545efbc771b9032730a13be1045f147875bcc005b6d37065fcc125f63dcdbc"
+    },
+    "todo05/run-A-20261016-145805-CPT5A8/evidence/student-A-reviewed-results.json": {
+      "file_sha256": "cb4e67da3e3522a38e6d4af2fad31eccfd15ad47a0bc3db61337433836d52767",
+      "uncompressed_sha256": "cb4e67da3e3522a38e6d4af2fad31eccfd15ad47a0bc3db61337433836d52767"
+    },
+    "todo05/run-A-20261016-145805-CPT5A8/source-rates.jsonl": {
+      "file_sha256": "c93fc1a4c58cdea31642ac3e0293b14b35e30319f680014dad832918f7f0c070",
+      "uncompressed_sha256": "c93fc1a4c58cdea31642ac3e0293b14b35e30319f680014dad832918f7f0c070"
+    },
+    "todo05/run-B-20261016-144402-YuFNPf/results.json": {
+      "file_sha256": "acf5b60ab30cac2daf8d54ed8911280727e113d853df0ba67731d61db4467973",
+      "uncompressed_sha256": "acf5b60ab30cac2daf8d54ed8911280727e113d853df0ba67731d61db4467973"
+    },
+    "todo05/run-B-20261016-144402-YuFNPf/sender.log": {
+      "file_sha256": "7f3b6822cf4ba1eec9f3b9d1031b078752819e3e0e018cd15c736e59cf7cdae8",
+      "uncompressed_sha256": "7f3b6822cf4ba1eec9f3b9d1031b078752819e3e0e018cd15c736e59cf7cdae8"
+    },
+    "todo05/run-B-20261016-144402-YuFNPf/receiver.log": {
+      "file_sha256": "e67c97772d5ad4f6c3148866773043ab867d3361b8eb0a8dfb4c6c94f2969660",
+      "uncompressed_sha256": "e67c97772d5ad4f6c3148866773043ab867d3361b8eb0a8dfb4c6c94f2969660"
+    },
+    "todo05/run-B-20261016-144402-YuFNPf/continuous-ping.log": {
+      "file_sha256": "458a6b032e3846a4a24c29aba880fbacd7b3af060d3a198d38857fff3cb0e504",
+      "uncompressed_sha256": "458a6b032e3846a4a24c29aba880fbacd7b3af060d3a198d38857fff3cb0e504"
+    },
+    "todo05/run-B-20261016-144402-YuFNPf/dataplane-samples.jsonl": {
+      "file_sha256": "d54060d9eb1cc93938b6f46eb352498467877c797e7819cedf10d03650698a0e",
+      "uncompressed_sha256": "d54060d9eb1cc93938b6f46eb352498467877c797e7819cedf10d03650698a0e"
+    },
+    "todo05/run-B-20261016-144402-YuFNPf/link-costs.jsonl": {
+      "file_sha256": "da25339acd288118e931276068494bb3c683b65430490fc68f76de735368477c",
+      "uncompressed_sha256": "da25339acd288118e931276068494bb3c683b65430490fc68f76de735368477c"
+    },
+    "todo05/run-B-20261016-144402-YuFNPf/evidence/events-at-offline-review.jsonl": {
+      "file_sha256": "8cec018e96dd040359158cca1265b57662cd93482243a4fbdf4193add50dba00",
+      "uncompressed_sha256": "8cec018e96dd040359158cca1265b57662cd93482243a4fbdf4193add50dba00"
+    },
+    "todo05/run-B-20261016-144402-YuFNPf/evidence/student-B-reviewed-results.json": {
+      "file_sha256": "1c3b54d20031ace1aaad29d8301a66f6ad19a8a348104eccfaa4477f783575dd",
+      "uncompressed_sha256": "1c3b54d20031ace1aaad29d8301a66f6ad19a8a348104eccfaa4477f783575dd"
+    },
+    "todo05/run-B-20261016-144402-YuFNPf/source-rates.jsonl": {
+      "file_sha256": "bb298cf3c3099ce8f73caaf47d68d685caddfbe66d180f1df32784384a2a7aa1",
+      "uncompressed_sha256": "bb298cf3c3099ce8f73caaf47d68d685caddfbe66d180f1df32784384a2a7aa1"
+    },
+    "todo05/run-B-20261017-105957-DfB6RZ/results.json": {
+      "file_sha256": "0bb861b3f6750254ce649af030826f0ad0aa7965eed3b20e382dfde6fd6c0e88",
+      "uncompressed_sha256": "0bb861b3f6750254ce649af030826f0ad0aa7965eed3b20e382dfde6fd6c0e88"
+    },
+    "todo05/run-B-20261017-105957-DfB6RZ/sender.log": {
+      "file_sha256": "bfea0b6cd0f8d7e3687f39d2bd51e353414999eab1e5c431704003820f4b132b",
+      "uncompressed_sha256": "bfea0b6cd0f8d7e3687f39d2bd51e353414999eab1e5c431704003820f4b132b"
+    },
+    "todo05/run-B-20261017-105957-DfB6RZ/receiver.log": {
+      "file_sha256": "c0eabdb9e5f8e27e774bfc570f74798b12de9b41c4beaf60c094150413645994",
+      "uncompressed_sha256": "c0eabdb9e5f8e27e774bfc570f74798b12de9b41c4beaf60c094150413645994"
+    },
+    "todo05/run-B-20261017-105957-DfB6RZ/continuous-ping.log": {
+      "file_sha256": "017447edbf62ac797de318674d44cf484afac3fe8a036c1153e912f72fa4094b",
+      "uncompressed_sha256": "017447edbf62ac797de318674d44cf484afac3fe8a036c1153e912f72fa4094b"
+    },
+    "todo05/run-B-20261017-105957-DfB6RZ/dataplane-samples.jsonl": {
+      "file_sha256": "1816d006eebf114d0cf989805d98f601d45c37a877deb6c6f6962385110219cd",
+      "uncompressed_sha256": "1816d006eebf114d0cf989805d98f601d45c37a877deb6c6f6962385110219cd"
+    },
+    "todo05/run-B-20261017-105957-DfB6RZ/link-costs.jsonl": {
+      "file_sha256": "de4d805c11061e9440405d049fb1289fc983dd753067d9c8a77d488187e0e0c1",
+      "uncompressed_sha256": "de4d805c11061e9440405d049fb1289fc983dd753067d9c8a77d488187e0e0c1"
+    },
+    "todo05/run-B-20261017-105957-DfB6RZ/evidence/events-at-offline-review.jsonl": {
+      "file_sha256": "5330e4ba85064e45c11640c84f226e69c211c4ecfa06ec17c74ad8f25fa67ee8",
+      "uncompressed_sha256": "5330e4ba85064e45c11640c84f226e69c211c4ecfa06ec17c74ad8f25fa67ee8"
+    },
+    "todo05/run-B-20261017-105957-DfB6RZ/evidence/student-B-reviewed-results.json": {
+      "file_sha256": "d815e91c92e38c1b29f6289cd0b3c0938d72b368118464a5bf5ccce507944a69",
+      "uncompressed_sha256": "d815e91c92e38c1b29f6289cd0b3c0938d72b368118464a5bf5ccce507944a69"
+    },
+    "todo05/run-B-20261017-105957-DfB6RZ/source-rates.jsonl": {
+      "file_sha256": "6c4f3f2e237d81968e9230f8389c16646bfefecf1013ff3082861b4ea46a4a5a",
+      "uncompressed_sha256": "6c4f3f2e237d81968e9230f8389c16646bfefecf1013ff3082861b4ea46a4a5a"
+    },
+    "todo05/run-B-20261017-111734-b9lfbt/results.json": {
+      "file_sha256": "c6c56c7bb7a9bd9f946e979073c0c0919a5a3596e3d35ec00142c7f8612bc540",
+      "uncompressed_sha256": "c6c56c7bb7a9bd9f946e979073c0c0919a5a3596e3d35ec00142c7f8612bc540"
+    },
+    "todo05/run-B-20261017-111734-b9lfbt/sender.log": {
+      "file_sha256": "5d908e7eae92d82985378f2d47543042841279cb897b3187858ccdc8717c3825",
+      "uncompressed_sha256": "5d908e7eae92d82985378f2d47543042841279cb897b3187858ccdc8717c3825"
+    },
+    "todo05/run-B-20261017-111734-b9lfbt/receiver.log": {
+      "file_sha256": "505ef4f06c182c01debfe184857f5a68825ce1e7d57aa8db2e36c48e511b2714",
+      "uncompressed_sha256": "505ef4f06c182c01debfe184857f5a68825ce1e7d57aa8db2e36c48e511b2714"
+    },
+    "todo05/run-B-20261017-111734-b9lfbt/continuous-ping.log": {
+      "file_sha256": "8590a79227ee5581e7febbe42695fe6383331945e3c1802088c0a1f549937769",
+      "uncompressed_sha256": "8590a79227ee5581e7febbe42695fe6383331945e3c1802088c0a1f549937769"
+    },
+    "todo05/run-B-20261017-111734-b9lfbt/dataplane-samples.jsonl": {
+      "file_sha256": "e2179cf288bffb762a515bef95405e1f231f8aefbf21a1b7de1cb2c440ebc563",
+      "uncompressed_sha256": "e2179cf288bffb762a515bef95405e1f231f8aefbf21a1b7de1cb2c440ebc563"
+    },
+    "todo05/run-B-20261017-111734-b9lfbt/link-costs.jsonl": {
+      "file_sha256": "9cbbd39361ddd44319cf2c2a0ef4020795d043ce7c2c0a8ba8eaf9911dbff63b",
+      "uncompressed_sha256": "9cbbd39361ddd44319cf2c2a0ef4020795d043ce7c2c0a8ba8eaf9911dbff63b"
+    },
+    "todo05/run-B-20261017-111734-b9lfbt/evidence/events-at-offline-review.jsonl": {
+      "file_sha256": "7c344c9fbd10c7f9a3c56b6845b9bb464a890d670fade359654c129c28f5f620",
+      "uncompressed_sha256": "7c344c9fbd10c7f9a3c56b6845b9bb464a890d670fade359654c129c28f5f620"
+    },
+    "todo05/run-B-20261017-111734-b9lfbt/evidence/student-B-reviewed-results.json": {
+      "file_sha256": "e424d90d07628046e84a39ba988d8b54f847b249f57889b5200ff8cecc66131c",
+      "uncompressed_sha256": "e424d90d07628046e84a39ba988d8b54f847b249f57889b5200ff8cecc66131c"
+    },
+    "todo05/run-B-20261017-111734-b9lfbt/source-rates.jsonl": {
+      "file_sha256": "af1da265844f5a5bb55e2c7855c93a1923887764fae9b5cda6a633c7bb4bdd10",
+      "uncompressed_sha256": "af1da265844f5a5bb55e2c7855c93a1923887764fae9b5cda6a633c7bb4bdd10"
+    },
+    "todo05/run-C-20261016-153103-Ho9Y7P/results.json": {
+      "file_sha256": "a4164f8699a527cad77a9e8b9a7368d4306f6b4e2d9719bc73051124f0b27eab",
+      "uncompressed_sha256": "a4164f8699a527cad77a9e8b9a7368d4306f6b4e2d9719bc73051124f0b27eab"
+    },
+    "todo05/run-C-20261016-153103-Ho9Y7P/sender.log": {
+      "file_sha256": "3bdd7201395163c283d8a087790d91546a7ffdb0e509ea7b8aacd2a65cce245c",
+      "uncompressed_sha256": "3bdd7201395163c283d8a087790d91546a7ffdb0e509ea7b8aacd2a65cce245c"
+    },
+    "todo05/run-C-20261016-153103-Ho9Y7P/receiver.log": {
+      "file_sha256": "40a771794af2b41e77f54155a865ff52f125e6697dc5b531e6c5f626ed918711",
+      "uncompressed_sha256": "40a771794af2b41e77f54155a865ff52f125e6697dc5b531e6c5f626ed918711"
+    },
+    "todo05/run-C-20261016-153103-Ho9Y7P/continuous-ping.log": {
+      "file_sha256": "8f8cf8b13438db0481d59a135adbd8408da95efbf09072f749bfc47327c270b6",
+      "uncompressed_sha256": "8f8cf8b13438db0481d59a135adbd8408da95efbf09072f749bfc47327c270b6"
+    },
+    "todo05/run-C-20261016-153103-Ho9Y7P/dataplane-samples.jsonl": {
+      "file_sha256": "b9939db25f0836138c6fae4645bfb6041bbb42778fef3f0d9d68a2b3ae94d84a",
+      "uncompressed_sha256": "b9939db25f0836138c6fae4645bfb6041bbb42778fef3f0d9d68a2b3ae94d84a"
+    },
+    "todo05/run-C-20261016-153103-Ho9Y7P/link-costs.jsonl": {
+      "file_sha256": "9aeb725bdbdcf73a199913857727d972a3f7db3fcd8678b5d332e0793cafec9c",
+      "uncompressed_sha256": "9aeb725bdbdcf73a199913857727d972a3f7db3fcd8678b5d332e0793cafec9c"
+    },
+    "todo05/run-C-20261016-153103-Ho9Y7P/evidence/events-at-final-review.jsonl": {
+      "file_sha256": "b6fd9762d029b34f358b9dba4d25e99ff13ed5ed6806c4210a34e8b1f9e43bbc",
+      "uncompressed_sha256": "b6fd9762d029b34f358b9dba4d25e99ff13ed5ed6806c4210a34e8b1f9e43bbc"
+    },
+    "todo05/run-C-20261016-153103-Ho9Y7P/evidence/student-C-reviewed-results.json": {
+      "file_sha256": "d8057b9239caab61c5beb4e3cd8b866bf4fc334952b1004287d279bb9453c9df",
+      "uncompressed_sha256": "d8057b9239caab61c5beb4e3cd8b866bf4fc334952b1004287d279bb9453c9df"
+    },
+    "todo05/run-C-20261016-153103-Ho9Y7P/source-rates.jsonl": {
+      "file_sha256": "33620b17a3cdccc741b160599cbe8e308a253ba286acd8e18773a6c98a45cf71",
+      "uncompressed_sha256": "33620b17a3cdccc741b160599cbe8e308a253ba286acd8e18773a6c98a45cf71"
+    }
+  },
+  "analysis_script_sha256": "9f5870c930abc9b0b96a7325b3287da58bf36b94818c7e4f2151a689d97873f5",
+  "checks": {
+    "all_22_directions_present": true,
+    "cost_formula_matches_logged_values": true,
+    "h1_not_blocked": true,
+    "all_B_repeats_transfer_and_recover": true,
+    "A_C_retain_original_branch": true
+  }
+}

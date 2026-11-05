@@ -27,11 +27,12 @@
 
 ## 已有报告与实验结果
 
-- [完整英文报告 PDF](report/review-20261104/CEG5101_CA2_Report_English.pdf)
-- [完整中文报告 PDF](report/review-20261104/CEG5101_CA2_Report_Chinese.pdf)
+- [完整英文报告 PDF](report/review-20261105/CEG5101_CA2_Report_English.pdf)
+- [完整中文报告 PDF](report/review-20261105/CEG5101_CA2_Report_Chinese.pdf)
 
-2026-11-04 两版报告各 18 页，第 5 页补充 Task 2 发包命令、检测/封锁代码入口和实际交换机流表的关系；实验测量未改变。原 2026-10-17 报告保留在 `report/review-20261017`。
-- 同目录 HTML 可编辑；移动时一起保留 `assets/`。报告是 2026-10-17 的原始快照，未补成员和分工。
+2026-11-05 两版报告各 24 页，新增六张从历史日志重建的多链路图：第 6、8、13、16、17、19 页分别解释选择性封锁、独立代价阶段、B 原/备用路径、全网 22 方向、A/C 和全部 B 重复。第 5 页保留命令与规则下发解释；实验测量未改变。旧报告保留。
+- [多链路证据、图表、CSV 与测量口径](todo06/policy-evidence-20261105/README.md)。离线入口 `analyze_policy_evidence.py`，无需启动网络。
+- 同目录 HTML 可编辑；移动时一起保留 `assets/`。实验数据来自 2026 年 10 月，报告解释于 11 月修订；未补成员和分工。
 - [三场景与三轮 B 的图表、CSV 和分析](todo06/task5-final-20261017/)
 - `todo01/evidence/` 至 `todo04/evidence/` 保存前期截图与证据。
 - `todo05/` 保存五轮学生实验。保留 B1 最初的检查器 FAIL 以及另存的核验 PASS，没有用后来的较好结果替换它。
